@@ -1,0 +1,32 @@
+<?php $__env->startSection('content'); ?>
+<div class="container">
+<?php if(sizeof($vendors)==0): ?>
+	<h2>No Records</h2>
+<?php else: ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Contact</th>
+				<th>Address</th>
+				<th>Note</th>
+			</tr>
+		</thead>
+		<tbody>
+		<?php foreach($vendors as $vendor): ?>
+			<tr>
+				<td><?php echo e($vendor->id); ?></td>
+				<td><?php echo e($vendor->name); ?></td>
+				<td><?php echo e($vendor->contact); ?></td>
+				<td><?php echo e($vendor->address); ?></td>
+				<td><?php echo e($vendor->note); ?></td>
+			</tr>
+		<?php endforeach; ?>
+		</tbody>
+	</table>
+<?php endif; ?>
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,29 @@
+<?php $__env->startSection('content'); ?>
+<div class="container">
+<?php if(sizeof($readers)==0): ?>
+	<h2>No Records</h2>
+<?php else: ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Department</th>
+				<th>Year</th>
+			</tr>
+		</thead>
+		<tbody>
+		<?php foreach($readers as $reader): ?>
+			<tr>
+				<td><?php echo e($reader->id); ?></td>
+				<td><?php echo e($reader->name); ?></td>
+				<td><?php echo e($reader->department); ?></td>
+				<td><?php echo e($reader->year); ?></td>
+			</tr>
+		<?php endforeach; ?>
+		</tbody>
+	</table>
+<?php endif; ?>
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

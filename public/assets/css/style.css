@@ -1,0 +1,26 @@
+.container{
+    padding-top: 30px;
+}
+#message{
+    text-align: center;
+}
+.button{
+    text-align: center;
+}
+.nav-wrapper{
+    background-color: #2196F3;
+}
+.dropdown:hover .dropdown-menu{
+	display: block;
+	margin: 0;
+}
+.modal-backdrop.in {
+    opacity: 0.0;
+}
+#table{
+	display: none;
+}
+body{
+	
+	font-family: 'Roboto', sans-serif;
+}

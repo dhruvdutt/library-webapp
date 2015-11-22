@@ -1,0 +1,10 @@
+<?php $__env->startSection('content'); ?>
+    <div class="container">
+        <?php echo Form::open(array('route'=>'fetchisbn')); ?>
+
+            <?php echo $__env->make('partials.acquisition', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php echo Form::close(); ?>
+
+    </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

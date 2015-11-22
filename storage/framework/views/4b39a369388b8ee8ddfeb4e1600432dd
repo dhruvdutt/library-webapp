@@ -1,0 +1,42 @@
+<div class="container">
+<div class="row">
+	<div class="col-md-4"></div>
+	<div class="col-md-4">
+		<?php if(Session::has('flash_message')): ?>
+        <div class="alert alert-info" style="text-align:center">
+            <?php echo e(Session::get('flash_message')); ?>
+
+        </div>
+		<?php endif; ?>
+	</div>
+	<div class="col-md-4"></div>
+</div>
+</div>
+
+ <?php if(sizeof($errors) != 0): ?>
+      <div class="container alert alert-danger">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <?php foreach($errors->all() as $error): ?>
+            <?php echo e($error); ?><br />
+          <?php endforeach; ?>
+        </div>
+        <div class="col-md-4"></div>
+      </div> 
+      </div>
+<?php endif; ?>
+
+<?php if(isset($message)): ?>
+   <div class="container" style="text-align:center">
+     <div class="row">
+       <div class="col-md-4"></div>
+       <div class="col-md-4">
+         <div>
+            <h4><?php echo e($message); ?></h4>
+          </div>
+       </div>
+       <div class="col-md-4"></div>
+     </div>
+   </div>  
+<?php endif; ?>

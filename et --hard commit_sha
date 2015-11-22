@@ -1,0 +1,85 @@
+[33mcommit a9d83998297e00da0eba597af4bfcf5371ddef4b[m
+Merge: c33a40f cf09da6
+Author: dhwanilvyas <dhwanilvyas@outlook.com>
+Date:   Sat Nov 7 14:54:18 2015 +0530
+
+    Merge branch 'master' into second
+
+[33mcommit c33a40ffc91f743941305f5724f8c05072e57995[m
+Author: dhwanilvyas <dhwanilvyas@outlook.com>
+Date:   Sat Nov 7 14:49:23 2015 +0530
+
+    Added comments
+
+[33mcommit cf09da6c02081d4c7e38d999a1af5ced524b974d[m
+Merge: f381385 07823bc
+Author: Dhwanil Vyas <dhwanilvyas8@gmail.com>
+Date:   Sat Nov 7 14:48:25 2015 +0530
+
+    Merged root into master
+
+[33mcommit 07823bc519ccbec7aa05ec1d31be94e8203b181a[m
+Author: Dhruvdutt Jadhav <jdhruv12@gmail.com>
+Date:   Sat Nov 7 14:40:53 2015 +0530
+
+    Added Changes
+
+[33mcommit f381385ef4874561c023aaa6531136e1af31eab8[m
+Merge: 3486006 d236402
+Author: Dhwanil Vyas <dhwanilvyas8@gmail.com>
+Date:   Sat Nov 7 13:36:46 2015 +0530
+
+    Merged in second (pull request #2)
+    
+    Updated Circulation Controller
+
+[33mcommit d2364027efca36f1552643b6178784096a7d25de[m
+Author: dhwanilvyas <dhwanilvyas@outlook.com>
+Date:   Sat Nov 7 13:27:13 2015 +0530
+
+    Updated Circulation Controller
+
+[33mcommit 3486006285e87bf91006231b2334419635f9dbd4[m
+Merge: f9d4038 3cb4005
+Author: Dhwanil Vyas <dhwanilvyas8@gmail.com>
+Date:   Sat Nov 7 13:00:54 2015 +0530
+
+    Merged in second (pull request #1)
+    
+    Merge Second into Master
+
+[33mcommit f9d4038e6afcbf203130c6c4f903958360964df9[m
+Author: dhwanilvyas <dhwanilvyas@outlook.com>
+Date:   Sat Nov 7 12:56:53 2015 +0530
+
+    Merged Second to Master
+
+[33mcommit 3cb40055321b0371b40ba89c24db0e8568acb6cc[m
+Author: dhwanilvyas <dhwanilvyas@outlook.com>
+Date:   Sat Nov 7 11:49:45 2015 +0530
+
+    'merged'
+
+[33mcommit 722b9379b228d15c2bab69775512a8427ea71ba2[m
+Author: dhwanilvyas <dhwanilvyas@outlook.com>
+Date:   Thu Nov 5 09:25:58 2015 +0530
+
+    'updated'
+
+[33mcommit 346687160d98e8c04fc8b2b2355a40026afaba42[m
+Author: dhwanilvyas <dhwanilvyas@outlook.com>
+Date:   Fri Oct 23 12:16:57 2015 +0530
+
+    'done'
+
+[33mcommit 70e9910043309ad96b7dff54efe672b31839e872[m
+Author: dhwanilvyas <dhwanilvyas@outlook.com>
+Date:   Wed Oct 21 17:55:43 2015 +0530
+
+    'done'
+
+[33mcommit 0c153139b23c764a6799f30304804fa5dae3baf7[m
+Author: dhwanilvyas <dhwanilvyas@outlook.com>
+Date:   Mon Oct 12 11:59:04 2015 +0530
+
+    'done'

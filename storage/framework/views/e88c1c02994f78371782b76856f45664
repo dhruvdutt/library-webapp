@@ -1,0 +1,36 @@
+<div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <?php echo Form::label('isbn','Book ISBN'); ?>
+
+                <?php echo Form::number('isbn',null,['class'=>'form-control','autocomplete'=>'off','required']); ?>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <?php echo Form::label('title','Book Title'); ?>
+
+                <?php echo Form::text('title',null,['class'=>'form-control','required']); ?>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <?php echo Form::label('author','Author'); ?>
+
+                <?php echo Form::text('author',null,['class'=>'form-control','required']); ?>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <?php echo Form::label('publisher','Publisher'); ?>
+
+                <?php echo Form::text('publisher',null,['class'=>'form-control','required']); ?>
+
+            </div>
+        </div>
+    </div>

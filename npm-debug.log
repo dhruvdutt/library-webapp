@@ -1,0 +1,3091 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'laravel-elixir' ]
+2 info using npm@2.14.4
+3 info using node@v4.1.1
+4 verbose install initial load of D:\library\package.json
+5 verbose installManyTop reading scoped package data from D:\library\node_modules\bootstrap-sass\package.json
+6 verbose installManyTop reading scoped package data from D:\library\node_modules\gulp\package.json
+7 verbose readDependencies loading dependencies from D:\library\package.json
+8 silly cache add args [ 'laravel-elixir@^3.0.0', null ]
+9 verbose cache add spec laravel-elixir@^3.0.0
+10 silly cache add parsed spec Result {
+10 silly cache add   raw: 'laravel-elixir@^3.0.0',
+10 silly cache add   scope: null,
+10 silly cache add   name: 'laravel-elixir',
+10 silly cache add   rawSpec: '^3.0.0',
+10 silly cache add   spec: '>=3.0.0 <4.0.0',
+10 silly cache add   type: 'range' }
+11 silly addNamed laravel-elixir@>=3.0.0 <4.0.0
+12 verbose addNamed ">=3.0.0 <4.0.0" is a valid semver range for laravel-elixir
+13 silly addNameRange { name: 'laravel-elixir',
+13 silly addNameRange   range: '>=3.0.0 <4.0.0',
+13 silly addNameRange   hasData: false }
+14 silly mapToRegistry name laravel-elixir
+15 silly mapToRegistry using default registry
+16 silly mapToRegistry registry http://registry.npmjs.org/
+17 silly mapToRegistry uri http://registry.npmjs.org/laravel-elixir
+18 verbose addNameRange registry:http://registry.npmjs.org/laravel-elixir not in flight; fetching
+19 verbose request uri http://registry.npmjs.org/laravel-elixir
+20 verbose request no auth needed
+21 info attempt registry request try #1 at 4:45:55 PM
+22 verbose request id 9f65bf2344269fc7
+23 verbose etag "F1MXUCSSDQ2IZD897HQ5ODWMW"
+24 http request GET http://registry.npmjs.org/laravel-elixir
+25 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+26 info attempt registry request try #2 at 4:46:26 PM
+27 verbose etag "F1MXUCSSDQ2IZD897HQ5ODWMW"
+28 http request GET http://registry.npmjs.org/laravel-elixir
+29 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+30 info attempt registry request try #3 at 4:47:47 PM
+31 verbose etag "F1MXUCSSDQ2IZD897HQ5ODWMW"
+32 http request GET http://registry.npmjs.org/laravel-elixir
+33 http 304 http://registry.npmjs.org/laravel-elixir
+34 silly get cb [ 304,
+34 silly get   { date: 'Thu, 12 Nov 2015 11:17:55 GMT',
+34 silly get     via: '1.1 varnish',
+34 silly get     'cache-control': 'max-age=60',
+34 silly get     etag: '"F1MXUCSSDQ2IZD897HQ5ODWMW"',
+34 silly get     age: '0',
+34 silly get     connection: 'keep-alive',
+34 silly get     'x-served-by': 'cache-sin6926-SIN',
+34 silly get     'x-cache': 'HIT',
+34 silly get     'x-cache-hits': '1',
+34 silly get     'x-timer': 'S1447327075.947718,VS0,VE250',
+34 silly get     vary: 'Accept' } ]
+35 verbose etag http://registry.npmjs.org/laravel-elixir from cache
+36 verbose get saving laravel-elixir to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\laravel-elixir\.cache.json
+37 silly addNameRange number 2 { name: 'laravel-elixir',
+37 silly addNameRange   range: '>=3.0.0 <4.0.0',
+37 silly addNameRange   hasData: true }
+38 silly addNameRange versions [ 'laravel-elixir',
+38 silly addNameRange   [ '0.1.0',
+38 silly addNameRange     '0.1.1',
+38 silly addNameRange     '0.1.2',
+38 silly addNameRange     '0.1.3',
+38 silly addNameRange     '0.1.4',
+38 silly addNameRange     '0.1.5',
+38 silly addNameRange     '0.1.6',
+38 silly addNameRange     '0.1.7',
+38 silly addNameRange     '0.1.8',
+38 silly addNameRange     '0.1.9',
+38 silly addNameRange     '0.2.0',
+38 silly addNameRange     '0.2.1',
+38 silly addNameRange     '0.2.2',
+38 silly addNameRange     '0.3.0',
+38 silly addNameRange     '0.3.1',
+38 silly addNameRange     '0.3.2',
+38 silly addNameRange     '0.3.3',
+38 silly addNameRange     '0.3.4',
+38 silly addNameRange     '0.3.5',
+38 silly addNameRange     '0.3.7',
+38 silly addNameRange     '0.3.8',
+38 silly addNameRange     '0.3.9',
+38 silly addNameRange     '0.3.10',
+38 silly addNameRange     '0.3.11',
+38 silly addNameRange     '0.4.0',
+38 silly addNameRange     '0.4.1',
+38 silly addNameRange     '0.4.3',
+38 silly addNameRange     '0.4.4',
+38 silly addNameRange     '0.4.5',
+38 silly addNameRange     '0.4.6',
+38 silly addNameRange     '0.4.7',
+38 silly addNameRange     '0.4.8',
+38 silly addNameRange     '0.4.9',
+38 silly addNameRange     '0.4.10',
+38 silly addNameRange     '0.4.11',
+38 silly addNameRange     '0.4.12',
+38 silly addNameRange     '0.4.13',
+38 silly addNameRange     '0.4.14',
+38 silly addNameRange     '0.4.15',
+38 silly addNameRange     '0.4.16',
+38 silly addNameRange     '0.4.17',
+38 silly addNameRange     '0.5.0',
+38 silly addNameRange     '0.5.1',
+38 silly addNameRange     '0.5.2',
+38 silly addNameRange     '0.5.3',
+38 silly addNameRange     '0.5.4',
+38 silly addNameRange     '0.5.5',
+38 silly addNameRange     '0.5.6',
+38 silly addNameRange     '0.5.7',
+38 silly addNameRange     '0.5.8',
+38 silly addNameRange     '0.6.0',
+38 silly addNameRange     '0.6.1',
+38 silly addNameRange     '0.6.2',
+38 silly addNameRange     '0.6.3',
+38 silly addNameRange     '0.6.4',
+38 silly addNameRange     '0.6.5',
+38 silly addNameRange     '0.6.6',
+38 silly addNameRange     '0.7.0',
+38 silly addNameRange     '0.6.7',
+38 silly addNameRange     '0.6.8',
+38 silly addNameRange     '0.7.1',
+38 silly addNameRange     '0.7.3',
+38 silly addNameRange     '0.7.4',
+38 silly addNameRange     '0.7.5',
+38 silly addNameRange     '0.7.6',
+38 silly addNameRange     '0.7.7',
+38 silly addNameRange     '0.7.8',
+38 silly addNameRange     '0.7.9',
+38 silly addNameRange     '0.7.10',
+38 silly addNameRange     '0.7.11',
+38 silly addNameRange     '0.8.0',
+38 silly addNameRange     '0.8.1',
+38 silly addNameRange     '0.9.1',
+38 silly addNameRange     '0.10.0',
+38 silly addNameRange     '0.10.1',
+38 silly addNameRange     '0.10.2',
+38 silly addNameRange     '0.10.3',
+38 silly addNameRange     '0.10.4',
+38 silly addNameRange     '0.10.5',
+38 silly addNameRange     '0.10.6',
+38 silly addNameRange     '0.10.7',
+38 silly addNameRange     '0.11.0',
+38 silly addNameRange     '0.12.0',
+38 silly addNameRange     '0.12.2',
+38 silly addNameRange     '0.12.3',
+38 silly addNameRange     '0.13.0',
+38 silly addNameRange     '0.13.1',
+38 silly addNameRange     '0.13.2',
+38 silly addNameRange     '0.13.3',
+38 silly addNameRange     '0.14.0',
+38 silly addNameRange     '0.14.2',
+38 silly addNameRange     '0.14.3',
+38 silly addNameRange     '0.14.4',
+38 silly addNameRange     '0.15.0',
+38 silly addNameRange     '0.15.1',
+38 silly addNameRange     '0.15.2',
+38 silly addNameRange     '0.15.3',
+38 silly addNameRange     '0.15.4',
+38 silly addNameRange     '0.15.5',
+38 silly addNameRange     '0.16.0',
+38 silly addNameRange     '0.16.1',
+38 silly addNameRange     '0.16.2',
+38 silly addNameRange     '0.16.3',
+38 silly addNameRange     '0.18.0',
+38 silly addNameRange     '0.18.1',
+38 silly addNameRange     '0.18.2',
+38 silly addNameRange     '0.18.3',
+38 silly addNameRange     '0.18.4',
+38 silly addNameRange     '0.18.5',
+38 silly addNameRange     '0.18.6',
+38 silly addNameRange     '0.18.7',
+38 silly addNameRange     '1.0.1',
+38 silly addNameRange     '1.0.2',
+38 silly addNameRange     '1.0.3',
+38 silly addNameRange     '2.0.0',
+38 silly addNameRange     '2.0.1',
+38 silly addNameRange     '2.1.0',
+38 silly addNameRange     '2.1.1',
+38 silly addNameRange     '2.1.2',
+38 silly addNameRange     '2.2.0',
+38 silly addNameRange     '2.2.1',
+38 silly addNameRange     '2.2.2',
+38 silly addNameRange     '2.2.3',
+38 silly addNameRange     '2.2.4',
+38 silly addNameRange     '2.3.0',
+38 silly addNameRange     '2.3.1',
+38 silly addNameRange     '2.3.2',
+38 silly addNameRange     '2.3.3',
+38 silly addNameRange     '2.3.4',
+38 silly addNameRange     '2.3.5',
+38 silly addNameRange     '2.3.6',
+38 silly addNameRange     '2.3.8',
+38 silly addNameRange     '2.3.9',
+38 silly addNameRange     '2.3.10',
+38 silly addNameRange     '2.3.11',
+38 silly addNameRange     '2.3.12',
+38 silly addNameRange     '2.3.13',
+38 silly addNameRange     '3.0.0-beta1',
+38 silly addNameRange     '3.0.0-beta2',
+38 silly addNameRange     '3.0.0',
+38 silly addNameRange     '3.0.1',
+38 silly addNameRange     '3.0.3',
+38 silly addNameRange     '3.0.4',
+38 silly addNameRange     '3.0.5',
+38 silly addNameRange     '3.0.6',
+38 silly addNameRange     '3.0.7',
+38 silly addNameRange     '3.1.0',
+38 silly addNameRange     '3.1.1',
+38 silly addNameRange     '3.1.2',
+38 silly addNameRange     '3.2.1',
+38 silly addNameRange     '3.2.2',
+38 silly addNameRange     '3.2.3',
+38 silly addNameRange     '3.2.4',
+38 silly addNameRange     '3.2.5',
+38 silly addNameRange     '3.2.6',
+38 silly addNameRange     '3.2.7',
+38 silly addNameRange     '3.2.8',
+38 silly addNameRange     '3.3.0',
+38 silly addNameRange     '3.3.1',
+38 silly addNameRange     '3.3.2',
+38 silly addNameRange     '3.3.3',
+38 silly addNameRange     '3.3.4',
+38 silly addNameRange     '3.3.5',
+38 silly addNameRange     '3.4.0',
+38 silly addNameRange     '3.4.1',
+38 silly addNameRange     '3.4.2' ] ]
+39 silly addNamed laravel-elixir@3.4.2
+40 verbose addNamed "3.4.2" is a plain semver version for laravel-elixir
+41 silly cache afterAdd laravel-elixir@3.4.2
+42 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\laravel-elixir\3.4.2\package\package.json not in flight; writing
+43 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\laravel-elixir\3.4.2\package\package.json written
+44 silly install resolved [ { name: 'laravel-elixir',
+44 silly install resolved     version: '3.4.2',
+44 silly install resolved     description: 'Laravel Elixir Core',
+44 silly install resolved     main: 'index.js',
+44 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+44 silly install resolved     repository:
+44 silly install resolved      { type: 'git',
+44 silly install resolved        url: 'git+https://github.com/laravel/elixir.git' },
+44 silly install resolved     keywords: [ 'laravel', 'elixir', 'gulp' ],
+44 silly install resolved     author: { name: 'Taylor Otwell, Jeffrey Way' },
+44 silly install resolved     license: 'MIT',
+44 silly install resolved     homepage: 'https://github.com/laravel/elixir',
+44 silly install resolved     dependencies:
+44 silly install resolved      { babelify: '^6.1.3',
+44 silly install resolved        'browser-sync': '^2.7.10',
+44 silly install resolved        browserify: '^11.2.0',
+44 silly install resolved        del: '^1.2.0',
+44 silly install resolved        glob: '^5.0.14',
+44 silly install resolved        'gulp-autoprefixer': '^2.3.1',
+44 silly install resolved        'gulp-babel': '^5.1.0',
+44 silly install resolved        'gulp-batch': '^1.0.5',
+44 silly install resolved        'gulp-coffee': '^2.3.1',
+44 silly install resolved        'gulp-concat': '^2.6.0',
+44 silly install resolved        'gulp-if': '^1.2.5',
+44 silly install resolved        'gulp-less': '^3.0.3',
+44 silly install resolved        'gulp-load-plugins': '^1.0.0-rc.1',
+44 silly install resolved        'gulp-minify-css': '^1.2.0',
+44 silly install resolved        'gulp-notify': '^2.2.0',
+44 silly install resolved        'gulp-phpspec': '^0.5.3',
+44 silly install resolved        'gulp-phpunit': '0.9.0',
+44 silly install resolved        'gulp-rename': '^1.2.2',
+44 silly install resolved        'gulp-rev': '^5.1.0',
+44 silly install resolved        'gulp-rev-replace': '^0.4.2',
+44 silly install resolved        'gulp-sass': '^2.0.3',
+44 silly install resolved        'gulp-sourcemaps': '^1.5.2',
+44 silly install resolved        'gulp-uglify': '^1.4.2',
+44 silly install resolved        'gulp-util': '^3.0.6',
+44 silly install resolved        'gulp-watch': '^4.2.4',
+44 silly install resolved        'insert-css': '^0.2.0',
+44 silly install resolved        'merge-stream': '^0.1.8',
+44 silly install resolved        'parse-filepath': '^0.5.0',
+44 silly install resolved        partialify: '^3.1.3',
+44 silly install resolved        path: '^0.11.14',
+44 silly install resolved        'require-dir': '^0.3.0',
+44 silly install resolved        'run-sequence': '^1.1.1',
+44 silly install resolved        underscore: '^1.8.3',
+44 silly install resolved        'underscore-deep-extend': '0.0.5',
+44 silly install resolved        'vinyl-buffer': '^1.0.0',
+44 silly install resolved        'vinyl-paths': '^1.0.0',
+44 silly install resolved        'vinyl-source-stream': '^1.1.0',
+44 silly install resolved        vueify: '^4.0.1',
+44 silly install resolved        watchify: '^3.2.3' },
+44 silly install resolved     devDependencies:
+44 silly install resolved      { gulp: '^3.8.8',
+44 silly install resolved        chai: '^3.2.0',
+44 silly install resolved        mocha: '^2.2.5',
+44 silly install resolved        rimraf: '^2.4.2' },
+44 silly install resolved     gitHead: 'd901479b16041166278caf86ac5084577ed1695b',
+44 silly install resolved     bugs: { url: 'https://github.com/laravel/elixir/issues' },
+44 silly install resolved     _id: 'laravel-elixir@3.4.2',
+44 silly install resolved     _shasum: 'dd6446cfc388d1eeff6946e77b4fdcb6841cbb83',
+44 silly install resolved     _from: 'laravel-elixir@>=3.0.0 <4.0.0',
+44 silly install resolved     _npmVersion: '2.10.1',
+44 silly install resolved     _nodeVersion: '0.12.4',
+44 silly install resolved     _npmUser: { name: 'jeffreyway', email: 'jeffrey@laracasts.com' },
+44 silly install resolved     maintainers: [ [Object] ],
+44 silly install resolved     dist:
+44 silly install resolved      { shasum: 'dd6446cfc388d1eeff6946e77b4fdcb6841cbb83',
+44 silly install resolved        tarball: 'http://registry.npmjs.org/laravel-elixir/-/laravel-elixir-3.4.2.tgz' },
+44 silly install resolved     directories: {},
+44 silly install resolved     _resolved: 'http://registry.npmjs.org/laravel-elixir/-/laravel-elixir-3.4.2.tgz',
+44 silly install resolved     readme: 'ERROR: No README data found!' } ]
+45 info install laravel-elixir@3.4.2 into D:\library
+46 info installOne laravel-elixir@3.4.2
+47 verbose installOne of laravel-elixir to D:\library not in flight; installing
+48 verbose lock using C:\Users\Daniel\AppData\Roaming\npm-cache\_locks\laravel-elixir-d9971966dd6c9bb3.lock for D:\library\node_modules\laravel-elixir
+49 silly install write writing laravel-elixir 3.4.2 to D:\library\node_modules\laravel-elixir
+50 verbose unbuild node_modules\laravel-elixir
+51 silly gentlyRm D:\library\node_modules\laravel-elixir is being purged from base D:\library
+52 verbose gentlyRm don't care about contents; nuking D:\library\node_modules\laravel-elixir
+53 verbose tar unpack C:\Users\Daniel\AppData\Roaming\npm-cache\laravel-elixir\3.4.2\package.tgz
+54 verbose tar unpacking to D:\library\node_modules\laravel-elixir
+55 silly gentlyRm D:\library\node_modules\laravel-elixir is being purged
+56 verbose gentlyRm don't care about contents; nuking D:\library\node_modules\laravel-elixir
+57 silly gunzTarPerm modes [ '777', '666' ]
+58 silly gunzTarPerm extractEntry package.json
+59 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+60 silly gunzTarPerm extractEntry .npmignore
+61 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+62 silly gunzTarPerm extractEntry Task.js
+63 silly gunzTarPerm modified mode [ 'Task.js', 420, 438 ]
+64 silly gunzTarPerm extractEntry Config.js
+65 silly gunzTarPerm modified mode [ 'Config.js', 420, 438 ]
+66 silly gunzTarPerm extractEntry GulpPaths.js
+67 silly gunzTarPerm modified mode [ 'GulpPaths.js', 420, 438 ]
+68 silly gunzTarPerm extractEntry Logger.js
+69 silly gunzTarPerm modified mode [ 'Logger.js', 420, 438 ]
+70 silly gunzTarPerm extractEntry Notification.js
+71 silly gunzTarPerm modified mode [ 'Notification.js', 420, 438 ]
+72 silly gunzTarPerm extractEntry index.js
+73 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+74 silly gunzTarPerm extractEntry elixir-test-app/copy/bar/bar.txt
+75 silly gunzTarPerm modified mode [ 'elixir-test-app/copy/bar/bar.txt', 420, 438 ]
+76 silly gunzTarPerm extractEntry elixir-test-app/copy/foo/foo.txt
+77 silly gunzTarPerm modified mode [ 'elixir-test-app/copy/foo/foo.txt', 420, 438 ]
+78 silly gunzTarPerm extractEntry elixir-test-app/resources/assets/coffee/module.coffee
+79 silly gunzTarPerm modified mode [ 'elixir-test-app/resources/assets/coffee/module.coffee',
+79 silly gunzTarPerm   420,
+79 silly gunzTarPerm   438 ]
+80 silly gunzTarPerm extractEntry elixir-test-app/resources/assets/css/one.css
+81 silly gunzTarPerm modified mode [ 'elixir-test-app/resources/assets/css/one.css', 420, 438 ]
+82 silly gunzTarPerm extractEntry elixir-test-app/resources/assets/css/two.css
+83 silly gunzTarPerm modified mode [ 'elixir-test-app/resources/assets/css/two.css', 420, 438 ]
+84 silly gunzTarPerm extractEntry elixir-test-app/resources/assets/sass/another.scss
+85 silly gunzTarPerm modified mode [ 'elixir-test-app/resources/assets/sass/another.scss',
+85 silly gunzTarPerm   420,
+85 silly gunzTarPerm   438 ]
+86 silly gunzTarPerm extractEntry elixir-test-app/resources/assets/sass/app.scss
+87 silly gunzTarPerm modified mode [ 'elixir-test-app/resources/assets/sass/app.scss', 420, 438 ]
+88 silly gunzTarPerm extractEntry elixir-test-app/test/GulpPaths.js
+89 silly gunzTarPerm modified mode [ 'elixir-test-app/test/GulpPaths.js', 420, 438 ]
+90 silly gunzTarPerm extractEntry elixir-test-app/test/coffee.js
+91 silly gunzTarPerm modified mode [ 'elixir-test-app/test/coffee.js', 420, 438 ]
+92 silly gunzTarPerm extractEntry elixir-test-app/test/copy.js
+93 silly gunzTarPerm modified mode [ 'elixir-test-app/test/copy.js', 420, 438 ]
+94 silly gunzTarPerm extractEntry elixir-test-app/test/sass.js
+95 silly gunzTarPerm modified mode [ 'elixir-test-app/test/sass.js', 420, 438 ]
+96 silly gunzTarPerm extractEntry elixir-test-app/test/styles.js
+97 silly gunzTarPerm modified mode [ 'elixir-test-app/test/styles.js', 420, 438 ]
+98 silly gunzTarPerm extractEntry icons/fail.png
+99 silly gunzTarPerm modified mode [ 'icons/fail.png', 420, 438 ]
+100 silly gunzTarPerm extractEntry icons/laravel.png
+101 silly gunzTarPerm modified mode [ 'icons/laravel.png', 420, 438 ]
+102 silly gunzTarPerm extractEntry icons/pass.png
+103 silly gunzTarPerm modified mode [ 'icons/pass.png', 420, 438 ]
+104 silly gunzTarPerm extractEntry tasks/browserify.js
+105 silly gunzTarPerm modified mode [ 'tasks/browserify.js', 420, 438 ]
+106 silly gunzTarPerm extractEntry tasks/default.js
+107 silly gunzTarPerm modified mode [ 'tasks/default.js', 420, 438 ]
+108 silly gunzTarPerm extractEntry tasks/less.js
+109 silly gunzTarPerm modified mode [ 'tasks/less.js', 420, 438 ]
+110 silly gunzTarPerm extractEntry tasks/phpspec.js
+111 silly gunzTarPerm modified mode [ 'tasks/phpspec.js', 420, 438 ]
+112 silly gunzTarPerm extractEntry tasks/copy.js
+113 silly gunzTarPerm modified mode [ 'tasks/copy.js', 420, 438 ]
+114 silly gunzTarPerm extractEntry tasks/browsersync.js
+115 silly gunzTarPerm modified mode [ 'tasks/browsersync.js', 420, 438 ]
+116 silly gunzTarPerm extractEntry tasks/scripts.js
+117 silly gunzTarPerm modified mode [ 'tasks/scripts.js', 420, 438 ]
+118 silly gunzTarPerm extractEntry tasks/version.js
+119 silly gunzTarPerm modified mode [ 'tasks/version.js', 420, 438 ]
+120 silly gunzTarPerm extractEntry tasks/styles.js
+121 silly gunzTarPerm modified mode [ 'tasks/styles.js', 420, 438 ]
+122 silly gunzTarPerm extractEntry tasks/task.js
+123 silly gunzTarPerm modified mode [ 'tasks/task.js', 420, 438 ]
+124 silly gunzTarPerm extractEntry tasks/coffee.js
+125 silly gunzTarPerm modified mode [ 'tasks/coffee.js', 420, 438 ]
+126 silly gunzTarPerm extractEntry tasks/tdd.js
+127 silly gunzTarPerm modified mode [ 'tasks/tdd.js', 420, 438 ]
+128 silly gunzTarPerm extractEntry tasks/phpunit.js
+129 silly gunzTarPerm modified mode [ 'tasks/phpunit.js', 420, 438 ]
+130 silly gunzTarPerm extractEntry tasks/watch.js
+131 silly gunzTarPerm modified mode [ 'tasks/watch.js', 420, 438 ]
+132 silly gunzTarPerm extractEntry tasks/sass.js
+133 silly gunzTarPerm modified mode [ 'tasks/sass.js', 420, 438 ]
+134 silly gunzTarPerm extractEntry tasks/shared/Css.js
+135 silly gunzTarPerm modified mode [ 'tasks/shared/Css.js', 420, 438 ]
+136 silly gunzTarPerm extractEntry tasks/shared/Tests.js
+137 silly gunzTarPerm modified mode [ 'tasks/shared/Tests.js', 420, 438 ]
+138 silly gunzTarPerm extractEntry readme.md
+139 silly gunzTarPerm modified mode [ 'readme.md', 420, 438 ]
+140 verbose write writing to D:\library\node_modules\laravel-elixir\package.json
+141 info preinstall laravel-elixir@3.4.2
+142 verbose readDependencies loading dependencies from D:\library\node_modules\laravel-elixir\package.json
+143 silly prepareForInstallMany adding babelify@^6.1.3 from laravel-elixir dependencies
+144 silly prepareForInstallMany adding browser-sync@^2.7.10 from laravel-elixir dependencies
+145 silly prepareForInstallMany adding browserify@^11.2.0 from laravel-elixir dependencies
+146 silly prepareForInstallMany adding del@^1.2.0 from laravel-elixir dependencies
+147 silly prepareForInstallMany adding glob@^5.0.14 from laravel-elixir dependencies
+148 silly prepareForInstallMany adding gulp-autoprefixer@^2.3.1 from laravel-elixir dependencies
+149 silly prepareForInstallMany adding gulp-babel@^5.1.0 from laravel-elixir dependencies
+150 silly prepareForInstallMany adding gulp-batch@^1.0.5 from laravel-elixir dependencies
+151 silly prepareForInstallMany adding gulp-coffee@^2.3.1 from laravel-elixir dependencies
+152 silly prepareForInstallMany adding gulp-concat@^2.6.0 from laravel-elixir dependencies
+153 silly prepareForInstallMany adding gulp-if@^1.2.5 from laravel-elixir dependencies
+154 silly prepareForInstallMany adding gulp-less@^3.0.3 from laravel-elixir dependencies
+155 silly prepareForInstallMany adding gulp-load-plugins@^1.0.0-rc.1 from laravel-elixir dependencies
+156 silly prepareForInstallMany adding gulp-minify-css@^1.2.0 from laravel-elixir dependencies
+157 silly prepareForInstallMany adding gulp-notify@^2.2.0 from laravel-elixir dependencies
+158 silly prepareForInstallMany adding gulp-phpspec@^0.5.3 from laravel-elixir dependencies
+159 silly prepareForInstallMany adding gulp-phpunit@0.9.0 from laravel-elixir dependencies
+160 silly prepareForInstallMany adding gulp-rename@^1.2.2 from laravel-elixir dependencies
+161 silly prepareForInstallMany adding gulp-rev@^5.1.0 from laravel-elixir dependencies
+162 silly prepareForInstallMany adding gulp-rev-replace@^0.4.2 from laravel-elixir dependencies
+163 silly prepareForInstallMany adding gulp-sass@^2.0.3 from laravel-elixir dependencies
+164 silly prepareForInstallMany adding gulp-sourcemaps@^1.5.2 from laravel-elixir dependencies
+165 silly prepareForInstallMany adding gulp-uglify@^1.4.2 from laravel-elixir dependencies
+166 silly prepareForInstallMany adding gulp-util@^3.0.6 from laravel-elixir dependencies
+167 silly prepareForInstallMany adding gulp-watch@^4.2.4 from laravel-elixir dependencies
+168 silly prepareForInstallMany adding insert-css@^0.2.0 from laravel-elixir dependencies
+169 silly prepareForInstallMany adding merge-stream@^0.1.8 from laravel-elixir dependencies
+170 silly prepareForInstallMany adding parse-filepath@^0.5.0 from laravel-elixir dependencies
+171 silly prepareForInstallMany adding partialify@^3.1.3 from laravel-elixir dependencies
+172 silly prepareForInstallMany adding path@^0.11.14 from laravel-elixir dependencies
+173 silly prepareForInstallMany adding require-dir@^0.3.0 from laravel-elixir dependencies
+174 silly prepareForInstallMany adding run-sequence@^1.1.1 from laravel-elixir dependencies
+175 silly prepareForInstallMany adding underscore@^1.8.3 from laravel-elixir dependencies
+176 silly prepareForInstallMany adding underscore-deep-extend@0.0.5 from laravel-elixir dependencies
+177 silly prepareForInstallMany adding vinyl-buffer@^1.0.0 from laravel-elixir dependencies
+178 silly prepareForInstallMany adding vinyl-paths@^1.0.0 from laravel-elixir dependencies
+179 silly prepareForInstallMany adding vinyl-source-stream@^1.1.0 from laravel-elixir dependencies
+180 silly prepareForInstallMany adding vueify@^4.0.1 from laravel-elixir dependencies
+181 silly prepareForInstallMany adding watchify@^3.2.3 from laravel-elixir dependencies
+182 verbose readDependencies loading dependencies from D:\library\node_modules\laravel-elixir\package.json
+183 silly cache add args [ 'del@^1.2.0', null ]
+184 verbose cache add spec del@^1.2.0
+185 silly cache add parsed spec Result {
+185 silly cache add   raw: 'del@^1.2.0',
+185 silly cache add   scope: null,
+185 silly cache add   name: 'del',
+185 silly cache add   rawSpec: '^1.2.0',
+185 silly cache add   spec: '>=1.2.0 <2.0.0',
+185 silly cache add   type: 'range' }
+186 silly addNamed del@>=1.2.0 <2.0.0
+187 verbose addNamed ">=1.2.0 <2.0.0" is a valid semver range for del
+188 silly addNameRange { name: 'del', range: '>=1.2.0 <2.0.0', hasData: false }
+189 silly mapToRegistry name del
+190 silly mapToRegistry using default registry
+191 silly mapToRegistry registry http://registry.npmjs.org/
+192 silly mapToRegistry uri http://registry.npmjs.org/del
+193 verbose addNameRange registry:http://registry.npmjs.org/del not in flight; fetching
+194 silly cache add args [ 'glob@^5.0.14', null ]
+195 verbose cache add spec glob@^5.0.14
+196 silly cache add parsed spec Result {
+196 silly cache add   raw: 'glob@^5.0.14',
+196 silly cache add   scope: null,
+196 silly cache add   name: 'glob',
+196 silly cache add   rawSpec: '^5.0.14',
+196 silly cache add   spec: '>=5.0.14 <6.0.0',
+196 silly cache add   type: 'range' }
+197 silly addNamed glob@>=5.0.14 <6.0.0
+198 verbose addNamed ">=5.0.14 <6.0.0" is a valid semver range for glob
+199 silly addNameRange { name: 'glob', range: '>=5.0.14 <6.0.0', hasData: false }
+200 silly mapToRegistry name glob
+201 silly mapToRegistry using default registry
+202 silly mapToRegistry registry http://registry.npmjs.org/
+203 silly mapToRegistry uri http://registry.npmjs.org/glob
+204 verbose addNameRange registry:http://registry.npmjs.org/glob not in flight; fetching
+205 silly cache add args [ 'gulp-autoprefixer@^2.3.1', null ]
+206 verbose cache add spec gulp-autoprefixer@^2.3.1
+207 silly cache add parsed spec Result {
+207 silly cache add   raw: 'gulp-autoprefixer@^2.3.1',
+207 silly cache add   scope: null,
+207 silly cache add   name: 'gulp-autoprefixer',
+207 silly cache add   rawSpec: '^2.3.1',
+207 silly cache add   spec: '>=2.3.1 <3.0.0',
+207 silly cache add   type: 'range' }
+208 silly addNamed gulp-autoprefixer@>=2.3.1 <3.0.0
+209 verbose addNamed ">=2.3.1 <3.0.0" is a valid semver range for gulp-autoprefixer
+210 silly addNameRange { name: 'gulp-autoprefixer',
+210 silly addNameRange   range: '>=2.3.1 <3.0.0',
+210 silly addNameRange   hasData: false }
+211 silly mapToRegistry name gulp-autoprefixer
+212 silly mapToRegistry using default registry
+213 silly mapToRegistry registry http://registry.npmjs.org/
+214 silly mapToRegistry uri http://registry.npmjs.org/gulp-autoprefixer
+215 verbose addNameRange registry:http://registry.npmjs.org/gulp-autoprefixer not in flight; fetching
+216 silly cache add args [ 'gulp-babel@^5.1.0', null ]
+217 verbose cache add spec gulp-babel@^5.1.0
+218 silly cache add parsed spec Result {
+218 silly cache add   raw: 'gulp-babel@^5.1.0',
+218 silly cache add   scope: null,
+218 silly cache add   name: 'gulp-babel',
+218 silly cache add   rawSpec: '^5.1.0',
+218 silly cache add   spec: '>=5.1.0 <6.0.0',
+218 silly cache add   type: 'range' }
+219 silly addNamed gulp-babel@>=5.1.0 <6.0.0
+220 verbose addNamed ">=5.1.0 <6.0.0" is a valid semver range for gulp-babel
+221 silly addNameRange { name: 'gulp-babel', range: '>=5.1.0 <6.0.0', hasData: false }
+222 silly mapToRegistry name gulp-babel
+223 silly mapToRegistry using default registry
+224 silly mapToRegistry registry http://registry.npmjs.org/
+225 silly mapToRegistry uri http://registry.npmjs.org/gulp-babel
+226 verbose addNameRange registry:http://registry.npmjs.org/gulp-babel not in flight; fetching
+227 silly cache add args [ 'gulp-batch@^1.0.5', null ]
+228 verbose cache add spec gulp-batch@^1.0.5
+229 silly cache add parsed spec Result {
+229 silly cache add   raw: 'gulp-batch@^1.0.5',
+229 silly cache add   scope: null,
+229 silly cache add   name: 'gulp-batch',
+229 silly cache add   rawSpec: '^1.0.5',
+229 silly cache add   spec: '>=1.0.5 <2.0.0',
+229 silly cache add   type: 'range' }
+230 silly addNamed gulp-batch@>=1.0.5 <2.0.0
+231 verbose addNamed ">=1.0.5 <2.0.0" is a valid semver range for gulp-batch
+232 silly addNameRange { name: 'gulp-batch', range: '>=1.0.5 <2.0.0', hasData: false }
+233 silly mapToRegistry name gulp-batch
+234 silly mapToRegistry using default registry
+235 silly mapToRegistry registry http://registry.npmjs.org/
+236 silly mapToRegistry uri http://registry.npmjs.org/gulp-batch
+237 verbose addNameRange registry:http://registry.npmjs.org/gulp-batch not in flight; fetching
+238 silly cache add args [ 'gulp-coffee@^2.3.1', null ]
+239 verbose cache add spec gulp-coffee@^2.3.1
+240 silly cache add parsed spec Result {
+240 silly cache add   raw: 'gulp-coffee@^2.3.1',
+240 silly cache add   scope: null,
+240 silly cache add   name: 'gulp-coffee',
+240 silly cache add   rawSpec: '^2.3.1',
+240 silly cache add   spec: '>=2.3.1 <3.0.0',
+240 silly cache add   type: 'range' }
+241 silly addNamed gulp-coffee@>=2.3.1 <3.0.0
+242 verbose addNamed ">=2.3.1 <3.0.0" is a valid semver range for gulp-coffee
+243 silly addNameRange { name: 'gulp-coffee', range: '>=2.3.1 <3.0.0', hasData: false }
+244 silly mapToRegistry name gulp-coffee
+245 silly mapToRegistry using default registry
+246 silly mapToRegistry registry http://registry.npmjs.org/
+247 silly mapToRegistry uri http://registry.npmjs.org/gulp-coffee
+248 verbose addNameRange registry:http://registry.npmjs.org/gulp-coffee not in flight; fetching
+249 silly cache add args [ 'gulp-concat@^2.6.0', null ]
+250 verbose cache add spec gulp-concat@^2.6.0
+251 silly cache add parsed spec Result {
+251 silly cache add   raw: 'gulp-concat@^2.6.0',
+251 silly cache add   scope: null,
+251 silly cache add   name: 'gulp-concat',
+251 silly cache add   rawSpec: '^2.6.0',
+251 silly cache add   spec: '>=2.6.0 <3.0.0',
+251 silly cache add   type: 'range' }
+252 silly addNamed gulp-concat@>=2.6.0 <3.0.0
+253 verbose addNamed ">=2.6.0 <3.0.0" is a valid semver range for gulp-concat
+254 silly addNameRange { name: 'gulp-concat', range: '>=2.6.0 <3.0.0', hasData: false }
+255 silly mapToRegistry name gulp-concat
+256 silly mapToRegistry using default registry
+257 silly mapToRegistry registry http://registry.npmjs.org/
+258 silly mapToRegistry uri http://registry.npmjs.org/gulp-concat
+259 verbose addNameRange registry:http://registry.npmjs.org/gulp-concat not in flight; fetching
+260 silly cache add args [ 'gulp-if@^1.2.5', null ]
+261 verbose cache add spec gulp-if@^1.2.5
+262 silly cache add parsed spec Result {
+262 silly cache add   raw: 'gulp-if@^1.2.5',
+262 silly cache add   scope: null,
+262 silly cache add   name: 'gulp-if',
+262 silly cache add   rawSpec: '^1.2.5',
+262 silly cache add   spec: '>=1.2.5 <2.0.0',
+262 silly cache add   type: 'range' }
+263 silly addNamed gulp-if@>=1.2.5 <2.0.0
+264 verbose addNamed ">=1.2.5 <2.0.0" is a valid semver range for gulp-if
+265 silly addNameRange { name: 'gulp-if', range: '>=1.2.5 <2.0.0', hasData: false }
+266 silly mapToRegistry name gulp-if
+267 silly mapToRegistry using default registry
+268 silly mapToRegistry registry http://registry.npmjs.org/
+269 silly mapToRegistry uri http://registry.npmjs.org/gulp-if
+270 verbose addNameRange registry:http://registry.npmjs.org/gulp-if not in flight; fetching
+271 silly cache add args [ 'gulp-less@^3.0.3', null ]
+272 verbose cache add spec gulp-less@^3.0.3
+273 silly cache add parsed spec Result {
+273 silly cache add   raw: 'gulp-less@^3.0.3',
+273 silly cache add   scope: null,
+273 silly cache add   name: 'gulp-less',
+273 silly cache add   rawSpec: '^3.0.3',
+273 silly cache add   spec: '>=3.0.3 <4.0.0',
+273 silly cache add   type: 'range' }
+274 silly addNamed gulp-less@>=3.0.3 <4.0.0
+275 verbose addNamed ">=3.0.3 <4.0.0" is a valid semver range for gulp-less
+276 silly addNameRange { name: 'gulp-less', range: '>=3.0.3 <4.0.0', hasData: false }
+277 silly mapToRegistry name gulp-less
+278 silly mapToRegistry using default registry
+279 silly mapToRegistry registry http://registry.npmjs.org/
+280 silly mapToRegistry uri http://registry.npmjs.org/gulp-less
+281 verbose addNameRange registry:http://registry.npmjs.org/gulp-less not in flight; fetching
+282 silly cache add args [ 'gulp-load-plugins@^1.0.0-rc.1', null ]
+283 verbose cache add spec gulp-load-plugins@^1.0.0-rc.1
+284 silly cache add parsed spec Result {
+284 silly cache add   raw: 'gulp-load-plugins@^1.0.0-rc.1',
+284 silly cache add   scope: null,
+284 silly cache add   name: 'gulp-load-plugins',
+284 silly cache add   rawSpec: '^1.0.0-rc.1',
+284 silly cache add   spec: '>=1.0.0-rc.1 <2.0.0',
+284 silly cache add   type: 'range' }
+285 silly addNamed gulp-load-plugins@>=1.0.0-rc.1 <2.0.0
+286 verbose addNamed ">=1.0.0-rc.1 <2.0.0" is a valid semver range for gulp-load-plugins
+287 silly addNameRange { name: 'gulp-load-plugins',
+287 silly addNameRange   range: '>=1.0.0-rc.1 <2.0.0',
+287 silly addNameRange   hasData: false }
+288 silly mapToRegistry name gulp-load-plugins
+289 silly mapToRegistry using default registry
+290 silly mapToRegistry registry http://registry.npmjs.org/
+291 silly mapToRegistry uri http://registry.npmjs.org/gulp-load-plugins
+292 verbose addNameRange registry:http://registry.npmjs.org/gulp-load-plugins not in flight; fetching
+293 silly cache add args [ 'gulp-minify-css@^1.2.0', null ]
+294 verbose cache add spec gulp-minify-css@^1.2.0
+295 silly cache add parsed spec Result {
+295 silly cache add   raw: 'gulp-minify-css@^1.2.0',
+295 silly cache add   scope: null,
+295 silly cache add   name: 'gulp-minify-css',
+295 silly cache add   rawSpec: '^1.2.0',
+295 silly cache add   spec: '>=1.2.0 <2.0.0',
+295 silly cache add   type: 'range' }
+296 silly addNamed gulp-minify-css@>=1.2.0 <2.0.0
+297 verbose addNamed ">=1.2.0 <2.0.0" is a valid semver range for gulp-minify-css
+298 silly addNameRange { name: 'gulp-minify-css',
+298 silly addNameRange   range: '>=1.2.0 <2.0.0',
+298 silly addNameRange   hasData: false }
+299 silly mapToRegistry name gulp-minify-css
+300 silly mapToRegistry using default registry
+301 silly mapToRegistry registry http://registry.npmjs.org/
+302 silly mapToRegistry uri http://registry.npmjs.org/gulp-minify-css
+303 verbose addNameRange registry:http://registry.npmjs.org/gulp-minify-css not in flight; fetching
+304 silly cache add args [ 'gulp-notify@^2.2.0', null ]
+305 verbose cache add spec gulp-notify@^2.2.0
+306 silly cache add parsed spec Result {
+306 silly cache add   raw: 'gulp-notify@^2.2.0',
+306 silly cache add   scope: null,
+306 silly cache add   name: 'gulp-notify',
+306 silly cache add   rawSpec: '^2.2.0',
+306 silly cache add   spec: '>=2.2.0 <3.0.0',
+306 silly cache add   type: 'range' }
+307 silly addNamed gulp-notify@>=2.2.0 <3.0.0
+308 verbose addNamed ">=2.2.0 <3.0.0" is a valid semver range for gulp-notify
+309 silly addNameRange { name: 'gulp-notify', range: '>=2.2.0 <3.0.0', hasData: false }
+310 silly mapToRegistry name gulp-notify
+311 silly mapToRegistry using default registry
+312 silly mapToRegistry registry http://registry.npmjs.org/
+313 silly mapToRegistry uri http://registry.npmjs.org/gulp-notify
+314 verbose addNameRange registry:http://registry.npmjs.org/gulp-notify not in flight; fetching
+315 silly cache add args [ 'gulp-phpspec@^0.5.3', null ]
+316 verbose cache add spec gulp-phpspec@^0.5.3
+317 silly cache add parsed spec Result {
+317 silly cache add   raw: 'gulp-phpspec@^0.5.3',
+317 silly cache add   scope: null,
+317 silly cache add   name: 'gulp-phpspec',
+317 silly cache add   rawSpec: '^0.5.3',
+317 silly cache add   spec: '>=0.5.3 <0.6.0',
+317 silly cache add   type: 'range' }
+318 silly addNamed gulp-phpspec@>=0.5.3 <0.6.0
+319 verbose addNamed ">=0.5.3 <0.6.0" is a valid semver range for gulp-phpspec
+320 silly addNameRange { name: 'gulp-phpspec', range: '>=0.5.3 <0.6.0', hasData: false }
+321 silly mapToRegistry name gulp-phpspec
+322 silly mapToRegistry using default registry
+323 silly mapToRegistry registry http://registry.npmjs.org/
+324 silly mapToRegistry uri http://registry.npmjs.org/gulp-phpspec
+325 verbose addNameRange registry:http://registry.npmjs.org/gulp-phpspec not in flight; fetching
+326 silly cache add args [ 'gulp-phpunit@0.9.0', null ]
+327 verbose cache add spec gulp-phpunit@0.9.0
+328 silly cache add parsed spec Result {
+328 silly cache add   raw: 'gulp-phpunit@0.9.0',
+328 silly cache add   scope: null,
+328 silly cache add   name: 'gulp-phpunit',
+328 silly cache add   rawSpec: '0.9.0',
+328 silly cache add   spec: '0.9.0',
+328 silly cache add   type: 'version' }
+329 silly addNamed gulp-phpunit@0.9.0
+330 verbose addNamed "0.9.0" is a plain semver version for gulp-phpunit
+331 silly mapToRegistry name gulp-phpunit
+332 silly mapToRegistry using default registry
+333 silly mapToRegistry registry http://registry.npmjs.org/
+334 silly mapToRegistry uri http://registry.npmjs.org/gulp-phpunit
+335 verbose addNameVersion registry:http://registry.npmjs.org/gulp-phpunit not in flight; fetching
+336 silly cache add args [ 'gulp-rename@^1.2.2', null ]
+337 verbose cache add spec gulp-rename@^1.2.2
+338 silly cache add parsed spec Result {
+338 silly cache add   raw: 'gulp-rename@^1.2.2',
+338 silly cache add   scope: null,
+338 silly cache add   name: 'gulp-rename',
+338 silly cache add   rawSpec: '^1.2.2',
+338 silly cache add   spec: '>=1.2.2 <2.0.0',
+338 silly cache add   type: 'range' }
+339 silly addNamed gulp-rename@>=1.2.2 <2.0.0
+340 verbose addNamed ">=1.2.2 <2.0.0" is a valid semver range for gulp-rename
+341 silly addNameRange { name: 'gulp-rename', range: '>=1.2.2 <2.0.0', hasData: false }
+342 silly mapToRegistry name gulp-rename
+343 silly mapToRegistry using default registry
+344 silly mapToRegistry registry http://registry.npmjs.org/
+345 silly mapToRegistry uri http://registry.npmjs.org/gulp-rename
+346 verbose addNameRange registry:http://registry.npmjs.org/gulp-rename not in flight; fetching
+347 silly cache add args [ 'gulp-rev@^5.1.0', null ]
+348 verbose cache add spec gulp-rev@^5.1.0
+349 silly cache add parsed spec Result {
+349 silly cache add   raw: 'gulp-rev@^5.1.0',
+349 silly cache add   scope: null,
+349 silly cache add   name: 'gulp-rev',
+349 silly cache add   rawSpec: '^5.1.0',
+349 silly cache add   spec: '>=5.1.0 <6.0.0',
+349 silly cache add   type: 'range' }
+350 silly addNamed gulp-rev@>=5.1.0 <6.0.0
+351 verbose addNamed ">=5.1.0 <6.0.0" is a valid semver range for gulp-rev
+352 silly addNameRange { name: 'gulp-rev', range: '>=5.1.0 <6.0.0', hasData: false }
+353 silly mapToRegistry name gulp-rev
+354 silly mapToRegistry using default registry
+355 silly mapToRegistry registry http://registry.npmjs.org/
+356 silly mapToRegistry uri http://registry.npmjs.org/gulp-rev
+357 verbose addNameRange registry:http://registry.npmjs.org/gulp-rev not in flight; fetching
+358 silly cache add args [ 'gulp-rev-replace@^0.4.2', null ]
+359 verbose cache add spec gulp-rev-replace@^0.4.2
+360 silly cache add parsed spec Result {
+360 silly cache add   raw: 'gulp-rev-replace@^0.4.2',
+360 silly cache add   scope: null,
+360 silly cache add   name: 'gulp-rev-replace',
+360 silly cache add   rawSpec: '^0.4.2',
+360 silly cache add   spec: '>=0.4.2 <0.5.0',
+360 silly cache add   type: 'range' }
+361 silly addNamed gulp-rev-replace@>=0.4.2 <0.5.0
+362 verbose addNamed ">=0.4.2 <0.5.0" is a valid semver range for gulp-rev-replace
+363 silly addNameRange { name: 'gulp-rev-replace',
+363 silly addNameRange   range: '>=0.4.2 <0.5.0',
+363 silly addNameRange   hasData: false }
+364 silly mapToRegistry name gulp-rev-replace
+365 silly mapToRegistry using default registry
+366 silly mapToRegistry registry http://registry.npmjs.org/
+367 silly mapToRegistry uri http://registry.npmjs.org/gulp-rev-replace
+368 verbose addNameRange registry:http://registry.npmjs.org/gulp-rev-replace not in flight; fetching
+369 silly cache add args [ 'gulp-sass@^2.0.3', null ]
+370 verbose cache add spec gulp-sass@^2.0.3
+371 silly cache add parsed spec Result {
+371 silly cache add   raw: 'gulp-sass@^2.0.3',
+371 silly cache add   scope: null,
+371 silly cache add   name: 'gulp-sass',
+371 silly cache add   rawSpec: '^2.0.3',
+371 silly cache add   spec: '>=2.0.3 <3.0.0',
+371 silly cache add   type: 'range' }
+372 silly addNamed gulp-sass@>=2.0.3 <3.0.0
+373 verbose addNamed ">=2.0.3 <3.0.0" is a valid semver range for gulp-sass
+374 silly addNameRange { name: 'gulp-sass', range: '>=2.0.3 <3.0.0', hasData: false }
+375 silly mapToRegistry name gulp-sass
+376 silly mapToRegistry using default registry
+377 silly mapToRegistry registry http://registry.npmjs.org/
+378 silly mapToRegistry uri http://registry.npmjs.org/gulp-sass
+379 verbose addNameRange registry:http://registry.npmjs.org/gulp-sass not in flight; fetching
+380 silly cache add args [ 'gulp-sourcemaps@^1.5.2', null ]
+381 verbose cache add spec gulp-sourcemaps@^1.5.2
+382 silly cache add parsed spec Result {
+382 silly cache add   raw: 'gulp-sourcemaps@^1.5.2',
+382 silly cache add   scope: null,
+382 silly cache add   name: 'gulp-sourcemaps',
+382 silly cache add   rawSpec: '^1.5.2',
+382 silly cache add   spec: '>=1.5.2 <2.0.0',
+382 silly cache add   type: 'range' }
+383 silly addNamed gulp-sourcemaps@>=1.5.2 <2.0.0
+384 verbose addNamed ">=1.5.2 <2.0.0" is a valid semver range for gulp-sourcemaps
+385 silly addNameRange { name: 'gulp-sourcemaps',
+385 silly addNameRange   range: '>=1.5.2 <2.0.0',
+385 silly addNameRange   hasData: false }
+386 silly mapToRegistry name gulp-sourcemaps
+387 silly mapToRegistry using default registry
+388 silly mapToRegistry registry http://registry.npmjs.org/
+389 silly mapToRegistry uri http://registry.npmjs.org/gulp-sourcemaps
+390 verbose addNameRange registry:http://registry.npmjs.org/gulp-sourcemaps not in flight; fetching
+391 silly cache add args [ 'gulp-uglify@^1.4.2', null ]
+392 verbose cache add spec gulp-uglify@^1.4.2
+393 silly cache add parsed spec Result {
+393 silly cache add   raw: 'gulp-uglify@^1.4.2',
+393 silly cache add   scope: null,
+393 silly cache add   name: 'gulp-uglify',
+393 silly cache add   rawSpec: '^1.4.2',
+393 silly cache add   spec: '>=1.4.2 <2.0.0',
+393 silly cache add   type: 'range' }
+394 silly addNamed gulp-uglify@>=1.4.2 <2.0.0
+395 verbose addNamed ">=1.4.2 <2.0.0" is a valid semver range for gulp-uglify
+396 silly addNameRange { name: 'gulp-uglify', range: '>=1.4.2 <2.0.0', hasData: false }
+397 silly mapToRegistry name gulp-uglify
+398 silly mapToRegistry using default registry
+399 silly mapToRegistry registry http://registry.npmjs.org/
+400 silly mapToRegistry uri http://registry.npmjs.org/gulp-uglify
+401 verbose addNameRange registry:http://registry.npmjs.org/gulp-uglify not in flight; fetching
+402 silly cache add args [ 'gulp-util@^3.0.6', null ]
+403 verbose cache add spec gulp-util@^3.0.6
+404 silly cache add parsed spec Result {
+404 silly cache add   raw: 'gulp-util@^3.0.6',
+404 silly cache add   scope: null,
+404 silly cache add   name: 'gulp-util',
+404 silly cache add   rawSpec: '^3.0.6',
+404 silly cache add   spec: '>=3.0.6 <4.0.0',
+404 silly cache add   type: 'range' }
+405 silly addNamed gulp-util@>=3.0.6 <4.0.0
+406 verbose addNamed ">=3.0.6 <4.0.0" is a valid semver range for gulp-util
+407 silly addNameRange { name: 'gulp-util', range: '>=3.0.6 <4.0.0', hasData: false }
+408 silly mapToRegistry name gulp-util
+409 silly mapToRegistry using default registry
+410 silly mapToRegistry registry http://registry.npmjs.org/
+411 silly mapToRegistry uri http://registry.npmjs.org/gulp-util
+412 verbose addNameRange registry:http://registry.npmjs.org/gulp-util not in flight; fetching
+413 silly cache add args [ 'gulp-watch@^4.2.4', null ]
+414 verbose cache add spec gulp-watch@^4.2.4
+415 silly cache add parsed spec Result {
+415 silly cache add   raw: 'gulp-watch@^4.2.4',
+415 silly cache add   scope: null,
+415 silly cache add   name: 'gulp-watch',
+415 silly cache add   rawSpec: '^4.2.4',
+415 silly cache add   spec: '>=4.2.4 <5.0.0',
+415 silly cache add   type: 'range' }
+416 silly addNamed gulp-watch@>=4.2.4 <5.0.0
+417 verbose addNamed ">=4.2.4 <5.0.0" is a valid semver range for gulp-watch
+418 silly addNameRange { name: 'gulp-watch', range: '>=4.2.4 <5.0.0', hasData: false }
+419 silly mapToRegistry name gulp-watch
+420 silly mapToRegistry using default registry
+421 silly mapToRegistry registry http://registry.npmjs.org/
+422 silly mapToRegistry uri http://registry.npmjs.org/gulp-watch
+423 verbose addNameRange registry:http://registry.npmjs.org/gulp-watch not in flight; fetching
+424 silly cache add args [ 'insert-css@^0.2.0', null ]
+425 verbose cache add spec insert-css@^0.2.0
+426 silly cache add parsed spec Result {
+426 silly cache add   raw: 'insert-css@^0.2.0',
+426 silly cache add   scope: null,
+426 silly cache add   name: 'insert-css',
+426 silly cache add   rawSpec: '^0.2.0',
+426 silly cache add   spec: '>=0.2.0 <0.3.0',
+426 silly cache add   type: 'range' }
+427 silly addNamed insert-css@>=0.2.0 <0.3.0
+428 verbose addNamed ">=0.2.0 <0.3.0" is a valid semver range for insert-css
+429 silly addNameRange { name: 'insert-css', range: '>=0.2.0 <0.3.0', hasData: false }
+430 silly mapToRegistry name insert-css
+431 silly mapToRegistry using default registry
+432 silly mapToRegistry registry http://registry.npmjs.org/
+433 silly mapToRegistry uri http://registry.npmjs.org/insert-css
+434 verbose addNameRange registry:http://registry.npmjs.org/insert-css not in flight; fetching
+435 silly cache add args [ 'merge-stream@^0.1.8', null ]
+436 verbose cache add spec merge-stream@^0.1.8
+437 silly cache add parsed spec Result {
+437 silly cache add   raw: 'merge-stream@^0.1.8',
+437 silly cache add   scope: null,
+437 silly cache add   name: 'merge-stream',
+437 silly cache add   rawSpec: '^0.1.8',
+437 silly cache add   spec: '>=0.1.8 <0.2.0',
+437 silly cache add   type: 'range' }
+438 silly addNamed merge-stream@>=0.1.8 <0.2.0
+439 verbose addNamed ">=0.1.8 <0.2.0" is a valid semver range for merge-stream
+440 silly addNameRange { name: 'merge-stream', range: '>=0.1.8 <0.2.0', hasData: false }
+441 silly mapToRegistry name merge-stream
+442 silly mapToRegistry using default registry
+443 silly mapToRegistry registry http://registry.npmjs.org/
+444 silly mapToRegistry uri http://registry.npmjs.org/merge-stream
+445 verbose addNameRange registry:http://registry.npmjs.org/merge-stream not in flight; fetching
+446 silly cache add args [ 'parse-filepath@^0.5.0', null ]
+447 verbose cache add spec parse-filepath@^0.5.0
+448 silly cache add parsed spec Result {
+448 silly cache add   raw: 'parse-filepath@^0.5.0',
+448 silly cache add   scope: null,
+448 silly cache add   name: 'parse-filepath',
+448 silly cache add   rawSpec: '^0.5.0',
+448 silly cache add   spec: '>=0.5.0 <0.6.0',
+448 silly cache add   type: 'range' }
+449 silly addNamed parse-filepath@>=0.5.0 <0.6.0
+450 verbose addNamed ">=0.5.0 <0.6.0" is a valid semver range for parse-filepath
+451 silly addNameRange { name: 'parse-filepath',
+451 silly addNameRange   range: '>=0.5.0 <0.6.0',
+451 silly addNameRange   hasData: false }
+452 silly mapToRegistry name parse-filepath
+453 silly mapToRegistry using default registry
+454 silly mapToRegistry registry http://registry.npmjs.org/
+455 silly mapToRegistry uri http://registry.npmjs.org/parse-filepath
+456 verbose addNameRange registry:http://registry.npmjs.org/parse-filepath not in flight; fetching
+457 silly cache add args [ 'partialify@^3.1.3', null ]
+458 verbose cache add spec partialify@^3.1.3
+459 silly cache add parsed spec Result {
+459 silly cache add   raw: 'partialify@^3.1.3',
+459 silly cache add   scope: null,
+459 silly cache add   name: 'partialify',
+459 silly cache add   rawSpec: '^3.1.3',
+459 silly cache add   spec: '>=3.1.3 <4.0.0',
+459 silly cache add   type: 'range' }
+460 silly addNamed partialify@>=3.1.3 <4.0.0
+461 verbose addNamed ">=3.1.3 <4.0.0" is a valid semver range for partialify
+462 silly addNameRange { name: 'partialify', range: '>=3.1.3 <4.0.0', hasData: false }
+463 silly mapToRegistry name partialify
+464 silly mapToRegistry using default registry
+465 silly mapToRegistry registry http://registry.npmjs.org/
+466 silly mapToRegistry uri http://registry.npmjs.org/partialify
+467 verbose addNameRange registry:http://registry.npmjs.org/partialify not in flight; fetching
+468 silly cache add args [ 'path@^0.11.14', null ]
+469 verbose cache add spec path@^0.11.14
+470 silly cache add parsed spec Result {
+470 silly cache add   raw: 'path@^0.11.14',
+470 silly cache add   scope: null,
+470 silly cache add   name: 'path',
+470 silly cache add   rawSpec: '^0.11.14',
+470 silly cache add   spec: '>=0.11.14 <0.12.0',
+470 silly cache add   type: 'range' }
+471 silly addNamed path@>=0.11.14 <0.12.0
+472 verbose addNamed ">=0.11.14 <0.12.0" is a valid semver range for path
+473 silly addNameRange { name: 'path', range: '>=0.11.14 <0.12.0', hasData: false }
+474 silly mapToRegistry name path
+475 silly mapToRegistry using default registry
+476 silly mapToRegistry registry http://registry.npmjs.org/
+477 silly mapToRegistry uri http://registry.npmjs.org/path
+478 verbose addNameRange registry:http://registry.npmjs.org/path not in flight; fetching
+479 silly cache add args [ 'require-dir@^0.3.0', null ]
+480 verbose cache add spec require-dir@^0.3.0
+481 silly cache add parsed spec Result {
+481 silly cache add   raw: 'require-dir@^0.3.0',
+481 silly cache add   scope: null,
+481 silly cache add   name: 'require-dir',
+481 silly cache add   rawSpec: '^0.3.0',
+481 silly cache add   spec: '>=0.3.0 <0.4.0',
+481 silly cache add   type: 'range' }
+482 silly addNamed require-dir@>=0.3.0 <0.4.0
+483 verbose addNamed ">=0.3.0 <0.4.0" is a valid semver range for require-dir
+484 silly addNameRange { name: 'require-dir', range: '>=0.3.0 <0.4.0', hasData: false }
+485 silly mapToRegistry name require-dir
+486 silly mapToRegistry using default registry
+487 silly mapToRegistry registry http://registry.npmjs.org/
+488 silly mapToRegistry uri http://registry.npmjs.org/require-dir
+489 verbose addNameRange registry:http://registry.npmjs.org/require-dir not in flight; fetching
+490 silly cache add args [ 'run-sequence@^1.1.1', null ]
+491 verbose cache add spec run-sequence@^1.1.1
+492 silly cache add parsed spec Result {
+492 silly cache add   raw: 'run-sequence@^1.1.1',
+492 silly cache add   scope: null,
+492 silly cache add   name: 'run-sequence',
+492 silly cache add   rawSpec: '^1.1.1',
+492 silly cache add   spec: '>=1.1.1 <2.0.0',
+492 silly cache add   type: 'range' }
+493 silly addNamed run-sequence@>=1.1.1 <2.0.0
+494 verbose addNamed ">=1.1.1 <2.0.0" is a valid semver range for run-sequence
+495 silly addNameRange { name: 'run-sequence', range: '>=1.1.1 <2.0.0', hasData: false }
+496 silly mapToRegistry name run-sequence
+497 silly mapToRegistry using default registry
+498 silly mapToRegistry registry http://registry.npmjs.org/
+499 silly mapToRegistry uri http://registry.npmjs.org/run-sequence
+500 verbose addNameRange registry:http://registry.npmjs.org/run-sequence not in flight; fetching
+501 silly cache add args [ 'underscore@^1.8.3', null ]
+502 verbose cache add spec underscore@^1.8.3
+503 silly cache add parsed spec Result {
+503 silly cache add   raw: 'underscore@^1.8.3',
+503 silly cache add   scope: null,
+503 silly cache add   name: 'underscore',
+503 silly cache add   rawSpec: '^1.8.3',
+503 silly cache add   spec: '>=1.8.3 <2.0.0',
+503 silly cache add   type: 'range' }
+504 silly addNamed underscore@>=1.8.3 <2.0.0
+505 verbose addNamed ">=1.8.3 <2.0.0" is a valid semver range for underscore
+506 silly addNameRange { name: 'underscore', range: '>=1.8.3 <2.0.0', hasData: false }
+507 silly mapToRegistry name underscore
+508 silly mapToRegistry using default registry
+509 silly mapToRegistry registry http://registry.npmjs.org/
+510 silly mapToRegistry uri http://registry.npmjs.org/underscore
+511 verbose addNameRange registry:http://registry.npmjs.org/underscore not in flight; fetching
+512 silly cache add args [ 'underscore-deep-extend@0.0.5', null ]
+513 verbose cache add spec underscore-deep-extend@0.0.5
+514 silly cache add parsed spec Result {
+514 silly cache add   raw: 'underscore-deep-extend@0.0.5',
+514 silly cache add   scope: null,
+514 silly cache add   name: 'underscore-deep-extend',
+514 silly cache add   rawSpec: '0.0.5',
+514 silly cache add   spec: '0.0.5',
+514 silly cache add   type: 'version' }
+515 silly addNamed underscore-deep-extend@0.0.5
+516 verbose addNamed "0.0.5" is a plain semver version for underscore-deep-extend
+517 silly mapToRegistry name underscore-deep-extend
+518 silly mapToRegistry using default registry
+519 silly mapToRegistry registry http://registry.npmjs.org/
+520 silly mapToRegistry uri http://registry.npmjs.org/underscore-deep-extend
+521 verbose addNameVersion registry:http://registry.npmjs.org/underscore-deep-extend not in flight; fetching
+522 silly cache add args [ 'vinyl-buffer@^1.0.0', null ]
+523 verbose cache add spec vinyl-buffer@^1.0.0
+524 silly cache add parsed spec Result {
+524 silly cache add   raw: 'vinyl-buffer@^1.0.0',
+524 silly cache add   scope: null,
+524 silly cache add   name: 'vinyl-buffer',
+524 silly cache add   rawSpec: '^1.0.0',
+524 silly cache add   spec: '>=1.0.0 <2.0.0',
+524 silly cache add   type: 'range' }
+525 silly addNamed vinyl-buffer@>=1.0.0 <2.0.0
+526 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for vinyl-buffer
+527 silly addNameRange { name: 'vinyl-buffer', range: '>=1.0.0 <2.0.0', hasData: false }
+528 silly mapToRegistry name vinyl-buffer
+529 silly mapToRegistry using default registry
+530 silly mapToRegistry registry http://registry.npmjs.org/
+531 silly mapToRegistry uri http://registry.npmjs.org/vinyl-buffer
+532 verbose addNameRange registry:http://registry.npmjs.org/vinyl-buffer not in flight; fetching
+533 silly cache add args [ 'vinyl-paths@^1.0.0', null ]
+534 verbose cache add spec vinyl-paths@^1.0.0
+535 silly cache add parsed spec Result {
+535 silly cache add   raw: 'vinyl-paths@^1.0.0',
+535 silly cache add   scope: null,
+535 silly cache add   name: 'vinyl-paths',
+535 silly cache add   rawSpec: '^1.0.0',
+535 silly cache add   spec: '>=1.0.0 <2.0.0',
+535 silly cache add   type: 'range' }
+536 silly addNamed vinyl-paths@>=1.0.0 <2.0.0
+537 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for vinyl-paths
+538 silly addNameRange { name: 'vinyl-paths', range: '>=1.0.0 <2.0.0', hasData: false }
+539 silly mapToRegistry name vinyl-paths
+540 silly mapToRegistry using default registry
+541 silly mapToRegistry registry http://registry.npmjs.org/
+542 silly mapToRegistry uri http://registry.npmjs.org/vinyl-paths
+543 verbose addNameRange registry:http://registry.npmjs.org/vinyl-paths not in flight; fetching
+544 silly cache add args [ 'vinyl-source-stream@^1.1.0', null ]
+545 verbose cache add spec vinyl-source-stream@^1.1.0
+546 silly cache add parsed spec Result {
+546 silly cache add   raw: 'vinyl-source-stream@^1.1.0',
+546 silly cache add   scope: null,
+546 silly cache add   name: 'vinyl-source-stream',
+546 silly cache add   rawSpec: '^1.1.0',
+546 silly cache add   spec: '>=1.1.0 <2.0.0',
+546 silly cache add   type: 'range' }
+547 silly addNamed vinyl-source-stream@>=1.1.0 <2.0.0
+548 verbose addNamed ">=1.1.0 <2.0.0" is a valid semver range for vinyl-source-stream
+549 silly addNameRange { name: 'vinyl-source-stream',
+549 silly addNameRange   range: '>=1.1.0 <2.0.0',
+549 silly addNameRange   hasData: false }
+550 silly mapToRegistry name vinyl-source-stream
+551 silly mapToRegistry using default registry
+552 silly mapToRegistry registry http://registry.npmjs.org/
+553 silly mapToRegistry uri http://registry.npmjs.org/vinyl-source-stream
+554 verbose addNameRange registry:http://registry.npmjs.org/vinyl-source-stream not in flight; fetching
+555 silly cache add args [ 'vueify@^4.0.1', null ]
+556 verbose cache add spec vueify@^4.0.1
+557 silly cache add parsed spec Result {
+557 silly cache add   raw: 'vueify@^4.0.1',
+557 silly cache add   scope: null,
+557 silly cache add   name: 'vueify',
+557 silly cache add   rawSpec: '^4.0.1',
+557 silly cache add   spec: '>=4.0.1 <5.0.0',
+557 silly cache add   type: 'range' }
+558 silly addNamed vueify@>=4.0.1 <5.0.0
+559 verbose addNamed ">=4.0.1 <5.0.0" is a valid semver range for vueify
+560 silly addNameRange { name: 'vueify', range: '>=4.0.1 <5.0.0', hasData: false }
+561 silly mapToRegistry name vueify
+562 silly mapToRegistry using default registry
+563 silly mapToRegistry registry http://registry.npmjs.org/
+564 silly mapToRegistry uri http://registry.npmjs.org/vueify
+565 verbose addNameRange registry:http://registry.npmjs.org/vueify not in flight; fetching
+566 silly cache add args [ 'watchify@^3.2.3', null ]
+567 verbose cache add spec watchify@^3.2.3
+568 silly cache add parsed spec Result {
+568 silly cache add   raw: 'watchify@^3.2.3',
+568 silly cache add   scope: null,
+568 silly cache add   name: 'watchify',
+568 silly cache add   rawSpec: '^3.2.3',
+568 silly cache add   spec: '>=3.2.3 <4.0.0',
+568 silly cache add   type: 'range' }
+569 silly addNamed watchify@>=3.2.3 <4.0.0
+570 verbose addNamed ">=3.2.3 <4.0.0" is a valid semver range for watchify
+571 silly addNameRange { name: 'watchify', range: '>=3.2.3 <4.0.0', hasData: false }
+572 silly mapToRegistry name watchify
+573 silly mapToRegistry using default registry
+574 silly mapToRegistry registry http://registry.npmjs.org/
+575 silly mapToRegistry uri http://registry.npmjs.org/watchify
+576 verbose addNameRange registry:http://registry.npmjs.org/watchify not in flight; fetching
+577 silly cache add args [ 'babelify@^6.1.3', null ]
+578 verbose cache add spec babelify@^6.1.3
+579 silly cache add parsed spec Result {
+579 silly cache add   raw: 'babelify@^6.1.3',
+579 silly cache add   scope: null,
+579 silly cache add   name: 'babelify',
+579 silly cache add   rawSpec: '^6.1.3',
+579 silly cache add   spec: '>=6.1.3 <7.0.0',
+579 silly cache add   type: 'range' }
+580 silly addNamed babelify@>=6.1.3 <7.0.0
+581 verbose addNamed ">=6.1.3 <7.0.0" is a valid semver range for babelify
+582 silly addNameRange { name: 'babelify', range: '>=6.1.3 <7.0.0', hasData: false }
+583 silly mapToRegistry name babelify
+584 silly mapToRegistry using default registry
+585 silly mapToRegistry registry http://registry.npmjs.org/
+586 silly mapToRegistry uri http://registry.npmjs.org/babelify
+587 verbose addNameRange registry:http://registry.npmjs.org/babelify not in flight; fetching
+588 silly cache add args [ 'browser-sync@^2.7.10', null ]
+589 verbose cache add spec browser-sync@^2.7.10
+590 silly cache add parsed spec Result {
+590 silly cache add   raw: 'browser-sync@^2.7.10',
+590 silly cache add   scope: null,
+590 silly cache add   name: 'browser-sync',
+590 silly cache add   rawSpec: '^2.7.10',
+590 silly cache add   spec: '>=2.7.10 <3.0.0',
+590 silly cache add   type: 'range' }
+591 silly addNamed browser-sync@>=2.7.10 <3.0.0
+592 verbose addNamed ">=2.7.10 <3.0.0" is a valid semver range for browser-sync
+593 silly addNameRange { name: 'browser-sync',
+593 silly addNameRange   range: '>=2.7.10 <3.0.0',
+593 silly addNameRange   hasData: false }
+594 silly mapToRegistry name browser-sync
+595 silly mapToRegistry using default registry
+596 silly mapToRegistry registry http://registry.npmjs.org/
+597 silly mapToRegistry uri http://registry.npmjs.org/browser-sync
+598 verbose addNameRange registry:http://registry.npmjs.org/browser-sync not in flight; fetching
+599 silly cache add args [ 'browserify@^11.2.0', null ]
+600 verbose cache add spec browserify@^11.2.0
+601 silly cache add parsed spec Result {
+601 silly cache add   raw: 'browserify@^11.2.0',
+601 silly cache add   scope: null,
+601 silly cache add   name: 'browserify',
+601 silly cache add   rawSpec: '^11.2.0',
+601 silly cache add   spec: '>=11.2.0 <12.0.0',
+601 silly cache add   type: 'range' }
+602 silly addNamed browserify@>=11.2.0 <12.0.0
+603 verbose addNamed ">=11.2.0 <12.0.0" is a valid semver range for browserify
+604 silly addNameRange { name: 'browserify', range: '>=11.2.0 <12.0.0', hasData: false }
+605 silly mapToRegistry name browserify
+606 silly mapToRegistry using default registry
+607 silly mapToRegistry registry http://registry.npmjs.org/
+608 silly mapToRegistry uri http://registry.npmjs.org/browserify
+609 verbose addNameRange registry:http://registry.npmjs.org/browserify not in flight; fetching
+610 verbose request uri http://registry.npmjs.org/gulp-coffee
+611 verbose request no auth needed
+612 info attempt registry request try #1 at 4:47:49 PM
+613 http request GET http://registry.npmjs.org/gulp-coffee
+614 verbose request uri http://registry.npmjs.org/gulp-minify-css
+615 verbose request no auth needed
+616 info attempt registry request try #1 at 4:47:49 PM
+617 http request GET http://registry.npmjs.org/gulp-minify-css
+618 verbose request uri http://registry.npmjs.org/gulp-phpspec
+619 verbose request no auth needed
+620 info attempt registry request try #1 at 4:47:49 PM
+621 http request GET http://registry.npmjs.org/gulp-phpspec
+622 verbose request uri http://registry.npmjs.org/gulp-rename
+623 verbose request no auth needed
+624 info attempt registry request try #1 at 4:47:49 PM
+625 http request GET http://registry.npmjs.org/gulp-rename
+626 verbose request uri http://registry.npmjs.org/gulp-rev
+627 verbose request no auth needed
+628 info attempt registry request try #1 at 4:47:49 PM
+629 http request GET http://registry.npmjs.org/gulp-rev
+630 verbose request uri http://registry.npmjs.org/gulp-rev-replace
+631 verbose request no auth needed
+632 info attempt registry request try #1 at 4:47:49 PM
+633 http request GET http://registry.npmjs.org/gulp-rev-replace
+634 verbose request uri http://registry.npmjs.org/gulp-watch
+635 verbose request no auth needed
+636 info attempt registry request try #1 at 4:47:49 PM
+637 http request GET http://registry.npmjs.org/gulp-watch
+638 verbose request uri http://registry.npmjs.org/insert-css
+639 verbose request no auth needed
+640 info attempt registry request try #1 at 4:47:49 PM
+641 http request GET http://registry.npmjs.org/insert-css
+642 verbose request uri http://registry.npmjs.org/parse-filepath
+643 verbose request no auth needed
+644 info attempt registry request try #1 at 4:47:49 PM
+645 http request GET http://registry.npmjs.org/parse-filepath
+646 verbose request uri http://registry.npmjs.org/path
+647 verbose request no auth needed
+648 info attempt registry request try #1 at 4:47:49 PM
+649 http request GET http://registry.npmjs.org/path
+650 verbose request uri http://registry.npmjs.org/underscore
+651 verbose request no auth needed
+652 info attempt registry request try #1 at 4:47:49 PM
+653 http request GET http://registry.npmjs.org/underscore
+654 verbose request uri http://registry.npmjs.org/underscore-deep-extend
+655 verbose request no auth needed
+656 info attempt registry request try #1 at 4:47:49 PM
+657 http request GET http://registry.npmjs.org/underscore-deep-extend
+658 verbose request uri http://registry.npmjs.org/vinyl-buffer
+659 verbose request no auth needed
+660 info attempt registry request try #1 at 4:47:49 PM
+661 http request GET http://registry.npmjs.org/vinyl-buffer
+662 verbose request uri http://registry.npmjs.org/vinyl-paths
+663 verbose request no auth needed
+664 info attempt registry request try #1 at 4:47:49 PM
+665 http request GET http://registry.npmjs.org/vinyl-paths
+666 verbose request uri http://registry.npmjs.org/vinyl-source-stream
+667 verbose request no auth needed
+668 info attempt registry request try #1 at 4:47:49 PM
+669 http request GET http://registry.npmjs.org/vinyl-source-stream
+670 verbose request uri http://registry.npmjs.org/vueify
+671 verbose request no auth needed
+672 info attempt registry request try #1 at 4:47:49 PM
+673 http request GET http://registry.npmjs.org/vueify
+674 verbose request uri http://registry.npmjs.org/watchify
+675 verbose request no auth needed
+676 info attempt registry request try #1 at 4:47:49 PM
+677 http request GET http://registry.npmjs.org/watchify
+678 verbose request uri http://registry.npmjs.org/gulp-autoprefixer
+679 verbose request no auth needed
+680 info attempt registry request try #1 at 4:47:49 PM
+681 verbose etag "HV6MJ5ZXNMB7S9X8WI9V6WDK"
+682 http request GET http://registry.npmjs.org/gulp-autoprefixer
+683 verbose request uri http://registry.npmjs.org/del
+684 verbose request no auth needed
+685 info attempt registry request try #1 at 4:47:49 PM
+686 verbose etag "649SB00HK1000DFC31Q1MXVZ5"
+687 http request GET http://registry.npmjs.org/del
+688 verbose request uri http://registry.npmjs.org/gulp-batch
+689 verbose request no auth needed
+690 info attempt registry request try #1 at 4:47:49 PM
+691 verbose etag "3NVJQJKNHWZW2FWZAIXJNDZNU"
+692 http request GET http://registry.npmjs.org/gulp-batch
+693 verbose request uri http://registry.npmjs.org/glob
+694 verbose request no auth needed
+695 info attempt registry request try #1 at 4:47:49 PM
+696 verbose etag "7TL4T12XYPEWTH98CWTK8KNFT"
+697 http request GET http://registry.npmjs.org/glob
+698 verbose request uri http://registry.npmjs.org/gulp-babel
+699 verbose request no auth needed
+700 info attempt registry request try #1 at 4:47:49 PM
+701 verbose etag "BC3AM2QNCT89AVK72Y6PXIZ42"
+702 http request GET http://registry.npmjs.org/gulp-babel
+703 verbose request uri http://registry.npmjs.org/gulp-concat
+704 verbose request no auth needed
+705 info attempt registry request try #1 at 4:47:49 PM
+706 verbose etag "ADFBQZBAFF3TDCB6A4Q7L47DT"
+707 http request GET http://registry.npmjs.org/gulp-concat
+708 verbose request uri http://registry.npmjs.org/gulp-less
+709 verbose request no auth needed
+710 info attempt registry request try #1 at 4:47:49 PM
+711 verbose etag "5OWRBHHB7N3YX78WXUG3H4L9X"
+712 http request GET http://registry.npmjs.org/gulp-less
+713 verbose request uri http://registry.npmjs.org/gulp-if
+714 verbose request no auth needed
+715 info attempt registry request try #1 at 4:47:49 PM
+716 verbose etag "91NI07GPHTQD7K1C9Z36OA8QU"
+717 http request GET http://registry.npmjs.org/gulp-if
+718 verbose request uri http://registry.npmjs.org/gulp-load-plugins
+719 verbose request no auth needed
+720 info attempt registry request try #1 at 4:47:49 PM
+721 verbose etag "444OGU3AKQPEUMJK5ZF82Y47W"
+722 http request GET http://registry.npmjs.org/gulp-load-plugins
+723 verbose request uri http://registry.npmjs.org/gulp-phpunit
+724 verbose request no auth needed
+725 info attempt registry request try #1 at 4:47:49 PM
+726 verbose etag "7OELIZJQHXP5VG3TR2AHNZXIP"
+727 http request GET http://registry.npmjs.org/gulp-phpunit
+728 verbose request uri http://registry.npmjs.org/gulp-sourcemaps
+729 verbose request no auth needed
+730 info attempt registry request try #1 at 4:47:49 PM
+731 verbose etag "EYA5FQ4YK3W2EHLAABUACWML7"
+732 http request GET http://registry.npmjs.org/gulp-sourcemaps
+733 verbose request uri http://registry.npmjs.org/gulp-notify
+734 verbose request no auth needed
+735 info attempt registry request try #1 at 4:47:49 PM
+736 verbose etag "BJLYF5KDL46Y7DOX8CADRGQG5"
+737 http request GET http://registry.npmjs.org/gulp-notify
+738 verbose request uri http://registry.npmjs.org/gulp-uglify
+739 verbose request no auth needed
+740 info attempt registry request try #1 at 4:47:49 PM
+741 verbose etag "BYU97Z4RC5A49D65Q4YJPFKYL"
+742 http request GET http://registry.npmjs.org/gulp-uglify
+743 verbose request uri http://registry.npmjs.org/gulp-sass
+744 verbose request no auth needed
+745 info attempt registry request try #1 at 4:47:49 PM
+746 verbose etag "71JDIWIABS7KNQO10IEKBW513"
+747 http request GET http://registry.npmjs.org/gulp-sass
+748 verbose request uri http://registry.npmjs.org/gulp-util
+749 verbose request no auth needed
+750 info attempt registry request try #1 at 4:47:49 PM
+751 verbose etag "7YDUW9OXN69RRY0BWS34YOP4F"
+752 http request GET http://registry.npmjs.org/gulp-util
+753 verbose request uri http://registry.npmjs.org/merge-stream
+754 verbose request no auth needed
+755 info attempt registry request try #1 at 4:47:49 PM
+756 verbose etag "2EC94FCJ203IJSWKDZRNHV9N3"
+757 http request GET http://registry.npmjs.org/merge-stream
+758 verbose request uri http://registry.npmjs.org/require-dir
+759 verbose request no auth needed
+760 info attempt registry request try #1 at 4:47:49 PM
+761 verbose etag "5ETQLRNITS2CHHGXVVBKGI5AW"
+762 http request GET http://registry.npmjs.org/require-dir
+763 verbose request uri http://registry.npmjs.org/partialify
+764 verbose request no auth needed
+765 info attempt registry request try #1 at 4:47:49 PM
+766 verbose etag "7OUWETJ6RAAMRIBISYWKCXR5N"
+767 http request GET http://registry.npmjs.org/partialify
+768 verbose request uri http://registry.npmjs.org/run-sequence
+769 verbose request no auth needed
+770 info attempt registry request try #1 at 4:47:49 PM
+771 verbose etag "6FPAF33GK7D0J99PUNL95Z4L"
+772 http request GET http://registry.npmjs.org/run-sequence
+773 verbose request uri http://registry.npmjs.org/babelify
+774 verbose request no auth needed
+775 info attempt registry request try #1 at 4:47:49 PM
+776 verbose etag "4YHRA9JW6XRV62SSYM4ICW8EQ"
+777 http request GET http://registry.npmjs.org/babelify
+778 verbose request uri http://registry.npmjs.org/browser-sync
+779 verbose request no auth needed
+780 info attempt registry request try #1 at 4:47:49 PM
+781 verbose etag "9NSQ49HHNSMFL1OXLV28L8YCM"
+782 http request GET http://registry.npmjs.org/browser-sync
+783 verbose request uri http://registry.npmjs.org/browserify
+784 verbose request no auth needed
+785 info attempt registry request try #1 at 4:47:49 PM
+786 verbose etag "10JG3GWDXSYC334ORZNM49B96"
+787 http request GET http://registry.npmjs.org/browserify
+788 http 200 http://registry.npmjs.org/gulp-coffee
+789 silly get cb [ 200,
+789 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+789 silly get     etag: '"5ARFXQIV7V2YP62HZJB5WWA3M"',
+789 silly get     'content-type': 'application/json',
+789 silly get     'cache-control': 'max-age=60',
+789 silly get     'content-length': '28895',
+789 silly get     'accept-ranges': 'bytes',
+789 silly get     date: 'Thu, 12 Nov 2015 11:17:57 GMT',
+789 silly get     via: '1.1 varnish',
+789 silly get     age: '0',
+789 silly get     connection: 'keep-alive',
+789 silly get     'x-served-by': 'cache-sin6926-SIN',
+789 silly get     'x-cache': 'HIT',
+789 silly get     'x-cache-hits': '1',
+789 silly get     'x-timer': 'S1447327077.134197,VS0,VE215',
+789 silly get     vary: 'Accept' } ]
+790 verbose get saving gulp-coffee to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-coffee\.cache.json
+791 silly addNameRange number 2 { name: 'gulp-coffee', range: '>=2.3.1 <3.0.0', hasData: true }
+792 silly addNameRange versions [ 'gulp-coffee',
+792 silly addNameRange   [ '0.0.1',
+792 silly addNameRange     '1.1.0',
+792 silly addNameRange     '1.2.0',
+792 silly addNameRange     '1.2.1',
+792 silly addNameRange     '1.2.2',
+792 silly addNameRange     '1.2.4',
+792 silly addNameRange     '1.2.5',
+792 silly addNameRange     '1.3.0',
+792 silly addNameRange     '1.4.0',
+792 silly addNameRange     '1.4.1',
+792 silly addNameRange     '1.4.2',
+792 silly addNameRange     '1.4.3',
+792 silly addNameRange     '2.0.0',
+792 silly addNameRange     '2.0.1',
+792 silly addNameRange     '2.1.0',
+792 silly addNameRange     '2.1.1',
+792 silly addNameRange     '2.1.2',
+792 silly addNameRange     '2.2.0',
+792 silly addNameRange     '2.2.1',
+792 silly addNameRange     '2.3.1' ] ]
+793 silly addNamed gulp-coffee@2.3.1
+794 verbose addNamed "2.3.1" is a plain semver version for gulp-coffee
+795 silly mapToRegistry name gulp-coffee
+796 silly mapToRegistry using default registry
+797 silly mapToRegistry registry http://registry.npmjs.org/
+798 silly mapToRegistry uri http://registry.npmjs.org/gulp-coffee
+799 verbose addRemoteTarball http://registry.npmjs.org/gulp-coffee/-/gulp-coffee-2.3.1.tgz not in flight; adding
+800 verbose addRemoteTarball [ 'http://registry.npmjs.org/gulp-coffee/-/gulp-coffee-2.3.1.tgz',
+800 verbose addRemoteTarball   '50d46e3f24cbf177421451661d24d243627c341d' ]
+801 info retry fetch attempt 1 at 4:47:50 PM
+802 info attempt registry request try #1 at 4:47:50 PM
+803 http fetch GET http://registry.npmjs.org/gulp-coffee/-/gulp-coffee-2.3.1.tgz
+804 http fetch 200 http://registry.npmjs.org/gulp-coffee/-/gulp-coffee-2.3.1.tgz
+805 silly fetchAndShaCheck shasum 50d46e3f24cbf177421451661d24d243627c341d
+806 verbose addTmpTarball C:\Users\Daniel\AppData\Local\Temp\npm-22608-bb27c0c5\registry.npmjs.org\gulp-coffee\-\gulp-coffee-2.3.1.tgz not in flight; adding
+807 verbose addTmpTarball already have metadata; skipping unpack for gulp-coffee@2.3.1
+808 silly cache afterAdd gulp-coffee@2.3.1
+809 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-coffee\2.3.1\package\package.json not in flight; writing
+810 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-coffee\2.3.1\package\package.json written
+811 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+812 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+813 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+814 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+815 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+816 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+817 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+818 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+819 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+820 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+821 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+822 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+823 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+824 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+825 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+826 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+827 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+828 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+829 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+830 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+831 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+832 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+833 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+834 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+835 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+836 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+837 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+838 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+839 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+840 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+841 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+842 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+843 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+844 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+845 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+846 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+847 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+848 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+849 info attempt registry request try #2 at 4:48:20 PM
+850 http request GET http://registry.npmjs.org/gulp-rev
+851 info attempt registry request try #2 at 4:48:20 PM
+852 http request GET http://registry.npmjs.org/vinyl-paths
+853 info attempt registry request try #2 at 4:48:20 PM
+854 http request GET http://registry.npmjs.org/parse-filepath
+855 info attempt registry request try #2 at 4:48:20 PM
+856 http request GET http://registry.npmjs.org/gulp-watch
+857 info attempt registry request try #2 at 4:48:20 PM
+858 http request GET http://registry.npmjs.org/underscore-deep-extend
+859 info attempt registry request try #2 at 4:48:20 PM
+860 http request GET http://registry.npmjs.org/gulp-phpspec
+861 info attempt registry request try #2 at 4:48:20 PM
+862 http request GET http://registry.npmjs.org/vueify
+863 info attempt registry request try #2 at 4:48:20 PM
+864 http request GET http://registry.npmjs.org/gulp-rev-replace
+865 info attempt registry request try #2 at 4:48:20 PM
+866 http request GET http://registry.npmjs.org/vinyl-buffer
+867 info attempt registry request try #2 at 4:48:20 PM
+868 http request GET http://registry.npmjs.org/gulp-minify-css
+869 info attempt registry request try #2 at 4:48:20 PM
+870 http request GET http://registry.npmjs.org/watchify
+871 info attempt registry request try #2 at 4:48:20 PM
+872 http request GET http://registry.npmjs.org/path
+873 info attempt registry request try #2 at 4:48:20 PM
+874 http request GET http://registry.npmjs.org/gulp-rename
+875 info attempt registry request try #2 at 4:48:20 PM
+876 http request GET http://registry.npmjs.org/vinyl-source-stream
+877 info attempt registry request try #2 at 4:48:20 PM
+878 http request GET http://registry.npmjs.org/insert-css
+879 info attempt registry request try #2 at 4:48:20 PM
+880 http request GET http://registry.npmjs.org/underscore
+881 info attempt registry request try #2 at 4:48:20 PM
+882 verbose etag "7TL4T12XYPEWTH98CWTK8KNFT"
+883 http request GET http://registry.npmjs.org/glob
+884 info attempt registry request try #2 at 4:48:20 PM
+885 verbose etag "3NVJQJKNHWZW2FWZAIXJNDZNU"
+886 http request GET http://registry.npmjs.org/gulp-batch
+887 info attempt registry request try #2 at 4:48:20 PM
+888 verbose etag "BC3AM2QNCT89AVK72Y6PXIZ42"
+889 http request GET http://registry.npmjs.org/gulp-babel
+890 info attempt registry request try #2 at 4:48:20 PM
+891 verbose etag "HV6MJ5ZXNMB7S9X8WI9V6WDK"
+892 http request GET http://registry.npmjs.org/gulp-autoprefixer
+893 info attempt registry request try #2 at 4:48:20 PM
+894 verbose etag "ADFBQZBAFF3TDCB6A4Q7L47DT"
+895 http request GET http://registry.npmjs.org/gulp-concat
+896 info attempt registry request try #2 at 4:48:20 PM
+897 verbose etag "649SB00HK1000DFC31Q1MXVZ5"
+898 http request GET http://registry.npmjs.org/del
+899 info attempt registry request try #2 at 4:48:20 PM
+900 verbose etag "5OWRBHHB7N3YX78WXUG3H4L9X"
+901 http request GET http://registry.npmjs.org/gulp-less
+902 info attempt registry request try #2 at 4:48:20 PM
+903 verbose etag "444OGU3AKQPEUMJK5ZF82Y47W"
+904 http request GET http://registry.npmjs.org/gulp-load-plugins
+905 info attempt registry request try #2 at 4:48:20 PM
+906 verbose etag "71JDIWIABS7KNQO10IEKBW513"
+907 http request GET http://registry.npmjs.org/gulp-sass
+908 info attempt registry request try #2 at 4:48:20 PM
+909 verbose etag "91NI07GPHTQD7K1C9Z36OA8QU"
+910 http request GET http://registry.npmjs.org/gulp-if
+911 info attempt registry request try #2 at 4:48:20 PM
+912 verbose etag "7OELIZJQHXP5VG3TR2AHNZXIP"
+913 http request GET http://registry.npmjs.org/gulp-phpunit
+914 info attempt registry request try #2 at 4:48:20 PM
+915 verbose etag "7OUWETJ6RAAMRIBISYWKCXR5N"
+916 http request GET http://registry.npmjs.org/partialify
+917 info attempt registry request try #2 at 4:48:20 PM
+918 verbose etag "EYA5FQ4YK3W2EHLAABUACWML7"
+919 http request GET http://registry.npmjs.org/gulp-sourcemaps
+920 info attempt registry request try #2 at 4:48:20 PM
+921 verbose etag "6FPAF33GK7D0J99PUNL95Z4L"
+922 http request GET http://registry.npmjs.org/run-sequence
+923 info attempt registry request try #2 at 4:48:20 PM
+924 verbose etag "7YDUW9OXN69RRY0BWS34YOP4F"
+925 http request GET http://registry.npmjs.org/gulp-util
+926 info attempt registry request try #2 at 4:48:20 PM
+927 verbose etag "BJLYF5KDL46Y7DOX8CADRGQG5"
+928 http request GET http://registry.npmjs.org/gulp-notify
+929 info attempt registry request try #2 at 4:48:20 PM
+930 verbose etag "2EC94FCJ203IJSWKDZRNHV9N3"
+931 http request GET http://registry.npmjs.org/merge-stream
+932 info attempt registry request try #2 at 4:48:20 PM
+933 verbose etag "BYU97Z4RC5A49D65Q4YJPFKYL"
+934 http request GET http://registry.npmjs.org/gulp-uglify
+935 info attempt registry request try #2 at 4:48:20 PM
+936 verbose etag "5ETQLRNITS2CHHGXVVBKGI5AW"
+937 http request GET http://registry.npmjs.org/require-dir
+938 info attempt registry request try #2 at 4:48:20 PM
+939 verbose etag "10JG3GWDXSYC334ORZNM49B96"
+940 http request GET http://registry.npmjs.org/browserify
+941 info attempt registry request try #2 at 4:48:20 PM
+942 verbose etag "4YHRA9JW6XRV62SSYM4ICW8EQ"
+943 http request GET http://registry.npmjs.org/babelify
+944 info attempt registry request try #2 at 4:48:20 PM
+945 verbose etag "9NSQ49HHNSMFL1OXLV28L8YCM"
+946 http request GET http://registry.npmjs.org/browser-sync
+947 http 200 http://registry.npmjs.org/gulp-rev
+948 silly get cb [ 200,
+948 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+948 silly get     etag: '"91PMQQMOVZQT8279NBYR6V0H1"',
+948 silly get     'content-type': 'application/json',
+948 silly get     'cache-control': 'max-age=60',
+948 silly get     'content-length': '34365',
+948 silly get     'accept-ranges': 'bytes',
+948 silly get     date: 'Thu, 12 Nov 2015 11:18:28 GMT',
+948 silly get     via: '1.1 varnish',
+948 silly get     age: '59',
+948 silly get     connection: 'keep-alive',
+948 silly get     'x-served-by': 'cache-sin6926-SIN',
+948 silly get     'x-cache': 'HIT',
+948 silly get     'x-cache-hits': '1',
+948 silly get     'x-timer': 'S1447327108.159760,VS0,VE0',
+948 silly get     vary: 'Accept' } ]
+949 verbose get saving gulp-rev to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-rev\.cache.json
+950 silly addNameRange number 2 { name: 'gulp-rev', range: '>=5.1.0 <6.0.0', hasData: true }
+951 silly addNameRange versions [ 'gulp-rev',
+951 silly addNameRange   [ '0.1.0',
+951 silly addNameRange     '0.2.0',
+951 silly addNameRange     '0.2.1',
+951 silly addNameRange     '0.3.0',
+951 silly addNameRange     '0.3.1',
+951 silly addNameRange     '0.3.2',
+951 silly addNameRange     '0.4.0',
+951 silly addNameRange     '0.4.1',
+951 silly addNameRange     '0.4.2',
+951 silly addNameRange     '1.0.0',
+951 silly addNameRange     '1.1.0',
+951 silly addNameRange     '2.0.0',
+951 silly addNameRange     '2.0.1',
+951 silly addNameRange     '3.0.0',
+951 silly addNameRange     '3.0.1',
+951 silly addNameRange     '4.0.0',
+951 silly addNameRange     '5.0.0',
+951 silly addNameRange     '5.0.1',
+951 silly addNameRange     '5.1.0',
+951 silly addNameRange     '6.0.0',
+951 silly addNameRange     '6.0.1' ] ]
+952 silly addNamed gulp-rev@5.1.0
+953 verbose addNamed "5.1.0" is a plain semver version for gulp-rev
+954 silly mapToRegistry name gulp-rev
+955 silly mapToRegistry using default registry
+956 silly mapToRegistry registry http://registry.npmjs.org/
+957 silly mapToRegistry uri http://registry.npmjs.org/gulp-rev
+958 verbose addRemoteTarball http://registry.npmjs.org/gulp-rev/-/gulp-rev-5.1.0.tgz not in flight; adding
+959 verbose addRemoteTarball [ 'http://registry.npmjs.org/gulp-rev/-/gulp-rev-5.1.0.tgz',
+959 verbose addRemoteTarball   'a2c37cdae321a7b7bbae20d753b60d0e5e87cd48' ]
+960 info retry fetch attempt 1 at 4:48:20 PM
+961 info attempt registry request try #1 at 4:48:20 PM
+962 http fetch GET http://registry.npmjs.org/gulp-rev/-/gulp-rev-5.1.0.tgz
+963 http fetch 200 http://registry.npmjs.org/gulp-rev/-/gulp-rev-5.1.0.tgz
+964 silly fetchAndShaCheck shasum a2c37cdae321a7b7bbae20d753b60d0e5e87cd48
+965 verbose addTmpTarball C:\Users\Daniel\AppData\Local\Temp\npm-22608-bb27c0c5\registry.npmjs.org\gulp-rev\-\gulp-rev-5.1.0.tgz not in flight; adding
+966 verbose addTmpTarball already have metadata; skipping unpack for gulp-rev@5.1.0
+967 silly cache afterAdd gulp-rev@5.1.0
+968 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-rev\5.1.0\package\package.json not in flight; writing
+969 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-rev\5.1.0\package\package.json written
+970 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+971 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+972 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+973 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+974 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+975 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+976 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+977 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+978 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+979 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+980 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+981 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+982 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+983 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+984 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+985 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+986 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+987 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+988 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+989 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+990 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+991 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+992 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+993 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+994 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+995 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+996 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+997 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+998 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+999 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+1000 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+1001 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+1002 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+1003 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+1004 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+1005 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+1006 info retry will retry, error on last attempt: Error: connect ETIMEDOUT 103.245.222.162:80
+1007 info attempt registry request try #3 at 4:49:41 PM
+1008 http request GET http://registry.npmjs.org/gulp-phpspec
+1009 info attempt registry request try #3 at 4:49:41 PM
+1010 http request GET http://registry.npmjs.org/gulp-minify-css
+1011 info attempt registry request try #3 at 4:49:41 PM
+1012 http request GET http://registry.npmjs.org/gulp-rev-replace
+1013 info attempt registry request try #3 at 4:49:41 PM
+1014 http request GET http://registry.npmjs.org/parse-filepath
+1015 info attempt registry request try #3 at 4:49:41 PM
+1016 http request GET http://registry.npmjs.org/gulp-watch
+1017 info attempt registry request try #3 at 4:49:41 PM
+1018 http request GET http://registry.npmjs.org/vueify
+1019 info attempt registry request try #3 at 4:49:41 PM
+1020 http request GET http://registry.npmjs.org/vinyl-buffer
+1021 info attempt registry request try #3 at 4:49:41 PM
+1022 http request GET http://registry.npmjs.org/vinyl-paths
+1023 info attempt registry request try #3 at 4:49:41 PM
+1024 http request GET http://registry.npmjs.org/underscore-deep-extend
+1025 info attempt registry request try #3 at 4:49:41 PM
+1026 http request GET http://registry.npmjs.org/vinyl-source-stream
+1027 info attempt registry request try #3 at 4:49:41 PM
+1028 verbose etag "3NVJQJKNHWZW2FWZAIXJNDZNU"
+1029 http request GET http://registry.npmjs.org/gulp-batch
+1030 info attempt registry request try #3 at 4:49:41 PM
+1031 http request GET http://registry.npmjs.org/underscore
+1032 info attempt registry request try #3 at 4:49:41 PM
+1033 http request GET http://registry.npmjs.org/path
+1034 info attempt registry request try #3 at 4:49:41 PM
+1035 http request GET http://registry.npmjs.org/insert-css
+1036 info attempt registry request try #3 at 4:49:41 PM
+1037 http request GET http://registry.npmjs.org/watchify
+1038 info attempt registry request try #3 at 4:49:41 PM
+1039 verbose etag "7TL4T12XYPEWTH98CWTK8KNFT"
+1040 http request GET http://registry.npmjs.org/glob
+1041 info attempt registry request try #3 at 4:49:41 PM
+1042 http request GET http://registry.npmjs.org/gulp-rename
+1043 info attempt registry request try #3 at 4:49:41 PM
+1044 verbose etag "91NI07GPHTQD7K1C9Z36OA8QU"
+1045 http request GET http://registry.npmjs.org/gulp-if
+1046 info attempt registry request try #3 at 4:49:41 PM
+1047 verbose etag "649SB00HK1000DFC31Q1MXVZ5"
+1048 http request GET http://registry.npmjs.org/del
+1049 info attempt registry request try #3 at 4:49:41 PM
+1050 verbose etag "6FPAF33GK7D0J99PUNL95Z4L"
+1051 http request GET http://registry.npmjs.org/run-sequence
+1052 info attempt registry request try #3 at 4:49:41 PM
+1053 verbose etag "HV6MJ5ZXNMB7S9X8WI9V6WDK"
+1054 http request GET http://registry.npmjs.org/gulp-autoprefixer
+1055 info attempt registry request try #3 at 4:49:41 PM
+1056 verbose etag "7OUWETJ6RAAMRIBISYWKCXR5N"
+1057 http request GET http://registry.npmjs.org/partialify
+1058 info attempt registry request try #3 at 4:49:41 PM
+1059 verbose etag "444OGU3AKQPEUMJK5ZF82Y47W"
+1060 http request GET http://registry.npmjs.org/gulp-load-plugins
+1061 info attempt registry request try #3 at 4:49:41 PM
+1062 verbose etag "7OELIZJQHXP5VG3TR2AHNZXIP"
+1063 http request GET http://registry.npmjs.org/gulp-phpunit
+1064 info attempt registry request try #3 at 4:49:41 PM
+1065 verbose etag "BC3AM2QNCT89AVK72Y6PXIZ42"
+1066 http request GET http://registry.npmjs.org/gulp-babel
+1067 info attempt registry request try #3 at 4:49:41 PM
+1068 verbose etag "5OWRBHHB7N3YX78WXUG3H4L9X"
+1069 http request GET http://registry.npmjs.org/gulp-less
+1070 info attempt registry request try #3 at 4:49:41 PM
+1071 verbose etag "ADFBQZBAFF3TDCB6A4Q7L47DT"
+1072 http request GET http://registry.npmjs.org/gulp-concat
+1073 info attempt registry request try #3 at 4:49:41 PM
+1074 verbose etag "EYA5FQ4YK3W2EHLAABUACWML7"
+1075 http request GET http://registry.npmjs.org/gulp-sourcemaps
+1076 info attempt registry request try #3 at 4:49:41 PM
+1077 verbose etag "71JDIWIABS7KNQO10IEKBW513"
+1078 http request GET http://registry.npmjs.org/gulp-sass
+1079 info attempt registry request try #3 at 4:49:41 PM
+1080 verbose etag "BYU97Z4RC5A49D65Q4YJPFKYL"
+1081 http request GET http://registry.npmjs.org/gulp-uglify
+1082 info attempt registry request try #3 at 4:49:41 PM
+1083 verbose etag "4YHRA9JW6XRV62SSYM4ICW8EQ"
+1084 http request GET http://registry.npmjs.org/babelify
+1085 info attempt registry request try #3 at 4:49:41 PM
+1086 verbose etag "BJLYF5KDL46Y7DOX8CADRGQG5"
+1087 http request GET http://registry.npmjs.org/gulp-notify
+1088 info attempt registry request try #3 at 4:49:41 PM
+1089 verbose etag "5ETQLRNITS2CHHGXVVBKGI5AW"
+1090 http request GET http://registry.npmjs.org/require-dir
+1091 info attempt registry request try #3 at 4:49:41 PM
+1092 verbose etag "10JG3GWDXSYC334ORZNM49B96"
+1093 http request GET http://registry.npmjs.org/browserify
+1094 info attempt registry request try #3 at 4:49:41 PM
+1095 verbose etag "7YDUW9OXN69RRY0BWS34YOP4F"
+1096 http request GET http://registry.npmjs.org/gulp-util
+1097 info attempt registry request try #3 at 4:49:41 PM
+1098 verbose etag "2EC94FCJ203IJSWKDZRNHV9N3"
+1099 http request GET http://registry.npmjs.org/merge-stream
+1100 info attempt registry request try #3 at 4:49:41 PM
+1101 verbose etag "9NSQ49HHNSMFL1OXLV28L8YCM"
+1102 http request GET http://registry.npmjs.org/browser-sync
+1103 http 200 http://registry.npmjs.org/gulp-phpspec
+1104 silly get cb [ 200,
+1104 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+1104 silly get     etag: '"8KECRQDN9SXBFI0EPL8J64XF9"',
+1104 silly get     'content-type': 'application/json',
+1104 silly get     'cache-control': 'max-age=60',
+1104 silly get     'content-length': '24365',
+1104 silly get     'accept-ranges': 'bytes',
+1104 silly get     date: 'Thu, 12 Nov 2015 11:19:49 GMT',
+1104 silly get     via: '1.1 varnish',
+1104 silly get     age: '42',
+1104 silly get     connection: 'keep-alive',
+1104 silly get     'x-served-by': 'cache-sin6926-SIN',
+1104 silly get     'x-cache': 'HIT',
+1104 silly get     'x-cache-hits': '1',
+1104 silly get     'x-timer': 'S1447327189.194216,VS0,VE0',
+1104 silly get     vary: 'Accept' } ]
+1105 verbose get saving gulp-phpspec to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-phpspec\.cache.json
+1106 silly addNameRange number 2 { name: 'gulp-phpspec', range: '>=0.5.3 <0.6.0', hasData: true }
+1107 silly addNameRange versions [ 'gulp-phpspec',
+1107 silly addNameRange   [ '0.1.0',
+1107 silly addNameRange     '0.2.0',
+1107 silly addNameRange     '0.2.2',
+1107 silly addNameRange     '0.2.3',
+1107 silly addNameRange     '0.2.4',
+1107 silly addNameRange     '0.2.5',
+1107 silly addNameRange     '0.2.6',
+1107 silly addNameRange     '0.3.0',
+1107 silly addNameRange     '0.3.1',
+1107 silly addNameRange     '0.4.0',
+1107 silly addNameRange     '0.4.1',
+1107 silly addNameRange     '0.4.2',
+1107 silly addNameRange     '0.5.0',
+1107 silly addNameRange     '0.5.1',
+1107 silly addNameRange     '0.5.2',
+1107 silly addNameRange     '0.5.3' ] ]
+1108 silly addNamed gulp-phpspec@0.5.3
+1109 verbose addNamed "0.5.3" is a plain semver version for gulp-phpspec
+1110 silly mapToRegistry name gulp-phpspec
+1111 silly mapToRegistry using default registry
+1112 silly mapToRegistry registry http://registry.npmjs.org/
+1113 silly mapToRegistry uri http://registry.npmjs.org/gulp-phpspec
+1114 verbose addRemoteTarball http://registry.npmjs.org/gulp-phpspec/-/gulp-phpspec-0.5.3.tgz not in flight; adding
+1115 verbose addRemoteTarball [ 'http://registry.npmjs.org/gulp-phpspec/-/gulp-phpspec-0.5.3.tgz',
+1115 verbose addRemoteTarball   '8a90bcc2c3af1d182a83e64c52dac5da31a311b5' ]
+1116 info retry fetch attempt 1 at 4:49:41 PM
+1117 info attempt registry request try #1 at 4:49:41 PM
+1118 http fetch GET http://registry.npmjs.org/gulp-phpspec/-/gulp-phpspec-0.5.3.tgz
+1119 http fetch 200 http://registry.npmjs.org/gulp-phpspec/-/gulp-phpspec-0.5.3.tgz
+1120 silly fetchAndShaCheck shasum 8a90bcc2c3af1d182a83e64c52dac5da31a311b5
+1121 verbose addTmpTarball C:\Users\Daniel\AppData\Local\Temp\npm-22608-bb27c0c5\registry.npmjs.org\gulp-phpspec\-\gulp-phpspec-0.5.3.tgz not in flight; adding
+1122 verbose addTmpTarball already have metadata; skipping unpack for gulp-phpspec@0.5.3
+1123 silly cache afterAdd gulp-phpspec@0.5.3
+1124 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-phpspec\0.5.3\package\package.json not in flight; writing
+1125 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-phpspec\0.5.3\package\package.json written
+1126 silly get cb [ 304, undefined ]
+1127 verbose etag http://registry.npmjs.org/glob from cache
+1128 verbose get saving glob to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\glob\.cache.json
+1129 silly get cb [ 304, undefined ]
+1130 verbose etag http://registry.npmjs.org/gulp-batch from cache
+1131 verbose get saving gulp-batch to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-batch\.cache.json
+1132 silly get cb [ 304, undefined ]
+1133 verbose etag http://registry.npmjs.org/run-sequence from cache
+1134 verbose get saving run-sequence to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\run-sequence\.cache.json
+1135 silly get cb [ 304, undefined ]
+1136 verbose etag http://registry.npmjs.org/gulp-phpunit from cache
+1137 verbose get saving gulp-phpunit to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-phpunit\.cache.json
+1138 silly get cb [ 304, undefined ]
+1139 verbose etag http://registry.npmjs.org/del from cache
+1140 verbose get saving del to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\del\.cache.json
+1141 silly get cb [ 304, undefined ]
+1142 verbose etag http://registry.npmjs.org/partialify from cache
+1143 verbose get saving partialify to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\partialify\.cache.json
+1144 silly get cb [ 304, undefined ]
+1145 verbose etag http://registry.npmjs.org/gulp-autoprefixer from cache
+1146 verbose get saving gulp-autoprefixer to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-autoprefixer\.cache.json
+1147 silly get cb [ 304, undefined ]
+1148 verbose etag http://registry.npmjs.org/gulp-if from cache
+1149 verbose get saving gulp-if to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-if\.cache.json
+1150 silly get cb [ 304, undefined ]
+1151 verbose etag http://registry.npmjs.org/gulp-load-plugins from cache
+1152 verbose get saving gulp-load-plugins to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-load-plugins\.cache.json
+1153 silly get cb [ 304, undefined ]
+1154 verbose etag http://registry.npmjs.org/gulp-concat from cache
+1155 verbose get saving gulp-concat to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-concat\.cache.json
+1156 silly get cb [ 304, undefined ]
+1157 verbose etag http://registry.npmjs.org/gulp-uglify from cache
+1158 verbose get saving gulp-uglify to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-uglify\.cache.json
+1159 silly get cb [ 304, undefined ]
+1160 verbose etag http://registry.npmjs.org/gulp-babel from cache
+1161 verbose get saving gulp-babel to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-babel\.cache.json
+1162 silly get cb [ 304, undefined ]
+1163 verbose etag http://registry.npmjs.org/gulp-notify from cache
+1164 verbose get saving gulp-notify to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-notify\.cache.json
+1165 silly get cb [ 304, undefined ]
+1166 verbose etag http://registry.npmjs.org/gulp-less from cache
+1167 verbose get saving gulp-less to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-less\.cache.json
+1168 silly get cb [ 304, undefined ]
+1169 verbose etag http://registry.npmjs.org/babelify from cache
+1170 verbose get saving babelify to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\babelify\.cache.json
+1171 silly get cb [ 304, undefined ]
+1172 verbose etag http://registry.npmjs.org/gulp-sourcemaps from cache
+1173 verbose get saving gulp-sourcemaps to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-sourcemaps\.cache.json
+1174 silly get cb [ 304, undefined ]
+1175 verbose etag http://registry.npmjs.org/gulp-sass from cache
+1176 verbose get saving gulp-sass to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-sass\.cache.json
+1177 silly get cb [ 304, undefined ]
+1178 verbose etag http://registry.npmjs.org/browser-sync from cache
+1179 verbose get saving browser-sync to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\browser-sync\.cache.json
+1180 silly get cb [ 304, undefined ]
+1181 verbose etag http://registry.npmjs.org/require-dir from cache
+1182 verbose get saving require-dir to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\require-dir\.cache.json
+1183 silly get cb [ 304, undefined ]
+1184 verbose etag http://registry.npmjs.org/browserify from cache
+1185 verbose get saving browserify to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\browserify\.cache.json
+1186 silly get cb [ 304, undefined ]
+1187 verbose etag http://registry.npmjs.org/gulp-util from cache
+1188 verbose get saving gulp-util to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-util\.cache.json
+1189 silly get cb [ 304, undefined ]
+1190 verbose etag http://registry.npmjs.org/merge-stream from cache
+1191 verbose get saving merge-stream to C:\Users\Daniel\AppData\Roaming\npm-cache\registry.npmjs.org\merge-stream\.cache.json
+1192 silly addNameRange number 2 { name: 'glob', range: '>=5.0.14 <6.0.0', hasData: true }
+1193 silly addNameRange versions [ 'glob',
+1193 silly addNameRange   [ '1.1.0',
+1193 silly addNameRange     '2.0.9',
+1193 silly addNameRange     '2.0.8',
+1193 silly addNameRange     '2.0.7',
+1193 silly addNameRange     '2.1.0',
+1193 silly addNameRange     '3.0.0',
+1193 silly addNameRange     '3.0.1',
+1193 silly addNameRange     '3.1.0',
+1193 silly addNameRange     '3.1.1',
+1193 silly addNameRange     '3.1.2',
+1193 silly addNameRange     '3.1.3',
+1193 silly addNameRange     '3.1.4',
+1193 silly addNameRange     '3.1.5',
+1193 silly addNameRange     '3.1.6',
+1193 silly addNameRange     '3.1.7',
+1193 silly addNameRange     '3.1.9',
+1193 silly addNameRange     '3.1.10',
+1193 silly addNameRange     '3.1.11',
+1193 silly addNameRange     '3.1.12',
+1193 silly addNameRange     '3.1.13',
+1193 silly addNameRange     '3.1.14',
+1193 silly addNameRange     '3.1.15',
+1193 silly addNameRange     '3.1.16',
+1193 silly addNameRange     '3.1.17',
+1193 silly addNameRange     '3.1.18',
+1193 silly addNameRange     '3.1.19',
+1193 silly addNameRange     '3.1.20',
+1193 silly addNameRange     '3.1.21',
+1193 silly addNameRange     '3.2.0',
+1193 silly addNameRange     '3.2.1',
+1193 silly addNameRange     '3.2.3',
+1193 silly addNameRange     '3.2.4',
+1193 silly addNameRange     '3.2.5',
+1193 silly addNameRange     '3.2.6',
+1193 silly addNameRange     '3.2.7',
+1193 silly addNameRange     '3.2.8',
+1193 silly addNameRange     '3.2.9',
+1193 silly addNameRange     '3.2.10',
+1193 silly addNameRange     '3.2.11',
+1193 silly addNameRange     '4.0.0',
+1193 silly addNameRange     '4.0.1',
+1193 silly addNameRange     '4.0.2',
+1193 silly addNameRange     '4.0.3',
+1193 silly addNameRange     '4.0.4',
+1193 silly addNameRange     '4.0.5',
+1193 silly addNameRange     '4.0.6',
+1193 silly addNameRange     '4.1.2-beta',
+1193 silly addNameRange     '4.1.2',
+1193 silly addNameRange     '4.1.3',
+1193 silly addNameRange     '4.1.4',
+1193 silly addNameRange     '4.1.5',
+1193 silly addNameRange     '4.1.6',
+1193 silly addNameRange     '4.2.0',
+1193 silly addNameRange     '4.2.1',
+1193 silly addNameRange     '4.2.2',
+1193 silly addNameRange     '4.3.0',
+1193 silly addNameRange     '4.3.1',
+1193 silly addNameRange     '4.3.2',
+1193 silly addNameRange     '4.3.3',
+1193 silly addNameRange     '4.3.4',
+1193 silly addNameRange     '4.3.5',
+1193 silly addNameRange     '4.4.0',
+1193 silly addNameRange     '4.4.2',
+1193 silly addNameRange     '4.5.0',
+1193 silly addNameRange     '5.0.0',
+1193 silly addNameRange     '4.5.1',
+1193 silly addNameRange     '5.0.1',
+1193 silly addNameRange     '4.5.2',
+1193 silly addNameRange     '5.0.2',
+1193 silly addNameRange     '4.5.3',
+1193 silly addNameRange     '5.0.3',
+1193 silly addNameRange     '5.0.4',
+1193 silly addNameRange     '5.0.5',
+1193 silly addNameRange     '5.0.6',
+1193 silly addNameRange     '5.0.7',
+1193 silly addNameRange     '5.0.9',
+1193 silly addNameRange     '5.0.10',
+1193 silly addNameRange     '5.0.11',
+1193 silly addNameRange     '5.0.12',
+1193 silly addNameRange     '5.0.13',
+1193 silly addNameRange     '5.0.14',
+1193 silly addNameRange     '5.0.15',
+1193 silly addNameRange     '6.0.1' ] ]
+1194 silly addNamed glob@5.0.15
+1195 verbose addNamed "5.0.15" is a plain semver version for glob
+1196 silly addNameRange number 2 { name: 'gulp-batch', range: '>=1.0.5 <2.0.0', hasData: true }
+1197 silly addNameRange versions [ 'gulp-batch',
+1197 silly addNameRange   [ '0.0.0',
+1197 silly addNameRange     '0.0.1',
+1197 silly addNameRange     '0.0.2',
+1197 silly addNameRange     '0.0.3',
+1197 silly addNameRange     '0.0.4',
+1197 silly addNameRange     '0.0.5',
+1197 silly addNameRange     '0.0.6',
+1197 silly addNameRange     '0.0.7',
+1197 silly addNameRange     '0.1.0',
+1197 silly addNameRange     '0.2.0',
+1197 silly addNameRange     '0.2.1',
+1197 silly addNameRange     '0.2.2',
+1197 silly addNameRange     '0.2.3',
+1197 silly addNameRange     '0.2.4',
+1197 silly addNameRange     '0.2.5',
+1197 silly addNameRange     '0.3.0',
+1197 silly addNameRange     '0.3.1',
+1197 silly addNameRange     '0.3.2',
+1197 silly addNameRange     '0.3.3',
+1197 silly addNameRange     '0.4.0',
+1197 silly addNameRange     '0.4.1',
+1197 silly addNameRange     '1.0.0',
+1197 silly addNameRange     '1.0.1',
+1197 silly addNameRange     '1.0.2',
+1197 silly addNameRange     '1.0.3',
+1197 silly addNameRange     '1.0.4',
+1197 silly addNameRange     '1.0.5' ] ]
+1198 silly addNamed gulp-batch@1.0.5
+1199 verbose addNamed "1.0.5" is a plain semver version for gulp-batch
+1200 silly addNameRange number 2 { name: 'run-sequence', range: '>=1.1.1 <2.0.0', hasData: true }
+1201 silly addNameRange versions [ 'run-sequence',
+1201 silly addNameRange   [ '0.3.1',
+1201 silly addNameRange     '0.3.2',
+1201 silly addNameRange     '0.3.3',
+1201 silly addNameRange     '0.3.4',
+1201 silly addNameRange     '0.3.5',
+1201 silly addNameRange     '0.3.6',
+1201 silly addNameRange     '0.3.7',
+1201 silly addNameRange     '1.0.0',
+1201 silly addNameRange     '1.0.1',
+1201 silly addNameRange     '1.0.2',
+1201 silly addNameRange     '1.1.0',
+1201 silly addNameRange     '1.1.1',
+1201 silly addNameRange     '1.1.2',
+1201 silly addNameRange     '1.1.3',
+1201 silly addNameRange     '1.1.4' ] ]
+1202 silly addNamed run-sequence@1.1.4
+1203 verbose addNamed "1.1.4" is a plain semver version for run-sequence
+1204 silly addNameRange number 2 { name: 'gulp-if', range: '>=1.2.5 <2.0.0', hasData: true }
+1205 silly addNameRange versions [ 'gulp-if',
+1205 silly addNameRange   [ '0.0.3',
+1205 silly addNameRange     '0.0.4',
+1205 silly addNameRange     '0.0.5',
+1205 silly addNameRange     '1.0.0',
+1205 silly addNameRange     '1.1.0',
+1205 silly addNameRange     '1.2.0',
+1205 silly addNameRange     '1.2.1',
+1205 silly addNameRange     '1.2.2',
+1205 silly addNameRange     '1.2.3',
+1205 silly addNameRange     '1.2.4',
+1205 silly addNameRange     '1.2.5',
+1205 silly addNameRange     '2.0.0' ] ]
+1206 silly addNamed gulp-if@1.2.5
+1207 verbose addNamed "1.2.5" is a plain semver version for gulp-if
+1208 silly addNameRange number 2 { name: 'gulp-autoprefixer',
+1208 silly addNameRange   range: '>=2.3.1 <3.0.0',
+1208 silly addNameRange   hasData: true }
+1209 silly addNameRange versions [ 'gulp-autoprefixer',
+1209 silly addNameRange   [ '0.0.1',
+1209 silly addNameRange     '0.0.2',
+1209 silly addNameRange     '0.0.3',
+1209 silly addNameRange     '0.0.4',
+1209 silly addNameRange     '0.0.5',
+1209 silly addNameRange     '0.0.6',
+1209 silly addNameRange     '0.0.7',
+1209 silly addNameRange     '0.0.8',
+1209 silly addNameRange     '0.0.9',
+1209 silly addNameRange     '0.0.10',
+1209 silly addNameRange     '1.0.0',
+1209 silly addNameRange     '1.0.1',
+1209 silly addNameRange     '2.0.0',
+1209 silly addNameRange     '2.1.0',
+1209 silly addNameRange     '2.2.0',
+1209 silly addNameRange     '2.3.0',
+1209 silly addNameRange     '2.3.1',
+1209 silly addNameRange     '3.0.0',
+1209 silly addNameRange     '3.0.1',
+1209 silly addNameRange     '3.0.2' ] ]
+1210 silly addNamed gulp-autoprefixer@2.3.1
+1211 verbose addNamed "2.3.1" is a plain semver version for gulp-autoprefixer
+1212 silly addNameRange number 2 { name: 'partialify', range: '>=3.1.3 <4.0.0', hasData: true }
+1213 silly addNameRange versions [ 'partialify',
+1213 silly addNameRange   [ '1.0.0',
+1213 silly addNameRange     '2.0.1',
+1213 silly addNameRange     '2.1.0',
+1213 silly addNameRange     '2.2.0',
+1213 silly addNameRange     '3.0.0',
+1213 silly addNameRange     '3.1.0',
+1213 silly addNameRange     '3.1.1',
+1213 silly addNameRange     '3.1.2',
+1213 silly addNameRange     '3.1.3',
+1213 silly addNameRange     '3.1.4',
+1213 silly addNameRange     '3.1.5' ] ]
+1214 silly addNamed partialify@3.1.5
+1215 verbose addNamed "3.1.5" is a plain semver version for partialify
+1216 silly addNameRange number 2 { name: 'gulp-load-plugins',
+1216 silly addNameRange   range: '>=1.0.0-rc.1 <2.0.0',
+1216 silly addNameRange   hasData: true }
+1217 silly addNameRange versions [ 'gulp-load-plugins',
+1217 silly addNameRange   [ '0.2.0',
+1217 silly addNameRange     '0.3.0',
+1217 silly addNameRange     '0.4.0',
+1217 silly addNameRange     '0.5.0',
+1217 silly addNameRange     '0.5.1',
+1217 silly addNameRange     '0.6.0-beta',
+1217 silly addNameRange     '0.5.2',
+1217 silly addNameRange     '0.5.3',
+1217 silly addNameRange     '0.6.0',
+1217 silly addNameRange     '0.7.0',
+1217 silly addNameRange     '0.7.1',
+1217 silly addNameRange     '0.8.0',
+1217 silly addNameRange     '0.8.1',
+1217 silly addNameRange     '0.9.0',
+1217 silly addNameRange     '0.10.0',
+1217 silly addNameRange     '1.0.0-rc.1' ] ]
+1218 silly addNamed gulp-load-plugins@1.0.0-rc.1
+1219 verbose addNamed "1.0.0-rc.1" is a plain semver version for gulp-load-plugins
+1220 silly addNameRange number 2 { name: 'del', range: '>=1.2.0 <2.0.0', hasData: true }
+1221 silly addNameRange versions [ 'del',
+1221 silly addNameRange   [ '0.1.0',
+1221 silly addNameRange     '0.1.1',
+1221 silly addNameRange     '0.1.2',
+1221 silly addNameRange     '0.1.3',
+1221 silly addNameRange     '1.0.0',
+1221 silly addNameRange     '1.1.0',
+1221 silly addNameRange     '1.1.1',
+1221 silly addNameRange     '1.2.0',
+1221 silly addNameRange     '1.2.1',
+1221 silly addNameRange     '2.0.0',
+1221 silly addNameRange     '2.0.1',
+1221 silly addNameRange     '2.0.2' ] ]
+1222 silly addNamed del@1.2.1
+1223 verbose addNamed "1.2.1" is a plain semver version for del
+1224 silly addNameRange number 2 { name: 'gulp-concat', range: '>=2.6.0 <3.0.0', hasData: true }
+1225 silly addNameRange versions [ 'gulp-concat',
+1225 silly addNameRange   [ '0.0.1',
+1225 silly addNameRange     '1.0.0',
+1225 silly addNameRange     '1.1.0',
+1225 silly addNameRange     '2.0.0',
+1225 silly addNameRange     '2.1.0',
+1225 silly addNameRange     '2.1.1',
+1225 silly addNameRange     '2.1.2',
+1225 silly addNameRange     '2.1.3',
+1225 silly addNameRange     '2.1.4',
+1225 silly addNameRange     '2.1.5',
+1225 silly addNameRange     '2.1.6',
+1225 silly addNameRange     '2.1.7',
+1225 silly addNameRange     '2.2.0',
+1225 silly addNameRange     '2.3.0',
+1225 silly addNameRange     '2.3.3',
+1225 silly addNameRange     '2.3.4',
+1225 silly addNameRange     '2.3.5',
+1225 silly addNameRange     '2.4.0',
+1225 silly addNameRange     '2.4.1',
+1225 silly addNameRange     '2.4.2',
+1225 silly addNameRange     '2.4.3',
+1225 silly addNameRange     '2.5.0',
+1225 silly addNameRange     '2.5.1',
+1225 silly addNameRange     '2.5.2',
+1225 silly addNameRange     '2.6.0' ] ]
+1226 silly addNamed gulp-concat@2.6.0
+1227 verbose addNamed "2.6.0" is a plain semver version for gulp-concat
+1228 silly addNameRange number 2 { name: 'gulp-uglify', range: '>=1.4.2 <2.0.0', hasData: true }
+1229 silly addNameRange versions [ 'gulp-uglify',
+1229 silly addNameRange   [ '0.0.1',
+1229 silly addNameRange     '0.0.3',
+1229 silly addNameRange     '0.0.4',
+1229 silly addNameRange     '0.1.0',
+1229 silly addNameRange     '0.2.0',
+1229 silly addNameRange     '0.2.1',
+1229 silly addNameRange     '0.3.0',
+1229 silly addNameRange     '0.3.1',
+1229 silly addNameRange     '0.3.2',
+1229 silly addNameRange     '1.0.0-0',
+1229 silly addNameRange     '1.0.0',
+1229 silly addNameRange     '1.0.1',
+1229 silly addNameRange     '1.0.2',
+1229 silly addNameRange     '1.1.0',
+1229 silly addNameRange     '1.2.0',
+1229 silly addNameRange     '1.3.0',
+1229 silly addNameRange     '1.4.0',
+1229 silly addNameRange     '1.4.1' ] ]
+1230 silly addNameRange number 2 { name: 'gulp-notify', range: '>=2.2.0 <3.0.0', hasData: true }
+1231 silly addNameRange versions [ 'gulp-notify',
+1231 silly addNameRange   [ '0.0.5',
+1231 silly addNameRange     '0.0.6',
+1231 silly addNameRange     '0.0.7',
+1231 silly addNameRange     '0.0.8',
+1231 silly addNameRange     '0.1.0',
+1231 silly addNameRange     '0.2.0',
+1231 silly addNameRange     '0.3.0',
+1231 silly addNameRange     '0.3.2',
+1231 silly addNameRange     '0.3.3',
+1231 silly addNameRange     '0.3.4',
+1231 silly addNameRange     '0.3.4-1',
+1231 silly addNameRange     '0.3.4-2',
+1231 silly addNameRange     '0.3.5-0',
+1231 silly addNameRange     '0.4.0',
+1231 silly addNameRange     '0.4.1',
+1231 silly addNameRange     '0.4.2',
+1231 silly addNameRange     '0.4.3',
+1231 silly addNameRange     '0.4.5',
+1231 silly addNameRange     '0.4.6',
+1231 silly addNameRange     '0.5.0',
+1231 silly addNameRange     '0.5.1',
+1231 silly addNameRange     '0.6.0',
+1231 silly addNameRange     '0.6.1',
+1231 silly addNameRange     '0.6.2',
+1231 silly addNameRange     '1.0.0-beta',
+1231 silly addNameRange     '1.1.0',
+1231 silly addNameRange     '1.1.1',
+1231 silly addNameRange     '1.2.0',
+1231 silly addNameRange     '1.2.1',
+1231 silly addNameRange     '1.2.2',
+1231 silly addNameRange     '1.2.4',
+1231 silly addNameRange     '1.2.5',
+1231 silly addNameRange     '1.2.6',
+1231 silly addNameRange     '1.3.0',
+1231 silly addNameRange     '1.3.1',
+1231 silly addNameRange     '1.4.0',
+1231 silly addNameRange     '1.4.1',
+1231 silly addNameRange     '1.4.2',
+1231 silly addNameRange     '1.5.0',
+1231 silly addNameRange     '1.5.1',
+1231 silly addNameRange     '1.6.0',
+1231 silly addNameRange     '1.7.0',
+1231 silly addNameRange     '1.7.1',
+1231 silly addNameRange     '1.8.0',
+1231 silly addNameRange     '2.0.0',
+1231 silly addNameRange     '2.0.1',
+1231 silly addNameRange     '2.1.0',
+1231 silly addNameRange     '2.2.0' ] ]
+1232 silly addNamed gulp-notify@2.2.0
+1233 verbose addNamed "2.2.0" is a plain semver version for gulp-notify
+1234 silly cache afterAdd glob@5.0.15
+1235 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\glob\5.0.15\package\package.json not in flight; writing
+1236 silly addNameRange number 2 { name: 'babelify', range: '>=6.1.3 <7.0.0', hasData: true }
+1237 silly addNameRange versions [ 'babelify',
+1237 silly addNameRange   [ '5.0.1',
+1237 silly addNameRange     '5.0.2',
+1237 silly addNameRange     '5.0.3',
+1237 silly addNameRange     '5.0.4',
+1237 silly addNameRange     '6.0.0',
+1237 silly addNameRange     '5.0.5',
+1237 silly addNameRange     '6.0.1',
+1237 silly addNameRange     '6.0.2',
+1237 silly addNameRange     '6.1.0',
+1237 silly addNameRange     '6.1.1',
+1237 silly addNameRange     '6.1.2',
+1237 silly addNameRange     '6.1.3',
+1237 silly addNameRange     '6.2.0',
+1237 silly addNameRange     '6.3.0',
+1237 silly addNameRange     '6.4.0',
+1237 silly addNameRange     '7.0.0',
+1237 silly addNameRange     '7.0.1',
+1237 silly addNameRange     '7.0.2',
+1237 silly addNameRange     '7.1.0',
+1237 silly addNameRange     '7.2.0' ] ]
+1238 silly addNamed babelify@6.4.0
+1239 verbose addNamed "6.4.0" is a plain semver version for babelify
+1240 silly addNameRange number 2 { name: 'gulp-babel', range: '>=5.1.0 <6.0.0', hasData: true }
+1241 silly addNameRange versions [ 'gulp-babel',
+1241 silly addNameRange   [ '4.0.0',
+1241 silly addNameRange     '4.0.1',
+1241 silly addNameRange     '5.0.0',
+1241 silly addNameRange     '5.1.0',
+1241 silly addNameRange     '5.2.0',
+1241 silly addNameRange     '5.2.1',
+1241 silly addNameRange     '5.3.0',
+1241 silly addNameRange     '6.0.0',
+1241 silly addNameRange     '6.1.0' ] ]
+1242 silly addNamed gulp-babel@5.3.0
+1243 verbose addNamed "5.3.0" is a plain semver version for gulp-babel
+1244 silly cache afterAdd gulp-batch@1.0.5
+1245 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-batch\1.0.5\package\package.json not in flight; writing
+1246 silly addNameRange number 2 { name: 'gulp-less', range: '>=3.0.3 <4.0.0', hasData: true }
+1247 silly addNameRange versions [ 'gulp-less',
+1247 silly addNameRange   [ '0.0.0',
+1247 silly addNameRange     '0.0.1',
+1247 silly addNameRange     '0.0.2',
+1247 silly addNameRange     '0.0.3',
+1247 silly addNameRange     '1.0.1',
+1247 silly addNameRange     '1.0.0',
+1247 silly addNameRange     '1.0.2',
+1247 silly addNameRange     '1.1.0',
+1247 silly addNameRange     '1.1.1',
+1247 silly addNameRange     '1.1.3',
+1247 silly addNameRange     '1.1.4',
+1247 silly addNameRange     '1.1.5',
+1247 silly addNameRange     '1.1.6',
+1247 silly addNameRange     '1.1.7',
+1247 silly addNameRange     '1.1.8',
+1247 silly addNameRange     '1.1.10',
+1247 silly addNameRange     '1.2.0',
+1247 silly addNameRange     '1.2.1',
+1247 silly addNameRange     '1.2.2',
+1247 silly addNameRange     '1.2.3',
+1247 silly addNameRange     '1.2.4',
+1247 silly addNameRange     '1.3.0',
+1247 silly addNameRange     '1.3.1',
+1247 silly addNameRange     '1.3.2',
+1247 silly addNameRange     '1.3.3',
+1247 silly addNameRange     '1.3.4',
+1247 silly addNameRange     '1.3.5',
+1247 silly addNameRange     '1.3.6',
+1247 silly addNameRange     '1.3.7',
+1247 silly addNameRange     '1.3.8',
+1247 silly addNameRange     '1.3.9',
+1247 silly addNameRange     '2.0.0',
+1247 silly addNameRange     '2.0.1',
+1247 silly addNameRange     '2.0.2',
+1247 silly addNameRange     '2.0.3',
+1247 silly addNameRange     '3.0.0',
+1247 silly addNameRange     '3.0.1',
+1247 silly addNameRange     '3.0.2',
+1247 silly addNameRange     '3.0.3' ] ]
+1248 silly addNamed gulp-less@3.0.3
+1249 verbose addNamed "3.0.3" is a plain semver version for gulp-less
+1250 silly addNameRange number 2 { name: 'gulp-sass', range: '>=2.0.3 <3.0.0', hasData: true }
+1251 silly addNameRange versions [ 'gulp-sass',
+1251 silly addNameRange   [ '0.1.0',
+1251 silly addNameRange     '0.2.1',
+1251 silly addNameRange     '0.2.2',
+1251 silly addNameRange     '0.2.3',
+1251 silly addNameRange     '0.3.0',
+1251 silly addNameRange     '0.4.0',
+1251 silly addNameRange     '0.4.1',
+1251 silly addNameRange     '0.5.0',
+1251 silly addNameRange     '0.5.1',
+1251 silly addNameRange     '0.5.2',
+1251 silly addNameRange     '0.6.0',
+1251 silly addNameRange     '0.7.0',
+1251 silly addNameRange     '0.7.1',
+1251 silly addNameRange     '0.7.2',
+1251 silly addNameRange     '0.7.3',
+1251 silly addNameRange     '1.0.0',
+1251 silly addNameRange     '1.1.0',
+1251 silly addNameRange     '1.2.0',
+1251 silly addNameRange     '1.2.1',
+1251 silly addNameRange     '1.2.2',
+1251 silly addNameRange     '1.2.3',
+1251 silly addNameRange     '1.2.4',
+1251 silly addNameRange     '1.3.0',
+1251 silly addNameRange     '1.3.1',
+1251 silly addNameRange     '1.3.2',
+1251 silly addNameRange     '1.3.3',
+1251 silly addNameRange     '2.0.0-alpha.1',
+1251 silly addNameRange     '2.0.0',
+1251 silly addNameRange     '2.0.2',
+1251 silly addNameRange     '2.0.3',
+1251 silly addNameRange     '2.0.4',
+1251 silly addNameRange     '2.1.0-beta' ] ]
+1252 silly addNamed gulp-sass@2.0.4
+1253 verbose addNamed "2.0.4" is a plain semver version for gulp-sass
+1254 silly addNameRange number 2 { name: 'gulp-sourcemaps',
+1254 silly addNameRange   range: '>=1.5.2 <2.0.0',
+1254 silly addNameRange   hasData: true }
+1255 silly addNameRange versions [ 'gulp-sourcemaps',
+1255 silly addNameRange   [ '0.2.0',
+1255 silly addNameRange     '0.2.1',
+1255 silly addNameRange     '0.3.0',
+1255 silly addNameRange     '0.3.1',
+1255 silly addNameRange     '0.4.0',
+1255 silly addNameRange     '0.4.1',
+1255 silly addNameRange     '0.4.2',
+1255 silly addNameRange     '0.4.3',
+1255 silly addNameRange     '0.4.4',
+1255 silly addNameRange     '0.4.5',
+1255 silly addNameRange     '0.4.6',
+1255 silly addNameRange     '1.0.0',
+1255 silly addNameRange     '1.1.0',
+1255 silly addNameRange     '1.1.1',
+1255 silly addNameRange     '1.1.2',
+1255 silly addNameRange     '1.1.3',
+1255 silly addNameRange     '1.1.4',
+1255 silly addNameRange     '1.1.5',
+1255 silly addNameRange     '1.2.0',
+1255 silly addNameRange     '1.2.1',
+1255 silly addNameRange     '1.2.2',
+1255 silly addNameRange     '1.2.3',
+1255 silly addNameRange     '1.2.4',
+1255 silly addNameRange     '1.2.5',
+1255 silly addNameRange     '1.2.6',
+1255 silly addNameRange     '1.2.7',
+1255 silly addNameRange     '1.2.8',
+1255 silly addNameRange     '1.3.0',
+1255 silly addNameRange     '1.4.0',
+1255 silly addNameRange     '1.5.0',
+1255 silly addNameRange     '1.5.1',
+1255 silly addNameRange     '1.5.2',
+1255 silly addNameRange     '1.6.0' ] ]
+1256 silly addNamed gulp-sourcemaps@1.6.0
+1257 verbose addNamed "1.6.0" is a plain semver version for gulp-sourcemaps
+1258 silly addNameRange number 2 { name: 'browser-sync', range: '>=2.7.10 <3.0.0', hasData: true }
+1259 silly addNameRange versions [ 'browser-sync',
+1259 silly addNameRange   [ '0.1.0',
+1259 silly addNameRange     '0.1.1',
+1259 silly addNameRange     '0.1.3',
+1259 silly addNameRange     '0.1.5',
+1259 silly addNameRange     '0.1.6',
+1259 silly addNameRange     '0.1.7',
+1259 silly addNameRange     '0.1.8',
+1259 silly addNameRange     '0.1.9',
+1259 silly addNameRange     '0.1.10',
+1259 silly addNameRange     '0.2.0',
+1259 silly addNameRange     '0.2.1',
+1259 silly addNameRange     '0.3.0',
+1259 silly addNameRange     '0.3.1',
+1259 silly addNameRange     '0.3.2',
+1259 silly addNameRange     '0.3.3',
+1259 silly addNameRange     '0.3.4',
+1259 silly addNameRange     '0.3.5',
+1259 silly addNameRange     '0.3.6',
+1259 silly addNameRange     '0.3.7',
+1259 silly addNameRange     '0.3.8',
+1259 silly addNameRange     '0.3.10',
+1259 silly addNameRange     '0.4.0',
+1259 silly addNameRange     '0.4.1',
+1259 silly addNameRange     '0.4.2',
+1259 silly addNameRange     '0.4.21',
+1259 silly addNameRange     '0.4.3',
+1259 silly addNameRange     '0.4.4',
+1259 silly addNameRange     '0.4.5',
+1259 silly addNameRange     '0.4.6',
+1259 silly addNameRange     '0.4.7',
+1259 silly addNameRange     '0.4.8',
+1259 silly addNameRange     '0.4.9',
+1259 silly addNameRange     '0.4.10',
+1259 silly addNameRange     '0.4.11',
+1259 silly addNameRange     '0.4.12',
+1259 silly addNameRange     '0.5.0',
+1259 silly addNameRange     '0.5.1',
+1259 silly addNameRange     '0.5.2',
+1259 silly addNameRange     '0.5.3',
+1259 silly addNameRange     '0.5.4',
+1259 silly addNameRange     '0.5.5',
+1259 silly addNameRange     '0.5.6',
+1259 silly addNameRange     '0.5.7',
+1259 silly addNameRange     '0.5.8',
+1259 silly addNameRange     '0.5.9',
+1259 silly addNameRange     '0.6.0',
+1259 silly addNameRange     '0.6.1',
+1259 silly addNameRange     '0.6.2',
+1259 silly addNameRange     '0.7.0',
+1259 silly addNameRange     '0.7.1',
+1259 silly addNameRange     '0.7.2',
+1259 silly addNameRange     '0.7.3',
+1259 silly addNameRange     '0.7.4',
+1259 silly addNameRange     '0.7.5',
+1259 silly addNameRange     '0.7.7',
+1259 silly addNameRange     '0.8.0',
+1259 silly addNameRange     '0.8.1',
+1259 silly addNameRange     '0.8.2',
+1259 silly addNameRange     '0.9.0',
+1259 silly addNameRange     '0.9.1',
+1259 silly addNameRange     '1.0.0',
+1259 silly addNameRange     '1.1.0',
+1259 silly addNameRange     '1.1.1',
+1259 silly addNameRange     '1.1.2',
+1259 silly addNameRange     '1.2.0',
+1259 silly addNameRange     '1.2.1',
+1259 silly addNameRange     '1.3.0',
+1259 silly addNameRange     '1.3.2',
+1259 silly addNameRange     '1.3.3',
+1259 silly addNameRange     '1.3.4',
+1259 silly addNameRange     '1.3.5',
+1259 silly addNameRange     '1.3.6',
+1259 silly addNameRange     '1.3.7',
+1259 silly addNameRange     '1.5.0',
+1259 silly addNameRange     '1.5.1',
+1259 silly addNameRange     '1.5.2',
+1259 silly addNameRange     '1.5.3',
+1259 silly addNameRange     '1.5.4',
+1259 silly addNameRange     '1.5.5',
+1259 silly addNameRange     '1.5.6',
+1259 silly addNameRange     '1.5.7',
+1259 silly addNameRange     '1.5.8',
+1259 silly addNameRange     '1.5.9',
+1259 silly addNameRange     '1.6.0',
+1259 silly addNameRange     '1.6.1',
+1259 silly addNameRange     '1.6.2',
+1259 silly addNameRange     '1.6.3',
+1259 silly addNameRange     '1.6.4',
+1259 silly addNameRange     '1.6.5',
+1259 silly addNameRange     '1.7.0',
+1259 silly addNameRange     '1.7.1',
+1259 silly addNameRange     '1.7.2',
+1259 silly addNameRange     '1.7.3',
+1259 silly addNameRange     '1.8.0',
+1259 silly addNameRange     '1.8.1',
+1259 silly addNameRange     '1.8.2',
+1259 silly addNameRange     '1.8.3',
+1259 silly addNameRange     '1.9.0',
+1259 silly addNameRange     '1.9.1',
+1259 silly addNameRange     '2.0.0-rc1',
+1259 silly addNameRange     '2.0.0-rc2',
+1259 silly addNameRange     '2.0.0-rc3',
+1259 silly addNameRange     '2.0.0-rc4',
+1259 silly addNameRange     '2.0.0-rc5',
+1259 silly addNameRange     '2.0.0-rc6',
+1259 silly addNameRange     '2.0.0-rc7',
+1259 silly addNameRange     '2.0.0-rc8',
+1259 silly addNameRange     '2.0.0-rc9',
+1259 silly addNameRange     '2.0.0-rc10',
+1259 silly addNameRange     '2.0.0',
+1259 silly addNameRange     '2.0.1',
+1259 silly addNameRange     '2.1.0',
+1259 silly addNameRange     '2.1.1',
+1259 silly addNameRange     '2.1.2',
+1259 silly addNameRange     '2.1.3',
+1259 silly addNameRange     '2.1.4',
+1259 silly addNameRange     '2.1.6',
+1259 silly addNameRange     '2.2.0',
+1259 silly addNameRange     '2.2.1',
+1259 silly addNameRange     '2.2.2',
+1259 silly addNameRange     '2.2.3',
+1259 silly addNameRange     '2.2.4',
+1259 silly addNameRange     '2.2.5',
+1259 silly addNameRange     '2.3.0',
+1259 silly addNameRange     '2.3.1',
+1259 silly addNameRange     '2.3.2',
+1259 silly addNameRange     '2.4.0',
+1259 silly addNameRange     '2.4.1',
+1259 silly addNameRange     '2.5.0',
+1259 silly addNameRange     '2.5.1',
+1259 silly addNameRange     '2.5.2',
+1259 silly addNameRange     '2.5.3',
+1259 silly addNameRange     '2.6.0',
+1259 silly addNameRange     '2.6.1',
+1259 silly addNameRange     '2.6.2',
+1259 silly addNameRange     '2.6.3',
+1259 silly addNameRange     '2.6.4',
+1259 silly addNameRange     '2.6.5',
+1259 silly addNameRange     '2.6.6',
+1259 silly addNameRange     '1.9.2',
+1259 silly addNameRange     '2.6.7',
+1259 silly addNameRange     '2.6.8',
+1259 silly addNameRange     '2.6.9',
+1259 silly addNameRange     '2.6.10',
+1259 silly addNameRange     '2.6.11',
+1259 silly addNameRange     '2.7.0',
+1259 silly addNameRange     '2.7.1',
+1259 silly addNameRange     '2.7.2',
+1259 silly addNameRange     '2.7.3',
+1259 silly addNameRange     '2.7.4',
+1259 silly addNameRange     '2.7.5',
+1259 silly addNameRange     '2.7.6',
+1259 silly addNameRange     '2.7.7',
+1259 silly addNameRange     '2.7.8',
+1259 silly addNameRange     '2.7.9',
+1259 silly addNameRange     '2.7.10',
+1259 silly addNameRange     '2.7.11',
+1259 silly addNameRange     '2.7.12',
+1259 silly addNameRange     '2.7.13',
+1259 silly addNameRange     '2.8.0',
+1259 silly addNameRange     '2.8.1',
+1259 silly addNameRange     '2.8.2',
+1259 silly addNameRange     '2.8.3',
+1259 silly addNameRange     '2.9.0',
+1259 silly addNameRange     '2.9.1',
+1259 silly addNameRange     '2.9.2',
+1259 silly addNameRange     '2.9.3',
+1259 silly addNameRange     '2.9.4',
+1259 silly addNameRange     '2.9.5',
+1259 silly addNameRange     '2.9.6',
+1259 silly addNameRange     '2.9.7',
+1259 silly addNameRange     '2.9.8' ] ]
+1260 silly addNamed browser-sync@2.9.8
+1261 verbose addNamed "2.9.8" is a plain semver version for browser-sync
+1262 silly addNameRange number 2 { name: 'require-dir', range: '>=0.3.0 <0.4.0', hasData: true }
+1263 silly addNameRange versions [ 'require-dir', [ '0.1.0', '0.2.0', '0.3.0' ] ]
+1264 silly addNamed require-dir@0.3.0
+1265 verbose addNamed "0.3.0" is a plain semver version for require-dir
+1266 silly addNameRange number 2 { name: 'browserify', range: '>=11.2.0 <12.0.0', hasData: true }
+1267 silly addNameRange versions [ 'browserify',
+1267 silly addNameRange   [ '0.0.1',
+1267 silly addNameRange     '0.0.2',
+1267 silly addNameRange     '0.0.3',
+1267 silly addNameRange     '0.0.4',
+1267 silly addNameRange     '0.0.5',
+1267 silly addNameRange     '0.1.0',
+1267 silly addNameRange     '0.1.1',
+1267 silly addNameRange     '0.1.2',
+1267 silly addNameRange     '0.1.3',
+1267 silly addNameRange     '0.1.4',
+1267 silly addNameRange     '0.1.5',
+1267 silly addNameRange     '0.2.0',
+1267 silly addNameRange     '0.2.1',
+1267 silly addNameRange     '0.2.2',
+1267 silly addNameRange     '0.2.3',
+1267 silly addNameRange     '0.2.4',
+1267 silly addNameRange     '0.2.5',
+1267 silly addNameRange     '0.2.6',
+1267 silly addNameRange     '0.2.7',
+1267 silly addNameRange     '0.2.8',
+1267 silly addNameRange     '0.2.9',
+1267 silly addNameRange     '0.2.10',
+1267 silly addNameRange     '0.2.11',
+1267 silly addNameRange     '0.3.0',
+1267 silly addNameRange     '0.3.1',
+1267 silly addNameRange     '0.3.2',
+1267 silly addNameRange     '0.3.3',
+1267 silly addNameRange     '0.3.4',
+1267 silly addNameRange     '0.3.5',
+1267 silly addNameRange     '0.3.6',
+1267 silly addNameRange     '0.3.7',
+1267 silly addNameRange     '0.4.0',
+1267 silly addNameRange     '0.4.1',
+1267 silly addNameRange     '0.4.2',
+1267 silly addNameRange     '0.4.3',
+1267 silly addNameRange     '0.4.4',
+1267 silly addNameRange     '0.4.5',
+1267 silly addNameRange     '0.4.6',
+1267 silly addNameRange     '0.4.7',
+1267 silly addNameRange     '0.4.8',
+1267 silly addNameRange     '0.4.9',
+1267 silly addNameRange     '0.4.10',
+1267 silly addNameRange     '0.4.11',
+1267 silly addNameRange     '0.4.12',
+1267 silly addNameRange     '0.4.13',
+1267 silly addNameRange     '0.4.14',
+1267 silly addNameRange     '0.4.15',
+1267 silly addNameRange     '0.5.0',
+1267 silly addNameRange     '0.5.1',
+1267 silly addNameRange     '0.5.2',
+1267 silly addNameRange     '1.0.0',
+1267 silly addNameRange     '1.1.0',
+1267 silly addNameRange     '1.1.1',
+1267 silly addNameRange     '1.1.2',
+1267 silly addNameRange     '1.1.3',
+1267 silly addNameRange     '1.1.4',
+1267 silly addNameRange     '1.2.0',
+1267 silly addNameRange     '1.2.1',
+1267 silly addNameRange     '1.2.2',
+1267 silly addNameRange     '1.2.3',
+1267 silly addNameRange     '1.2.4',
+1267 silly addNameRange     '1.2.5',
+1267 silly addNameRange     '1.2.6',
+1267 silly addNameRange     '1.2.7',
+1267 silly addNameRange     '1.2.8',
+1267 silly addNameRange     '1.2.9',
+1267 silly addNameRange     '1.3.0',
+1267 silly addNameRange     '1.4.0',
+1267 silly addNameRange     '1.4.1',
+1267 silly addNameRange     '1.4.2',
+1267 silly addNameRange     '1.4.3',
+1267 silly addNameRange     '1.4.4',
+1267 silly addNameRange     '1.4.5',
+1267 silly addNameRange     '1.4.6',
+1267 silly addNameRange     '1.4.7',
+1267 silly addNameRange     '1.4.8',
+1267 silly addNameRange     '1.5.0',
+1267 silly addNameRange     '1.6.0',
+1267 silly addNameRange     '1.6.1',
+1267 silly addNameRange     '1.7.0',
+1267 silly addNameRange     '1.7.1',
+1267 silly addNameRange     '1.7.2',
+1267 silly addNameRange     '1.7.3',
+1267 silly addNameRange     '1.7.4',
+1267 silly addNameRange     '1.7.5',
+1267 silly addNameRange     '1.7.6',
+1267 silly addNameRange     '1.7.7',
+1267 silly addNameRange     '1.8.0',
+1267 silly addNameRange     '1.8.1',
+1267 silly addNameRange     '1.8.2',
+1267 silly addNameRange     '1.8.3',
+1267 silly addNameRange     '1.9.0',
+1267 silly addNameRange     '1.9.1',
+1267 silly addNameRange     '1.9.2',
+1267 silly addNameRange     '1.9.3',
+1267 silly addNameRange     '1.9.4',
+1267 silly addNameRange     '1.10.0',
+1267 silly addNameRange     '1.10.1',
+1267 silly addNameRange     '1.10.2',
+1267 silly addNameRange     '1.10.3',
+1267 silly addNameRange     '1.10.4',
+1267 silly addNameRange     '1.10.5',
+1267 silly addNameRange     '1.10.6',
+1267 silly addNameRange     '1.10.7',
+1267 silly addNameRange     '1.10.8',
+1267 silly addNameRange     '1.10.9',
+1267 silly addNameRange     '1.10.11',
+1267 silly addNameRange     '1.10.12',
+1267 silly addNameRange     '1.10.13',
+1267 silly addNameRange     '1.10.14',
+1267 silly addNameRange     '1.10.15',
+1267 silly addNameRange     '1.10.16',
+1267 silly addNameRange     '1.10.17',
+1267 silly addNameRange     '1.11.0',
+1267 silly addNameRange     '1.11.1',
+1267 silly addNameRange     '1.12.0',
+1267 silly addNameRange     '1.12.1',
+1267 silly addNameRange     '1.12.2',
+1267 silly addNameRange     '1.12.3',
+1267 silly addNameRange     '1.13.0',
+1267 silly addNameRange     '1.13.1',
+1267 silly addNameRange     '1.13.2',
+1267 silly addNameRange     '1.13.3',
+1267 silly addNameRange     '1.13.4',
+1267 silly addNameRange     '1.13.5',
+1267 silly addNameRange     '1.13.6',
+1267 silly addNameRange     '1.13.8',
+1267 silly addNameRange     '1.13.9',
+1267 silly addNameRange     '1.13.10',
+1267 silly addNameRange     '1.14.0',
+1267 silly addNameRange     '1.14.1',
+1267 silly addNameRange     '1.14.2',
+1267 silly addNameRange     '1.14.3',
+1267 silly addNameRange     '1.14.4',
+1267 silly addNameRange     '1.14.5',
+1267 silly addNameRange     '1.15.0',
+1267 silly addNameRange     '1.15.1',
+1267 silly addNameRange     '1.15.2',
+1267 silly addNameRange     '1.15.3',
+1267 silly addNameRange     '1.15.4',
+1267 silly addNameRange     '1.15.5',
+1267 silly addNameRange     '1.15.6',
+1267 silly addNameRange     '1.16.0',
+1267 silly addNameRange     '1.16.1',
+1267 silly addNameRange     '1.16.2',
+1267 silly addNameRange     '1.16.3',
+1267 silly addNameRange     '1.16.4',
+1267 silly addNameRange     '1.16.5',
+1267 silly addNameRange     '1.16.6',
+1267 silly addNameRange     '1.16.7',
+1267 silly addNameRange     '1.16.8',
+1267 silly addNameRange     '1.17.0',
+1267 silly addNameRange     '1.17.1',
+1267 silly addNameRange     '1.17.2',
+1267 silly addNameRange     '1.17.3',
+1267 silly addNameRange     '1.18.0',
+1267 silly addNameRange     '2.0.0',
+1267 silly addNameRange     '2.0.1',
+1267 silly addNameRange     '2.1.0',
+1267 silly addNameRange     '2.2.0',
+1267 silly addNameRange     '2.2.1',
+1267 silly addNameRange     '2.2.2',
+1267 silly addNameRange     '2.2.3',
+1267 silly addNameRange     '2.2.4',
+1267 silly addNameRange     '2.2.5',
+1267 silly addNameRange     '2.2.6',
+1267 silly addNameRange     '2.3.0',
+1267 silly addNameRange     '2.3.1',
+1267 silly addNameRange     '2.4.0',
+1267 silly addNameRange     '2.4.1',
+1267 silly addNameRange     '2.4.2',
+1267 silly addNameRange     '2.4.3',
+1267 silly addNameRange     '2.5.0',
+1267 silly addNameRange     '2.5.1',
+1267 silly addNameRange     '2.6.0',
+1267 silly addNameRange     '2.6.1',
+1267 silly addNameRange     '2.7.0',
+1267 silly addNameRange     '2.7.1',
+1267 silly addNameRange     '2.7.2',
+1267 silly addNameRange     '2.7.3',
+1267 silly addNameRange     '2.7.4',
+1267 silly addNameRange     '2.8.0',
+1267 silly addNameRange     '2.8.1',
+1267 silly addNameRange     '2.9.0',
+1267 silly addNameRange     '2.10.0',
+1267 silly addNameRange     '2.10.1',
+1267 silly addNameRange     '2.10.2',
+1267 silly addNameRange     '2.11.0',
+1267 silly addNameRange     '2.12.0',
+1267 silly addNameRange     '2.12.1',
+1267 silly addNameRange     '2.12.2',
+1267 silly addNameRange     '2.12.3',
+1267 silly addNameRange     '2.12.4',
+1267 silly addNameRange     '2.12.5',
+1267 silly addNameRange     '2.13.0',
+1267 silly addNameRange     '2.13.1',
+1267 silly addNameRange     '2.13.2',
+1267 silly addNameRange     '2.13.3',
+1267 silly addNameRange     '2.14.0',
+1267 silly addNameRange     '2.14.1',
+1267 silly addNameRange     '2.14.2',
+1267 silly addNameRange     '2.15.0',
+1267 silly addNameRange     '2.16.0',
+1267 silly addNameRange     '2.17.0',
+1267 silly addNameRange     '2.17.1',
+1267 silly addNameRange     '2.17.2',
+1267 silly addNameRange     '2.17.3',
+1267 silly addNameRange     '2.17.4',
+1267 silly addNameRange     '2.18.0',
+1267 silly addNameRange     '2.18.1',
+1267 silly addNameRange     '2.19.0',
+1267 silly addNameRange     '2.20.0',
+1267 silly addNameRange     '2.20.1',
+1267 silly addNameRange     '2.20.2',
+1267 silly addNameRange     '2.21.0',
+1267 silly addNameRange     '2.22.0',
+1267 silly addNameRange     '2.23.0',
+1267 silly addNameRange     '2.23.1',
+1267 silly addNameRange     '2.24.0',
+1267 silly addNameRange     '2.24.1',
+1267 silly addNameRange     '2.24.2',
+1267 silly addNameRange     '2.24.3',
+1267 silly addNameRange     '2.25.0',
+1267 silly addNameRange     '2.25.1',
+1267 silly addNameRange     '2.26.0',
+1267 silly addNameRange     '2.27.0',
+1267 silly addNameRange     '2.27.1',
+1267 silly addNameRange     '2.28.0',
+1267 silly addNameRange     '2.29.0',
+1267 silly addNameRange     '2.29.1',
+1267 silly addNameRange     '2.30.0',
+1267 silly addNameRange     '2.31.0',
+1267 silly addNameRange     '2.32.0',
+1267 silly addNameRange     '2.32.1',
+1267 silly addNameRange     '2.32.2',
+1267 silly addNameRange     '2.32.3',
+1267 silly addNameRange     '2.32.4',
+1267 silly addNameRange     '2.33.0',
+1267 silly addNameRange     '2.33.1',
+1267 silly addNameRange     '2.34.0',
+1267 silly addNameRange     '2.34.1',
+1267 silly addNameRange     '2.34.2',
+1267 silly addNameRange     '2.34.3',
+1267 silly addNameRange     '2.35.0',
+1267 silly addNameRange     '2.35.1',
+1267 silly addNameRange     '2.35.2',
+1267 silly addNameRange     '2.35.3',
+1267 silly addNameRange     '2.35.4',
+1267 silly addNameRange     '2.36.0',
+1267 silly addNameRange     '2.36.1',
+1267 silly addNameRange     '3.0.0',
+1267 silly addNameRange     '3.1.0',
+1267 silly addNameRange     '3.1.1',
+1267 silly addNameRange     '3.1.2',
+1267 silly addNameRange     '3.1.3',
+1267 silly addNameRange     '3.2.0',
+1267 silly addNameRange     '3.2.1',
+1267 silly addNameRange     '3.2.2',
+1267 silly addNameRange     '3.3.0',
+1267 silly addNameRange     '3.4.0',
+1267 silly addNameRange     '3.4.1',
+1267 silly addNameRange     '3.5.0',
+1267 silly addNameRange     '3.6.0',
+1267 silly addNameRange     '3.7.0',
+1267 silly addNameRange     '3.8.0',
+1267 silly addNameRange     '3.8.1',
+1267 silly addNameRange     '3.9.0',
+1267 silly addNameRange     '3.9.1',
+1267 silly addNameRange     '3.10.0',
+1267 silly addNameRange     '3.11.0',
+1267 silly addNameRange     '3.11.1',
+1267 silly addNameRange     '3.12.0',
+1267 silly addNameRange     '3.13.0',
+1267 silly addNameRange     '3.14.0',
+1267 silly addNameRange     '3.14.1',
+1267 silly addNameRange     '3.16.0',
+1267 silly addNameRange     '3.16.1',
+1267 silly addNameRange     '3.17.0',
+1267 silly addNameRange     '3.18.0',
+1267 silly addNameRange     '3.19.0',
+1267 silly addNameRange     '3.19.1',
+1267 silly addNameRange     '3.20.0',
+1267 silly addNameRange     '3.20.1',
+1267 silly addNameRange     '3.20.2',
+1267 silly addNameRange     '3.21.0',
+1267 silly addNameRange     '3.21.1',
+1267 silly addNameRange     '3.22.0',
+1267 silly addNameRange     '3.22.1',
+1267 silly addNameRange     '3.23.0',
+1267 silly addNameRange     '3.23.1',
+1267 silly addNameRange     '3.24.0',
+1267 silly addNameRange     '3.24.1',
+1267 silly addNameRange     '3.24.2',
+1267 silly addNameRange     '3.24.3',
+1267 silly addNameRange     '3.24.4',
+1267 silly addNameRange     '3.24.5',
+1267 silly addNameRange     '3.24.6',
+1267 silly addNameRange     '3.24.7',
+1267 silly addNameRange     '3.24.8',
+1267 silly addNameRange     '3.24.9',
+1267 silly addNameRange     '3.24.10',
+1267 silly addNameRange     '3.24.11',
+1267 silly addNameRange     '3.24.13',
+1267 silly addNameRange     '3.25.0',
+1267 silly addNameRange     '3.25.1',
+1267 silly addNameRange     '3.25.2',
+1267 silly addNameRange     '3.26.0',
+1267 silly addNameRange     '3.27.0',
+1267 silly addNameRange     '3.27.1',
+1267 silly addNameRange     '3.28.0',
+1267 silly addNameRange     '3.28.1',
+1267 silly addNameRange     '3.28.2',
+1267 silly addNameRange     '3.29.0',
+1267 silly addNameRange     '3.29.1',
+1267 silly addNameRange     '3.30.0',
+1267 silly addNameRange     '3.30.1',
+1267 silly addNameRange     '3.30.2',
+1267 silly addNameRange     '3.30.3',
+1267 silly addNameRange     '3.30.4',
+1267 silly addNameRange     '3.31.0',
+1267 silly addNameRange     '3.31.1',
+1267 silly addNameRange     '3.31.2',
+1267 silly addNameRange     '3.32.0',
+1267 silly addNameRange     '3.32.1',
+1267 silly addNameRange     '3.33.0',
+1267 silly addNameRange     '3.33.1',
+1267 silly addNameRange     '3.34.0',
+1267 silly addNameRange     '3.35.0',
+1267 silly addNameRange     '3.36.0',
+1267 silly addNameRange     '3.36.1',
+1267 silly addNameRange     '3.37.0',
+1267 silly addNameRange     '3.37.1',
+1267 silly addNameRange     '3.37.2',
+1267 silly addNameRange     '3.38.0',
+1267 silly addNameRange     '3.38.1',
+1267 silly addNameRange     '3.39.0',
+1267 silly addNameRange     '3.40.0',
+1267 silly addNameRange     '3.40.1',
+1267 silly addNameRange     '3.40.2',
+1267 silly addNameRange     '3.40.3',
+1267 silly addNameRange     '3.40.4',
+1267 silly addNameRange     '3.41.0',
+1267 silly addNameRange     '3.42.0',
+1267 silly addNameRange     '3.43.0',
+1267 silly addNameRange     '3.44.0',
+1267 silly addNameRange     '3.44.1',
+1267 silly addNameRange     '3.44.2',
+1267 silly addNameRange     '3.45.0',
+1267 silly addNameRange     '3.46.0',
+1267 silly addNameRange     '3.46.1',
+1267 silly addNameRange     '4.0.0',
+1267 silly addNameRange     '4.1.0',
+1267 silly addNameRange     '4.1.1',
+1267 silly addNameRange     '4.1.2',
+1267 silly addNameRange     '4.1.3',
+1267 silly addNameRange     '4.1.4',
+1267 silly addNameRange     '4.1.5',
+1267 silly addNameRange     '4.1.6',
+1267 silly addNameRange     '4.1.7',
+1267 silly addNameRange     '4.1.8',
+1267 silly addNameRange     '4.1.9',
+1267 silly addNameRange     '4.1.10',
+1267 silly addNameRange     '4.1.11',
+1267 silly addNameRange     '4.2.0',
+1267 silly addNameRange     '4.2.1',
+1267 silly addNameRange     '4.2.2',
+1267 silly addNameRange     '4.2.3',
+1267 silly addNameRange     '5.0.0',
+1267 silly addNameRange     '5.0.1',
+1267 silly addNameRange     '5.0.2',
+1267 silly addNameRange     '5.0.3',
+1267 silly addNameRange     '5.0.4',
+1267 silly addNameRange     '5.0.5',
+1267 silly addNameRange     '5.0.6',
+1267 silly addNameRange     '5.0.7',
+1267 silly addNameRange     '5.0.8',
+1267 silly addNameRange     '5.1.0',
+1267 silly addNameRange     '5.1.1',
+1267 silly addNameRange     '5.2.0',
+1267 silly addNameRange     '5.2.1',
+1267 silly addNameRange     '5.3.0',
+1267 silly addNameRange     '5.4.0',
+1267 silly addNameRange     '5.4.1',
+1267 silly addNameRange     '5.4.2',
+1267 silly addNameRange     '5.5.0',
+1267 silly addNameRange     '5.6.0',
+1267 silly addNameRange     '5.6.1',
+1267 silly addNameRange     '5.7.0',
+1267 silly addNameRange     '5.8.0',
+1267 silly addNameRange     '5.9.0',
+1267 silly addNameRange     '5.9.1',
+1267 silly addNameRange     '5.9.2',
+1267 silly addNameRange     '5.9.3',
+1267 silly addNameRange     '5.10.0',
+1267 silly addNameRange     '5.10.1',
+1267 silly addNameRange     '5.11.0',
+1267 silly addNameRange     '5.11.1',
+1267 silly addNameRange     '5.11.2',
+1267 silly addNameRange     '5.12.0',
+1267 silly addNameRange     '5.12.1',
+1267 silly addNameRange     '5.12.2',
+1267 silly addNameRange     '5.13.0',
+1267 silly addNameRange     '5.13.1',
+1267 silly addNameRange     '6.0.0',
+1267 silly addNameRange     '6.0.1',
+1267 silly addNameRange     '6.0.2',
+1267 silly addNameRange     '6.0.3',
+1267 silly addNameRange     '6.1.0',
+1267 silly addNameRange     '6.1.1',
+1267 silly addNameRange     '6.1.2',
+1267 silly addNameRange     '6.2.0',
+1267 silly addNameRange     '6.3.0',
+1267 silly addNameRange     '6.3.1',
+1267 silly addNameRange     '6.3.2',
+1267 silly addNameRange     '6.3.3',
+1267 silly addNameRange     '6.3.4',
+1267 silly addNameRange     '7.0.0',
+1267 silly addNameRange     '7.0.1',
+1267 silly addNameRange     '7.0.2',
+1267 silly addNameRange     '7.0.3',
+1267 silly addNameRange     '7.1.0',
+1267 silly addNameRange     '8.0.0',
+1267 silly addNameRange     '8.0.1',
+1267 silly addNameRange     '8.0.2',
+1267 silly addNameRange     '8.0.3',
+1267 silly addNameRange     '8.1.0',
+1267 silly addNameRange     '8.1.1',
+1267 silly addNameRange     '8.1.2',
+1267 silly addNameRange     '8.1.3',
+1267 silly addNameRange     '9.0.0',
+1267 silly addNameRange     '9.0.1',
+1267 silly addNameRange     '9.0.2',
+1267 silly addNameRange     '9.0.3',
+1267 silly addNameRange     '9.0.4',
+1267 silly addNameRange     '9.0.5',
+1267 silly addNameRange     '9.0.6',
+1267 silly addNameRange     '9.0.7',
+1267 silly addNameRange     '9.0.8',
+1267 silly addNameRange     '10.0.0',
+1267 silly addNameRange     '10.1.0',
+1267 silly addNameRange     '10.1.1',
+1267 silly addNameRange     '10.1.2',
+1267 silly addNameRange     '10.1.3',
+1267 silly addNameRange     '10.2.0',
+1267 silly addNameRange     '10.2.1',
+1267 silly addNameRange     '10.2.3',
+1267 silly addNameRange     '10.2.4',
+1267 silly addNameRange     '10.2.5',
+1267 silly addNameRange     '10.2.6',
+1267 silly addNameRange     '11.0.0',
+1267 silly addNameRange     '11.0.1',
+1267 silly addNameRange     '11.1.0',
+1267 silly addNameRange     '11.2.0',
+1267 silly addNameRange     '12.0.0',
+1267 silly addNameRange     '12.0.1' ] ]
+1268 silly addNamed browserify@11.2.0
+1269 verbose addNamed "11.2.0" is a plain semver version for browserify
+1270 silly addNameRange number 2 { name: 'gulp-util', range: '>=3.0.6 <4.0.0', hasData: true }
+1271 silly addNameRange versions [ 'gulp-util',
+1271 silly addNameRange   [ '0.0.1',
+1271 silly addNameRange     '1.0.0',
+1271 silly addNameRange     '1.1.0',
+1271 silly addNameRange     '1.1.1',
+1271 silly addNameRange     '1.2.0',
+1271 silly addNameRange     '1.3.0',
+1271 silly addNameRange     '2.0.0',
+1271 silly addNameRange     '2.1.1',
+1271 silly addNameRange     '2.1.2',
+1271 silly addNameRange     '2.1.3',
+1271 silly addNameRange     '2.1.4',
+1271 silly addNameRange     '2.2.0',
+1271 silly addNameRange     '2.2.1',
+1271 silly addNameRange     '2.2.2',
+1271 silly addNameRange     '2.2.3',
+1271 silly addNameRange     '2.2.5',
+1271 silly addNameRange     '2.2.6',
+1271 silly addNameRange     '2.2.7',
+1271 silly addNameRange     '2.2.8',
+1271 silly addNameRange     '2.2.9',
+1271 silly addNameRange     '2.2.10',
+1271 silly addNameRange     '2.2.11',
+1271 silly addNameRange     '2.2.12',
+1271 silly addNameRange     '2.2.13',
+1271 silly addNameRange     '2.2.14',
+1271 silly addNameRange     '2.2.15',
+1271 silly addNameRange     '2.2.16',
+1271 silly addNameRange     '2.2.17',
+1271 silly addNameRange     '2.2.18',
+1271 silly addNameRange     '2.2.19',
+1271 silly addNameRange     '2.2.20',
+1271 silly addNameRange     '3.0.0',
+1271 silly addNameRange     '3.0.1',
+1271 silly addNameRange     '3.0.2',
+1271 silly addNameRange     '3.0.3',
+1271 silly addNameRange     '3.0.4',
+1271 silly addNameRange     '3.0.5',
+1271 silly addNameRange     '3.0.6',
+1271 silly addNameRange     '3.0.7' ] ]
+1272 silly addNamed gulp-util@3.0.7
+1273 verbose addNamed "3.0.7" is a plain semver version for gulp-util
+1274 silly addNameRange number 2 { name: 'merge-stream', range: '>=0.1.8 <0.2.0', hasData: true }
+1275 silly addNameRange versions [ 'merge-stream',
+1275 silly addNameRange   [ '0.0.0',
+1275 silly addNameRange     '0.0.1',
+1275 silly addNameRange     '0.1.1',
+1275 silly addNameRange     '0.1.2',
+1275 silly addNameRange     '0.1.3',
+1275 silly addNameRange     '0.1.4',
+1275 silly addNameRange     '0.1.5',
+1275 silly addNameRange     '0.1.6',
+1275 silly addNameRange     '0.1.7',
+1275 silly addNameRange     '0.1.8',
+1275 silly addNameRange     '1.0.0' ] ]
+1276 silly addNamed merge-stream@0.1.8
+1277 verbose addNamed "0.1.8" is a plain semver version for merge-stream
+1278 silly cache afterAdd gulp-phpunit@0.9.0
+1279 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-phpunit\0.9.0\package\package.json not in flight; writing
+1280 silly cache afterAdd run-sequence@1.1.4
+1281 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\run-sequence\1.1.4\package\package.json not in flight; writing
+1282 silly cache afterAdd gulp-if@1.2.5
+1283 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-if\1.2.5\package\package.json not in flight; writing
+1284 silly cache afterAdd gulp-autoprefixer@2.3.1
+1285 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-autoprefixer\2.3.1\package\package.json not in flight; writing
+1286 silly cache afterAdd gulp-load-plugins@1.0.0-rc.1
+1287 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-load-plugins\1.0.0-rc.1\package\package.json not in flight; writing
+1288 silly cache afterAdd partialify@3.1.5
+1289 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\partialify\3.1.5\package\package.json not in flight; writing
+1290 silly cache afterAdd del@1.2.1
+1291 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\del\1.2.1\package\package.json not in flight; writing
+1292 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\glob\5.0.15\package\package.json written
+1293 silly cache afterAdd gulp-concat@2.6.0
+1294 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-concat\2.6.0\package\package.json not in flight; writing
+1295 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-batch\1.0.5\package\package.json written
+1296 silly cache afterAdd gulp-notify@2.2.0
+1297 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-notify\2.2.0\package\package.json not in flight; writing
+1298 silly cache afterAdd babelify@6.4.0
+1299 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\babelify\6.4.0\package\package.json not in flight; writing
+1300 silly cache afterAdd gulp-babel@5.3.0
+1301 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-babel\5.3.0\package\package.json not in flight; writing
+1302 silly cache afterAdd gulp-sass@2.0.4
+1303 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-sass\2.0.4\package\package.json not in flight; writing
+1304 silly cache afterAdd gulp-less@3.0.3
+1305 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-less\3.0.3\package\package.json not in flight; writing
+1306 silly cache afterAdd gulp-sourcemaps@1.6.0
+1307 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-sourcemaps\1.6.0\package\package.json not in flight; writing
+1308 silly cache afterAdd require-dir@0.3.0
+1309 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\require-dir\0.3.0\package\package.json not in flight; writing
+1310 silly cache afterAdd gulp-util@3.0.7
+1311 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-util\3.0.7\package\package.json not in flight; writing
+1312 silly cache afterAdd merge-stream@0.1.8
+1313 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\merge-stream\0.1.8\package\package.json not in flight; writing
+1314 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-phpunit\0.9.0\package\package.json written
+1315 silly cache afterAdd browser-sync@2.9.8
+1316 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\browser-sync\2.9.8\package\package.json not in flight; writing
+1317 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\run-sequence\1.1.4\package\package.json written
+1318 silly cache afterAdd browserify@11.2.0
+1319 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\browserify\11.2.0\package\package.json not in flight; writing
+1320 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-if\1.2.5\package\package.json written
+1321 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-autoprefixer\2.3.1\package\package.json written
+1322 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-load-plugins\1.0.0-rc.1\package\package.json written
+1323 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\partialify\3.1.5\package\package.json written
+1324 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\del\1.2.1\package\package.json written
+1325 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-concat\2.6.0\package\package.json written
+1326 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-notify\2.2.0\package\package.json written
+1327 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-babel\5.3.0\package\package.json written
+1328 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-sass\2.0.4\package\package.json written
+1329 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-less\3.0.3\package\package.json written
+1330 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-sourcemaps\1.6.0\package\package.json written
+1331 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\require-dir\0.3.0\package\package.json written
+1332 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\gulp-util\3.0.7\package\package.json written
+1333 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\babelify\6.4.0\package\package.json written
+1334 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\merge-stream\0.1.8\package\package.json written
+1335 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\browser-sync\2.9.8\package\package.json written
+1336 verbose afterAdd C:\Users\Daniel\AppData\Roaming\npm-cache\browserify\11.2.0\package\package.json written
+1337 verbose about to build D:\library\node_modules\laravel-elixir
+1338 verbose unlock done using C:\Users\Daniel\AppData\Roaming\npm-cache\_locks\laravel-elixir-d9971966dd6c9bb3.lock for D:\library\node_modules\laravel-elixir
+1339 verbose stack Error: connect ETIMEDOUT 103.245.222.162:80
+1339 verbose stack     at Object.exports._errnoException (util.js:837:11)
+1339 verbose stack     at exports._exceptionWithHostPort (util.js:860:20)
+1339 verbose stack     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1060:14)
+1340 verbose cwd D:\library
+1341 error Windows_NT 6.3.9600
+1342 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "laravel-elixir"
+1343 error node v4.1.1
+1344 error npm  v2.14.4
+1345 error code ETIMEDOUT
+1346 error errno ETIMEDOUT
+1347 error syscall connect
+1348 error network connect ETIMEDOUT 103.245.222.162:80
+1348 error network This is most likely not a problem with npm itself
+1348 error network and is related to network connectivity.
+1348 error network In most cases you are behind a proxy or have bad network settings.
+1348 error network
+1348 error network If you are behind a proxy, please make sure that the
+1348 error network 'proxy' config is set properly.  See: 'npm help config'
+1349 verbose exit [ 1, true ]
+1350 verbose unbuild node_modules\laravel-elixir
+1351 info preuninstall laravel-elixir@3.4.2
+1352 info uninstall laravel-elixir@3.4.2
+1353 verbose unbuild rmStuff laravel-elixir@3.4.2 from D:\library\node_modules
+1354 info postuninstall laravel-elixir@3.4.2
+1355 silly gentlyRm D:\library\node_modules\laravel-elixir is being purged from base D:\library
+1356 verbose gentlyRm don't care about contents; nuking D:\library\node_modules\laravel-elixir
+1357 silly vacuum-fs purging D:\library\node_modules\laravel-elixir
+1358 silly vacuum-fs quitting because other entries in D:\library\node_modules

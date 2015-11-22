@@ -1,0 +1,22 @@
+<?php $__env->startSection('content'); ?>
+    <div class="container">
+        <?php echo Form::open(array('route'=>'resetPassword')); ?>
+
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <?php echo Form::label('id','Reader ID'); ?>
+
+                    <?php echo Form::text('id',null,['class'=>'form-control','required']); ?>
+
+                </div>
+                <button type="submit" class="btn btn-primary form-control">Reset Password</button>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <?php echo Form::close(); ?>
+
+    </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,44 @@
+<?php $__env->startSection('content'); ?>
+<dic class="container">
+<?php echo Form::open(array('route'=>'change','id'=>'firsttime')); ?>
+
+<h4 id="message"><?php echo e($welcome_message); ?></h4>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <?php echo Form::label('newpassword','New Password'); ?>
+
+                <?php echo Form::password('newpassword',['class'=>'form-control','required']); ?>
+
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <?php echo Form::label('confirmpassword','Confirm Password'); ?>
+
+                <?php echo Form::password('confirmpassword',['class'=>'form-control']); ?>
+
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div id="passwordmatcherror" style="color:red"></div>
+            <button type="submit" class="btn btn-primary form-control">Change</button>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+<?php echo Form::close(); ?>
+
+</div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
