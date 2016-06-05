@@ -3,76 +3,97 @@
 get('/','home@index');
 get('/home', array('middleware'=>['auth'],'uses'=>'home@main','as'=>'home'));
 
-get('/reports',function(){
+get('/reports',array('middleware'=>['auth','authorize'],function(){
 	return view('reports.reports')
-		   ->with(array('title'=>'Reports'));
+		   ->with(array('title'=>'Reports','message'=>'Reports'));
+}));
+post('/reports', array('middleware'=>['auth','authorize'],'uses'=>'ReportsController@generateReports','as'=>'generatereports'));
+
+get('/developers',function(){
+	return view('developers')
+		   ->with(array('title'=>'Developers'));
 });
 
-post('/reports', array('uses'=>'ReportsController@generateReports','as'=>'generatereports'));
-
+Route::resource('sessions','SessionController',['only' => ['destroy','store']]);
 get('/logout', array('uses'=>'SessionController@destroy','as'=>'logout'));
-post('/changepassword', array('uses'=>'SessionController@change','as'=>'change'));
-resource('sessions','SessionController',['only' => ['destroy','store']]);
 
-get('publication/accession',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@getcontrolAccession','as'=>'getcontrolAccession'));
-post('publication/accession',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@controlAccession','as'=>'controlAccession'));
-patch('publication/accession',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@updateAccession','as'=>'updateAccession'));
+Route::group(['prefix'=>'cataloging'],function(){
+	get('/publication/find',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@getFindPublication'));
+	post('/publication/details',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@findPublication','as'=>'findpublication'));
+	get('/publication/add',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@getaddPublication'));
+	post('/publication/add',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@addPublication','as'=>'addPublication'));
+	get('/publication/update/{isbn}',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@getUpdatePublication'));
+	put('/publication/update',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@updatePublication','as'=>'updatePublication'));
+	get('/serial/find',array('middleware' => ['auth','authorize'],'uses'=>'SerialController@getFindSerial'));
+	post('/serial/find',array('middleware' => ['auth','authorize'],'uses'=>'SerialController@findSerial','as'=>'findserial'));
+	get('/serial/add',array('middleware' => ['auth','authorize'],'uses'=>'SerialController@getAddSerial'));
+	post('/serial/add',array('middleware' => ['auth','authorize'],'uses'=>'SerialController@addSerial','as'=>'addSerial'));
+	get('/serial/update/{serialno}',array('middleware' => ['auth','authorize'],'uses'=>'SerialController@getUpdateSerial'));
+	put('/serial/update',array('middleware' => ['auth','authorize'],'uses'=>'SerialController@updateSerial','as'=>'updateSerial'));
+});
 
-get('/publication/add',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@getaddPublication'));
-post('/publication/add',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@addPublication','as'=>'addPublication'));
+Route::group(['prefix'=>'circulation'],function(){
+	get('/issue/{id}',array('middleware' => ['auth','authorize'],'uses'=>'CirculationController@getPendingdetails'));
+	post('/issue',array('middleware' => ['auth','authorize'],'uses'=>'CirculationController@issuePublication','as'=>'issuePublication'));
+	put('/return',array('middleware' => ['auth','authorize'],'uses'=>'CirculationController@returnPublication','as'=>'returnPublication'));
+	get('/publication/{accession_no}',array('middleware' => ['auth','authorize'],'uses'=>'CirculationController@getPublicationInfo'));
+});
 
-get('/acquisition',array('middleware' => ['auth','authorize'],'uses'=>'AcquisitionController@getisbn'));
-post('/acquisition',array('middleware' => ['auth','authorize'],'uses'=>'AcquisitionController@fetchisbn','as'=>'fetchisbn'));
+Route::group(['prefix'=>'acquisition'],function(){
+	get('/publication',array('middleware' => ['auth','authorize'],'uses'=>'AcquisitionController@getisbn'));
+	post('/publication',array('middleware' => ['auth','authorize'],'uses'=>'AcquisitionController@fetchisbn','as'=>'fetchisbn'));
+	get('/publication/add',array('middleware' => ['auth','authorize'],'uses'=>'AcquisitionController@getAcquisition'));
+	post('/publication/add',array('middleware' => ['auth','authorize'],'uses'=>'AcquisitionController@addAcquisition','as'=>'addAcquisition'));
+	get('/serial',array('middleware' => ['auth','authorize'],'uses'=>'AcquisitionSerialController@getserialno'));
+	post('/serial',array('middleware' => ['auth','authorize'],'uses'=>'AcquisitionSerialController@fetchserialno','as'=>'fetchserialno'));
+	get('/serial/add',array('middleware' => ['auth','authorize'],'uses'=>'AcquisitionSerialController@getSerialAcquisition'));
+	post('/serial/add',array('middleware' => ['auth','authorize'],'uses'=>'AcquisitionSerialController@addSerialAcquisition','as'=>'addSerialAcquisition'));
+	});
 
-get('/acquisition/add',array('middleware' => ['auth','authorize'],'uses'=>'AcquisitionController@getAcquisition'));
-post('/acquisition/add',array('middleware' => ['auth','authorize'],'uses'=>'AcquisitionController@addAcquisition','as'=>'addAcquisition'));
+Route::group(['prefix'=>'reader'],function(){
+	get('/add',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@getaddReader'));
+	post('/add',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@addReader','as'=>'addReader'));
+	get('/find',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@getFindReader'));
+	post('/details',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@findReader','as'=>'findreader'));
+	get('/update/{id}',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@getupdateReader','as'=>'getUpdateReader'));
+	put('/update',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@updateReader','as'=>'updateReader','as'=>'updatereader'));
+	get('/resetpassword/{id}',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@resetPassword'));
+	post('/changepassword',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@changePassword','as'=>'change'));
+});
 
-get('/publication/update',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@getupdatePublication'));
-post('/publication/update',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@updatePublication','as'=>'updatePublication'));
-put('/publication/update',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@updatePub','as'=>'updatePub'));
+Route::group(['prefix'=>'vendor'],function(){
+	get('/add',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@getaddVendor'));
+	post('/add',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@addVendor','as'=>'addVendor'));
+	get('/find',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@getvendor','as'=>'getvendor'));
+	post('/find',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@findVendor','as'=>'findvendor'));
+	get('/update/{id}',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@getupdateVendor','as'=>'getVendor'));
+	put('/update',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@updateVendor','as'=>'updatevendor'));
+	get('/get',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@returnvendor'));
+});
 
-get('/publication/issue',array('middleware' => ['auth','authorize'],'uses'=>'CirculationController@getissuePublication'));
-get('/publication/issue/{id}',array('middleware' => ['auth','authorize'],'uses'=>'CirculationController@issue'));
-post('/publication/issue',array('middleware' => ['auth','authorize'],'uses'=>'CirculationController@issuePublication','as'=>'issuePublication'));
+Route::group(['prefix'=>'restrict'],function(){
+    get('/issue',['middleware' => ['auth','authorize'],'uses'=>'IssueRestrictionController@getrestrictionData']);
+    post('/issue',['middleware' => ['auth','authorize'],'uses'=>'IssueRestrictionController@restrictIssue']);
+    put('/issue/{year}',['middleware' => ['auth','authorize'],'uses'=>'IssueRestrictionController@updateRestriction']);
+});
 
-get('/publication/return',array('middleware' => ['auth','authorize'],'uses'=>'CirculationController@getreturnPublication'));
-post('/publication/return',array('middleware' => ['auth','authorize'],'uses'=>'CirculationController@returnPublication','as'=>'returnPublication'));
-post('/return',array('middleware' => ['auth','authorize'],'uses'=>'CirculationController@returnedPublication','as'=>'returnedPublication'));
+post('/fine/collect',array('middleware' => ['auth','authorize'],'uses'=>'IssueRestrictionController@collectFine'));
 
-get('/reader/find',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@getreader','as'=>'getreader'));
-post('/reader/find',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@findReader','as'=>'findreader'));
+get('/migrate/{year}',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@getmigrateReaders', 'as'=>'getmigrateReader'));
+post('/migrate',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@migrateReaders', 'as'=>'migratereaders'));
 
-get('/reader/add',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@getaddReader','as'=>'getaddreader'));
-post('/reader/add',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@addReader','as'=>'addReader'));
-
-get('/reader/update',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@getupdateReader','as'=>'getupdatereader'));
-post('/reader/update',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@updateReader','as'=>'updateReader'));
-patch('/reader/update',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@update','as'=>'update'));
-
-get('/reader/migrate',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@getmigrateReaders', 'as'=>'getmigrateReader'));
-post('/reader/migrate',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@migrateReaders', 'as'=>'migratereaders'));
-
-get('/reader/resetpassword',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@getResetPassword', 'as'=>'getResetPassword'));
-post('/reader/resetpassword',array('middleware' => ['auth','authorize'],'uses'=>'SessionController@resetPassword', 'as'=>'resetPassword'));
-
-get('/vendor/add',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@getaddVendor','as'=>'getaddvendor'));
-post('/vendor/add',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@addVendor','as'=>'addVendor'));
-
-get('/get/vendor',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@returnvendor'));
-
-get('/vendor/find',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@getvendor','as'=>'getvendor'));
-post('/vendor/find',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@findVendor','as'=>'findvendor'));
-
-get('/vendor/update',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@getupdateVendor','as'=>'getVendor'));
-post('/vendor/update',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@updateVendor','as'=>'updatevendor'));
-patch('/vendor/update',array('middleware' => ['auth','authorize'],'uses'=>'VendorController@updatevend','as'=>'updatevend'));
+get('/accession',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@getAccession'));
+get('/publication/accession',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@getcontrolAccession','as'=>'getcontrolAccession'));
+post('/publication/accession',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@controlAccession','as'=>'controlAccession'));
+patch('/publication/accession',array('middleware' => ['auth','authorize'],'uses'=>'PublicationController@updateAccession','as'=>'updateAccession'));
 
 get('/search/{book}/query/{query}',array('uses'=>'SearchController@search','as'=>'search'));
-get('/searchtitle',array('uses'=>'SearchController@searchTitle'));
+get('/search/publication',array('middleware' => ['auth','authorize'],'uses'=>'SearchController@searchPublication'));
+get('/search/serial',array('middleware' => ['auth','authorize'],'uses'=>'SearchController@searchSerial'));
 get('/search/vendor',array('middleware' => ['auth','authorize'],'uses'=>'SearchController@vendor'));
 get('/search/reader',array('middleware' => ['auth','authorize'],'uses'=>'SearchController@reader'));
-get('/search/book/{value}',array('uses'=>'SearchController@searchBook'));
+get('/search/book/{value}/query/{query}',array('uses'=>'SearchController@searchBook'));
 
-get('/pending/{id}',array('middleware' => ['auth','authorize'],'uses'=>'CirculationController@getPendingdetails'));
+get('/old/records/{year_enrolled}/{year}',array('middleware' => ['auth','authorize'],'uses'=>'OldRecordsController@getOldRecords'));
 
-get('/get/accession',array('middleware' => ['auth','authorize'],'uses'=>'AcquisitionController@getAccession'));
+get('/me', array('middleware' => ['auth','authorize'],'uses'=>'SessionController@profile'));

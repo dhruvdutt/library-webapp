@@ -8,6 +8,6 @@ use DB;
 
 class Publication extends Model
 {
-		protected $table = 'publication';
-    protected $fillable = array('*');
+	protected $table = 'publication';
+  protected $fillable = array('*');
 }

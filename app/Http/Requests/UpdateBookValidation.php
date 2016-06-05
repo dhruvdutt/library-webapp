@@ -26,9 +26,9 @@ class UpdateBookValidation extends Request
     public function rules()
     {
         return [
-            'price'=>'required',
-            'cd'=>'required',
-            'quantity'=>'required',
+            'price'=>'required|numeric|min:50',
+            'cd'=>'required|numeric',
+            'quantity'=>'required|numeric',
             'vendor'=>'required',
         ];
     }

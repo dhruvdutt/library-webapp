@@ -1,18 +1,22 @@
 @extends('layouts.nav')
 @section('content')
-<div class="container">
+<div class="container box">
 	@if(sizeof($datas) == 0)
 		<h3>No Records</h3>
 	@else
 		<div class="row">
-	        <div class="col s12">
-	           	<table class="table sortable-theme-bootstrap" data-sortable>
+			<button class="btn btn-primary" onclick="download('{{$message}}')">Download</button>
+	        <div class="col s12" id="report">
+	           	<table class="table">
 	                <thead>
 	                    <tr>
-	                        <th data-field="name" data-sortable="false">Accession Number</th>
-                          <th data-field="name" data-sortable="false">Class Number</th>
-	                        <th data-field="price">Status</th>
-	                        <th data-field="price">Date</th>
+	                        <th>Accession Number</th>
+                          <th>Class Number</th>
+													<th>ISBN</th>
+													<th>Title</th>
+													<th>Author</th>
+	                        <th>Status</th>
+	                        <th>Date</th>
 	                    </tr>
 	                    </thead>
 	                    <tbody>
@@ -20,7 +24,10 @@
 	                        <tr>
 	                            <td>{{ $data->accession_no }}</td>
 	                            <td>{{ $data->class_no }}</td>
-	                            <td>{{ $data->status }}</td>
+															<td>{{ $data->isbn }}</td>
+															<td>{{ $data->title }}</td>
+															<td>{{ $data->author }}</td>
+	                            <td>{{ strtoupper($data->status) }}</td>
 	                           	<td>{{ $data->updated_at }}</td>
 	                        </tr>
 	                    @endforeach

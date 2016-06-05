@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+    var vendor = 0,reader = 0;
+
+    $('[data-submenu]').submenupicker();
+
+     $('[data-toggle="popover"]').popover();
+
     $('#issuedatetimepicker').datetimepicker({
             format : 'YYYY-M-DD'
         });
@@ -27,24 +33,38 @@ $(document).ready(function(){
     });
 
     //Search Publication title based on isbn
-    $('#isbn').autocomplete({
-        source : '/searchtitle',
-        minLength : 1,
-        select: function(event, ui) {
-            $('#isbn').val(ui.item.value);
-        }
+    $('#publication_isbn').autocomplete({
+        source : '/search/publication',
+        minLength : 1
+    });
+
+    //Search Serial title based on issn,title,serial_no
+    $('#issn').autocomplete({
+        source : '/search/serial',
+        minLength : 1
     });
 
     //Search Reader
     $('#readerTitle').autocomplete({
         source : '/search/reader',
-        minLength : 1
+        minLength : 1,
+        select : function(event,ui){
+          $("#readerTitle").val(ui.item.label);
+        }
     });
+  });
 
-});
+  //Search Reader
+  $('#readerName').autocomplete({
+      source : '/search/reader',
+      minLength : 1,
+      select : function(event,ui){
+        $("#readerName").val(ui.item.value);
+      }
+  });
 
 //Fetch Book details from the API
-$('#isbn').blur(function(){
+/*$('#isbn').blur(function(){
     var isbn = $('#isbn').val();
     $.ajax({
         method : 'GET',
@@ -60,66 +80,7 @@ $('#isbn').blur(function(){
                 alert('Cannot get the information online.Please enter it manually');
         }
     });
-});
-
-//Generate Modal based on Quantity entered
-var accessionno=0,classno=0;
-$('#generate').click(function(){
-    $.ajax({
-        method : 'GET',
-        url : '/get/accession',
-        success : function(response){
-            var string = "";
-            var quantity = $('#quantity').val();
-            if(response.length == 0){
-                for(var i=1;i<=quantity;i++){
-                    string += '<div class=row><div class=col-md-6><div class=form-group><label for=accession'+i+'>Accession</label><input type=number class=form-control id=accession'+i+' name=accession'+i+' autocomplete=off></div></div><div class=col-md-6><div class=form-group><label for=classno'+i+'>Class</label><input type=number class=form-control id=classno'+i+' name=classno'+i+' autocomplete=off></div></div></div>';
-                }   
-            }
-            else{
-                accessionno = response[0].accession_no;
-                classno = response[0].class_no;
-                for(var i=1;i<=quantity;i++){
-                    string += '<div class=row><div class=col-md-6><div>Last Accession No. '+accessionno+'</div><div class=form-group><label for=accession'+i+'>Accession</label><input type=number class=form-control id=accession'+i+' name=accession'+i+' value='+(accessionno+i)+' autocomplete=off></div></div><div class=col-md-6><div>Last Class No.'+classno+'</div><div class=form-group><label for=classno'+i+'>Class</label><input type=number class=form-control id=classno'+i+' name=classno'+i+' value='+(classno+i)+' autocomplete=off></div></div></div>';
-                }
-            }
-            $('#generated').html(string);
-            $('#myModal').modal({show:true,backdrop:false});
-        },
-        error : function(){
-            alert('Something went wrong');
-        }
-    });
-});
-
-//Get Pending Issue Details on form submit
-$('#pending').click(function(){
-    var id = $('#readerid').val();
-    if(id == ""){
-        $('#response').html("The field is required");
-        return;
-    }
-    $('#pending').prop('disabled',true);
-    $.ajax({
-        method : 'GET',
-        url : '/pending/'+id,
-        success : function(response){
-            response = JSON.parse(response);
-            if(response.status == 404){
-                $('#response').html(response.message);
-            }
-            else{
-                $('#pendingdata').append("<td>"+response.id+"</td><td>"+response.name+"</td><td>"+response.department+"</td><td>"+response.year+"</td><td>"+response.pending+"</td>");
-                $('#table').append("<a class='btn btn-primary form-control' href=/publication/issue/"+response.id+">Proceed to Issue</a>");
-                $('#table').css({"display":"block"});
-                flag = 1;
-            }
-        },
-        error : function(){
-            alert('Something went wrong');
-        }
-    });
-});
+});*/
 
 //Search info based on title,publisher,author
 $('#search').autocomplete({
@@ -131,7 +92,7 @@ $('#search').autocomplete({
                 response(JSON.parse(data));
             },
             error : function(){
-                alert('Something went wrong');
+                //alert('Something went wrong');
             }
         })
         },
@@ -140,41 +101,41 @@ $('#search').autocomplete({
             event.preventDefault();
             $('#search').val(ui.item.value);
             var value = ui.item.value;
-            window.location.href = '/search/book/'+value;
+            window.location.href = '/search/book/'+value+'/query/'+$('#query').val();
         }
     });
-$('#firsttime').submit(function(){
-    if($('#newpassword').val() != $('#confirmpassword').val()){
-        $('#passwordmatcherror').html("They Do not Match");
-    }
-    else{
-     $('#passwordmatcherror').html("");  
-    }
-});
 
 //Disable submit in search
 $('#searchform').submit(false);
 
 $('#type').change(function(){
-    if($('#type').val() == 'acquisition'){
-        $.ajax({
-            method : 'GET',
-            url : '/get/vendor',
-            success : function(response){
-                var select = "<label for=vendor>Vendor</label><select class=form-control id=vendor name=vendor>"
-                for(var i=0 ;i<response.length; i++){
-                    select += "<option>"+response[i].name+"</option>";
-                }
-                select += "</select>";
-                $('#vendor').append (select);
-            },
-            error : function(){
-                alert('Something went wrong');
-            }
-        });
-    }
+    $('#type').val() == 'publication_acquisition' || $('#type').val() == 'serial_acquisition'  ? vendor = 1 : vendor = 0;
+    $('#type').val() == 'circulation_reader' || $('#type').val() == 'fine_reader' ? reader = 1 : reader = 0;
+
+    vendor == 1 ? $('#vendor').css({'display':'block'}) : $('#vendor').css({'display':'none'});
+    reader == 1 ? $('#reader').css({'display':'block'}) : $('#reader').css({'display':'none'});
 });
 
-$('#download').click(function(){
-    $('#report').tableExport({type:'pdf',pdfFontSize:'10',escape:'false'});
+
+$('#resetpassword').click(function(){
+    if(confirm('Sure to reset password?')){
+         return true;
+    }
+    return false;
 });
+
+$('#changepassword').click(function(){
+  var newpassword = $('#newpassword').val();
+  var confirmpassword = $('#confirmpassword').val();
+  if(newpassword != confirmpassword){
+    $('#error_message').html("They do not match");
+    return false;
+  }
+  return true;
+});
+
+function download(title){
+  $("#report").printMe({ "path": ["assets/css/bootstrap.min.css","assets/css/style.css"],"title": title,'img': ["assets/images/logo.png"] });
+}
+
+$(document).keydown(function(e){1!=e.ctrlKey||"61"!=e.which&&"107"!=e.which&&"173"!=e.which&&"109"!=e.which&&"187"!=e.which&&"189"!=e.which||e.preventDefault()}),$(window).bind("mousewheel DOMMouseScroll",function(e){1==e.ctrlKey&&e.preventDefault()});

@@ -1,29 +1,28 @@
 @extends('layouts.nav')
 @section('content')
-    <div class="container">
+    <div class="container box">
+      {!! $readers->render() !!}
         {!! Form::open(array('route'=>'migratereaders')) !!}
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    {!! Form::label('from','From') !!}
-                    {!! Form::select('from', array('fy' => 'FY', 'sy' => 'SY','ty'=>'TY'),null,array('class'=>'form-control')) !!}
-                </div>
-            </div>
-            <div class="col-md-4"></div>
-        </div>
-
-        <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <div class="form-group">
-                {!! Form::label('to','To') !!}
-                {!! Form::select('to', array('fy' => 'FY', 'sy' => 'SY','ty'=>'TY'),null,array('class'=>'form-control')) !!}
-            </div>
-        <button type="submit" class="btn btn-primary form-control">Update</button>
-        </div>
-        <div class="col-md-4"></div>
-    </div>
+        <table class="table">
+          <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Year</th>
+          </thead>
+          <tbody>
+            @foreach($readers as $reader)
+            <tr>
+              <td>{{ $reader->id }}</td>
+              <td>{{ $reader->name }}</td>
+              <td>{{ $reader->department }}</td>
+              <td>{{ strtoupper($reader->year) }}</td>
+              <td><input type="checkbox" name="ids[]" value="{{$reader->id}}" checked /> Migrate</td>
+            </tr>
+            @endforeach
+            <button type="submit" class="btn btn-primary">Migrate</button>
+          </tbody>
+        </table>
         {!! Form::close() !!}
     </div>
 @stop

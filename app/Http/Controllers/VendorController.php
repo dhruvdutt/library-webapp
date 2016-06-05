@@ -36,44 +36,27 @@ class VendorController extends Controller
     }
 
     /*Return view to update vendor*/
-    public function getupdateVendor()
+    public function getupdateVendor($id)
     {
-      return view('vendor.updatevendorinput')
-             ->with(array('title'=>'Update Vendor','message'=>'Update Vendor'));
+      $vendor = Vendor::where('id',$id)
+                        ->firstOrFail();
+
+      Session::put('vendorid',$id);
+
+      return view('vendor.update')
+          ->with(array('title'=>'Update Vendor','vendor'=>$vendor));
     }
 
     /*Check if vendor exists in the DB*/
     public function updateVendor(Request $request)
     {
-      $title = $request->id;
-      $vendor = new Vendor();
-      $vendor = DB::table('vendor')
-          ->where('id','=',$title)
-          ->get();
-      if($vendor == null)
-      {
-          return Redirect::back()->withInput()
-              ->with(array('flash_message'=>'No Record with this ID or title'));
-      }
-      else
-      {
-          Session::put('vendorid',$title);
-          return view('vendor.update')
-              ->with(array('title'=>'Update Vendor','vendor'=>$vendor[0]));
-      }
-    }
-
-    /*Update vendor*/
-    public function updatevend(Request $request)
-    {
-        $id = Session::get('vendorid');
-        Session::forget('vendorid');
-        DB::table('vendor')
-            ->where('id', $id)
-            ->orWhere('name',$id)
-            ->update(['name' => $request->name,'contact'=>$request->contact]);
-            return Redirect::to('vendor/update')
-                ->with(array('flash_message'=>'Vendor Updated Successfully'));
+      $id = Session::get('vendorid');
+      Session::forget('vendorid');
+      Vendor::where('id', $id)
+              ->orWhere('name',$id)
+              ->update(['name' => $request->name,'contact'=>$request->contact,'note'=>$request->note]);
+      return Redirect::to('/vendor/find')
+                       ->with(array('flash_message'=>'Vendor Updated Successfully'));
     }
 
     /*Return view to find Vendor*/
@@ -87,7 +70,7 @@ class VendorController extends Controller
     public function findVendor(Request $request)
     {
       $vendor = DB::table('vendor')->where('name','LIKE','%'.$request->vendortitle.'%')->get();
-      return view('vendor.showvendor')->with(array('title'=>'Vendor','vendors'=>$vendor));
+      return view('vendor.showvendor')->with(array('title'=>'Vendor','vendors'=>$vendor,'message'=>'Vendor Details'));
     }
 
     /*Return vendor names to ajax call*/

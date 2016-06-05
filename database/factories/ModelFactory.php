@@ -19,13 +19,3 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
-
-$factory->define(App\Publication::class, function (Faker\Generator $faker) {
-    return [
-        'isbn' => $faker->ean13(),
-        'title' => $faker->name,
-        'author' => $faker->name,
-        'publisher' => $faker->name,
-        'created_at' => Carbon\Carbon::now()
-    ];
-});

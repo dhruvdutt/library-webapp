@@ -1,6 +1,6 @@
 @extends('layouts.nav')
 @section('content')
-<div class="container">
+<div class="container box">
 @if(sizeof($vendors)==0)
 	<h2>No Records</h2>
 @else
@@ -22,6 +22,7 @@
 				<td>{{$vendor->contact}}</td>
 				<td>{{$vendor->address}}</td>
 				<td>{{$vendor->note}}</td>
+				<td><a class="btn btn-primary btn-xs" href="/vendor/update/{{$vendor->id}}">Update</a></td>
 			</tr>
 		@endforeach
 		</tbody>

@@ -4,30 +4,37 @@
 	@if(sizeof($reports) == 0)
 		<h3>No Records</h3>
 	@else
-		<div class="row">
-			<div class="col-md-12">
-				<button class="btn btn-primary" style="float:right" id="download">Download</button><br />
-			</div>
-		</div>
-		<div class="row">
-	        <div class="col-md-12" id="report">
-	        	<h4>Issue Report</h4>
-	           	<table class="table sortable-theme-bootstrap" data-sortable>
+		<div class="row box">
+			<button class="btn btn-primary" onclick="download('{{$message}}')">Download</button>
+	        <div class="col-lg-12" id="report">
+	           	<table class="table">
 	                <thead>
 	                    <tr>
-	                    	<th data-field="name" data-sortable="false">Reader ID</th>
-	                        <th data-field="name" data-sortable="false">Accession Number</th>
-	                        <th data-field="price">Issue Date</th>
-	                        <th data-field="price">Return Date</th>
-	                        <th data-field="price">Returned Date</th>
-	                        <th data-field="price">Fine</th>
+	                    		<th>Reader ID</th>
+													<th>Name</th>
+													<th>Year</th>
+													<th>Year Enrolled</th>
+	                        <th>Accession Number</th>
+													<th>ISBN</th>
+													<th>Title</th>
+													<th>Author</th>
+	                        <th>Issue Date</th>
+	                        <th>Return Date</th>
+	                        <th>Returned Date</th>
+	                        <th>Fine</th>
 	                    </tr>
-	                    </thead>
+	                 </thead>
 	                    <tbody>
 	                    @foreach ($reports as $report)
 	                        <tr>
-	                        	<td>{{ $report->readerid }}</td>
+	                        		<td>{{ $report->readerid }}</td>
+															<td>{{ $report->name }}</td>
+															<td>{{ $report->year }}</td>
+															<td>{{ $report->year_enrolled }}</td>
 	                            <td>{{ $report->accession_no }}</td>
+															<td>{{ $report->isbn }}</td>
+															<td>{{ $report->title }}</td>
+															<td>{{ $report->author }}</td>
 	                            <td>{{ $report->issuedate }}</td>
 	                            <td>{{ $report->returndate }}</td>
 	                            @if ($report->returneddate == null)

@@ -20,8 +20,8 @@ class Authorization
     {
         if(Auth::user()->type != 'admin')
         {
-          Session::flash('flash_message','You are unauthorized to access this page');
-          return redirect()->guest('/');
+          Session::flash('flash_message','You are unauthorized to access that page');
+          return redirect()->guest('/home');
         }
         return $next($request);
     }

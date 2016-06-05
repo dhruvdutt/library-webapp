@@ -4,12 +4,12 @@
         {!! Form::open(array('route'=>'controlAccession')) !!}
         <div class="row">
             <div class="col-md-4"></div>
-            <div class="col-md-4">
+            <div class="col-md-4 box">
                 <div class="form-group">
                     {!! Form::label('accession','Book Accession') !!}
                     {!! Form::text('accession',null,['class'=>'form-control','required']) !!}
                 </div>
-                <button type="submit" class="btn btn-primary form-control">Submit</button>
+                <button type="submit" class="btn btn-primary form-control">Proceed</button>
             </div>
             <div class="col-md-4"></div>
         </div>

@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="calibrary">
 <head>
+		<link rel="icon" type="image/gif" href="{{ URL::asset('assets/favicon/favicon.gif') }}"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>{{ $title }}</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/jquery-ui.min.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap-datetimepicker.min.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/sortable-theme-bootstrap.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('assets/css/style.css') }}">
+    @include('partials.styles')
 </head>
 <body>
-@yield('navbar')
-@yield('content')
-<script type="text/javascript" src="{{ URL::asset('assets/js/jquery.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('assets/js/jquery-ui.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('assets/js/bootstrap.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('assets/js/moment.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('assets/js/bootstrap-datetimepicker.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('assets/js/sortable.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('assets/js/tableExport.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('assets/js/jquery.base64.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('assets/js/sprintf.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('assets/js/jspdf.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('assets/js/base64.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('assets/js/style.js') }}"></script>
+  @yield('navbar')
+  @yield('content')
+	@if(Auth::user())
+		@if(Auth::user()->type == 'admin')
+			<div class="container text-center">
+				<p>
+					Total Publication in the library : {{ Session::get('total_pubication') }}<br />
+					Total Books issued till date : {{ Session::get('total_circulation') }}<br />
+					Total Fine collected till date : &#8377;{{ Session::get('total_fine') }}
+				</p>
+			</div>
+		@endif
+	@endif
+  <footer class="footer">
+    <p>&copy; Computer Applications (CA Dept) Library</p>
+		<p><a href="/developers" target="_blank">Developers</a>
+  </footer>
+  @include('partials.scripts')
 </body>
 </html>

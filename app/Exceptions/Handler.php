@@ -6,7 +6,10 @@ use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
+use Illuminate\Session\TokenMismatchException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Redirect;
 
 class Handler extends ExceptionHandler
 {
@@ -42,8 +45,19 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        if ($e instanceof ModelNotFoundException) {
-            $e = new NotFoundHttpException($e->getMessage(), $e);
+        if ($e instanceof ModelNotFoundException)
+        {
+            return Redirect::back()->withInput()->with('flash_message','Record not found');
+        }
+
+        if ($e instanceof TokenMismatchException)
+        {
+            return Redirect::to('/')->with('flash_message','Please login to continue');
+        }
+
+        if ($e instanceof MethodNotAllowedHttpException)
+        {
+            return Redirect::to('/home')->with('flash_message','Seems like you are lost.Start from the Scratch');
         }
 
         return parent::render($request, $e);

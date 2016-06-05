@@ -8,48 +8,69 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
+use App\User;
 
 class SearchController extends Controller
 {
     /*Seach Publication by author isbn title and publisher*/
     public function search($book,$query)
     {
-        $result = array();
+        $result = [];
         $values = DB::table('publication')
             ->where($query,'LIKE','%'.$book.'%')
+            ->select($query)
             ->get();
-        if(sizeof($values) == 0)
+
+        $final = [];
+        foreach ($values as $current)
         {
-            $result[] = ['value'=>'No Suggestions'];
+          if ( ! in_array($current, $final))
+          {
+            $final[] = $current;
+          }
         }
-        else
+        foreach ($final as $f)
         {
-            foreach ($values as $value) {
-                $result[] = [ 'value' => $value->$query ];
-            }
+          $result[] = ['value'=>$f->$query];
         }
-        return json_encode($result);
+
+      return json_encode($result);
     }
 
     /*Search Publication Title*/
-    public function searchTitle()
+    public function searchPublication()
     {
         $result = array();
         $term = Input::get('term');
         $values = DB::table('publication')
             ->where('isbn','LIKE','%'.$term.'%')
             ->orWhere('title','LIKE','%'.$term.'%')
+            ->select('title')
             ->get();
-        if(sizeof($values) == 0)
-        {
-            $result[] = ['value'=>'No Suggestions'];
-        }
-        else
-        {
-            foreach ($values as $value) {
+
+            foreach ($values as $value)
+            {
                 $result[] = [ 'value' => $value->title ];
             }
-        }
+        return json_encode($result);
+    }
+
+    /*Search Serial Title*/
+    public function searchSerial()
+    {
+        $result = array();
+        $term = Input::get('term');
+        $values = DB::table('serials')
+            ->where('issn','LIKE','%'.$term.'%')
+            ->orWhere('title','LIKE','%'.$term.'%')
+            ->orWhere('serial_no','LIKE','%'.$term.'%')
+            ->select('title')
+            ->get();
+
+            foreach ($values as $value)
+            {
+                $result[] = [ 'value' => $value->title ];
+            }
         return json_encode($result);
     }
 
@@ -61,68 +82,66 @@ class SearchController extends Controller
         $values = DB::table('vendor')
             ->where('name','LIKE','%'.$term.'%')
             ->get();
-        if(sizeof($values) == 0)
+
+        foreach ($values as $value)
         {
-            $result[] = ['value'=>'No Suggestions'];
-        }
-        else
-        {
-            foreach ($values as $value) {
-                $result[] = [ 'value' => $value->name ];
-            }
+            $result[] = [ 'value' => $value->name ];
         }
         return json_encode($result);
     }
 
     /*Search Reader*/
-    public function reader(Request $request)
+    public function reader()
     {
         $result = array();
         $term = Input::get('term');
-        $values = DB::table('users')
-            ->where('name','LIKE','%'.$term.'%')
-            ->orWhere('id','LIKE','%'.$term.'%')
-            ->get();
-        if(sizeof($values) == 0)
-        {
-            $result[] = ['value'=>'No Suggestions'];
-        }
-        else
-        {
-            foreach ($values as $value) {
-                $result[] = ['value' => $value->name];
-            }
-        }
-        return json_encode($result);
+
+        $values = User::where('name','LIKE','%'.$term.'%')
+                        ->orWhere('id','LIKE','%'.$term.'%')
+                        ->get();
+          foreach ($values as $value)
+          {
+              $result[] = ['value' => $value->id,'label'=>$value->name.' ('.$value->id.')'];
+          }
+        return $result;
     }
 
     /*Check availibility of Book and return view with the data*/
-    public function searchBook($value)
+    public function searchBook($value,$query)
     {
-      $status = 'Not Available';
       $publications = DB::table('publication')
-          ->where('title','LIKE','%'.$value.'%')
-          ->orWhere('publisher','LIKE','%'.$value.'%')
-          ->orWhere('author','LIKE','%'.$value.'%')
-          ->get();
-          
-    if(sizeof($publications) == 0)
-    {
+                          ->join('accession', function ($join) {
+                              $join->on('accession.isbn', '=', 'publication.isbn')
+                                   ->where('status','=','available');
+                              })
+                          ->where($query,'LIKE','%'.$value.'%')
+                          ->select('publication.isbn','publication.title','publication.author','publication.publisher','accession.status')
+                          ->get();
+
+        $final = [];
+        foreach ($publications as $current)
+        {
+          if ( ! in_array($current, $final))
+          {
+            $final[] = $current;
+          }
+        }
+        if(!empty($final))
+        {
+          $publications = $final;
+        }
+        if(empty($publications))
+        {
+          $publications = DB::table('publication')
+                            ->where($query,'LIKE','%'.$value.'%')
+                            ->select('publication.isbn','publication.title','publication.author','publication.publisher')
+                            ->get();
+           foreach($publications as $publication)
+           {
+             $publication->status = 'notavailable';
+           }
+        }
         return view('searchBook')
-               ->with(array('title'=>'Book','publications'=>null,'status'=>null));
-    }
-      $availablity = DB::table('accession')
-            ->where('isbn','=',$publications[0]->isbn)->get();
-            
-       for($i=0;$i<sizeof($availablity);$i++)
-       {
-            if($availablity[$i]->status == 'available')
-            {
-                $status = 'Available';
-                break;
-            }
-       }
-          return view('searchBook')
-                  ->with(array('title'=>'Book','publications'=>$publications,'status'=>$status));
+               ->with(array('title'=>'Publication Details','publications'=>$publications,'message'=>'Publication Details'));
     }
 }

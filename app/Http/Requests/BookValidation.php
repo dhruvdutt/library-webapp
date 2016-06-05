@@ -28,7 +28,7 @@ class BookValidation extends Request
     public function rules()
     {
         return [
-            'isbn'=>'numeric',
+            'isbn'=>'required|min:10|numeric',
             'title'=>'required',
             'author'=>'required',
             'publisher'=>'required'

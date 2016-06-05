@@ -1,5 +1,11 @@
+body{
+  overflow-x: hidden;
+}
+.navbar{
+  font-size: 110%;
+}
 .container{
-    padding-top: 30px;
+    padding-top: 15px;
 }
 #message{
     text-align: center;
@@ -7,20 +13,51 @@
 .button{
     text-align: center;
 }
-.nav-wrapper{
-    background-color: #2196F3;
-}
-.dropdown:hover .dropdown-menu{
+/*.dropdown:hover .dropdown-menu{
 	display: block;
 	margin: 0;
-}
+}*/
 .modal-backdrop.in {
     opacity: 0.0;
 }
-#table{
-	display: none;
-}
 body{
-	
-	font-family: 'Roboto', sans-serif;
+  background-color: #eeeeee;
+}
+.box{
+  background-color: #ffffff;
+  padding: 20px;
+  -webkit-box-shadow: 5px 5px 5px #888888;
+  box-shadow: 5px 5px 5px #888888;
+  border-radius: 5px;
+}
+.footer{
+    padding: 15px;
+    text-align: center;
+}
+
+#logo{
+  float: right !important;
+  height: 50px;
+  width: 50px;
+}
+
+.dev{
+  height:82%;
+}
+.outline{
+  margin-left: 6%;
+}
+.grayscale{
+  filter: gray;
+  -webkit-filter: grayscale(60%);
+  -webkit-transition: all .6s ease;
+  -webkit-transition: all .6s ease;
+  -webkit-backface-visibility: hidden;
+}
+img.grayscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+}
+.ui-autocomplete {
+    z-index: 5000;
 }

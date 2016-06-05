@@ -11,7 +11,7 @@ class CreateCirculationTable extends Migration
             $table->string('transactionid')->unique();
             $table->integer('accession_no')->unsigned();
             $table->foreign('accession_no')->references('accession_no')->on('accession');
-            $table->unsignedInteger('readerid');
+            $table->string('readerid');
             $table->foreign('readerid')->references('id')->on('users');
             $table->date('issuedate');
             $table->date('returndate');

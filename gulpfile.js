@@ -12,5 +12,6 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.phpunit();
+    mix.sass('app.scss');
+    mix.styles(['public/assets/css/style/css']);
 });
